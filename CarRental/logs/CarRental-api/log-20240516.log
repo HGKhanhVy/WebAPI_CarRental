@@ -1,0 +1,2804 @@
+2024-05-16T03:33:01.9079390+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("572"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE DATABASE [DB_CarRental];"
+2024-05-16T03:33:02.0220234+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [DB_CarRental] SET READ_COMMITTED_SNAPSHOT ON;
+END;"
+2024-05-16T03:33:02.0409259+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:33:02.2491442+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("155"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);"
+2024-05-16T03:33:02.2511949+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:33:02.2711320+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T03:33:02.2801444+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T03:33:02.2965977+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T03:33:02.5074347+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T03:33:02.5105689+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T03:33:02.5139032+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T03:33:02.5153915+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T03:33:02.5167040+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T03:33:02.5193659+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T03:33:02.5207602+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T03:33:02.5221316+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T03:33:02.5235732+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T03:33:02.5249267+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T03:33:02.5275404+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T03:33:02.9980243+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T03:33:02.9997950+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T03:33:03.0038561+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:03.0081412+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:03.0106950+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:03.0130912+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:07.6945641+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:07.6972265+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:07.7001493+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:07.7034792+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:07.7064981+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:33:07.7087929+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:33:11.5107542+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:11.5128679+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:11.5203213+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:11.5229404+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:11.5270197+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:33:11.5633795+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:46.6634158+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:40:46.7119423+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T03:40:46.7134665+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:40:46.7138513+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T03:40:46.7261848+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T03:40:46.7352375+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T03:40:46.8576625+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T03:40:46.8590331+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T03:40:46.8599631+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T03:40:46.8609652+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T03:40:46.8618577+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T03:40:46.8633984+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T03:40:46.8644904+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T03:40:46.8656390+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T03:40:46.8675306+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T03:40:46.8686099+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T03:40:46.8698479+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T03:40:46.8714867+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T03:40:47.3073772+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T03:40:47.3092186+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:47.3116643+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:47.3135948+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:47.3165442+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:47.3180586+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:50.8993636+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:50.9013436+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:50.9042381+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:50.9059530+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:40:50.9090373+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:40:54.2613107+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:54.2647975+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:54.2682288+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:54.2717217+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:54.2751600+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:40:54.3025485+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:09.0768268+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:48:09.1237202+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T03:48:09.1253791+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T03:48:09.1258406+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T03:48:09.1374554+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T03:48:09.1455968+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T03:48:09.2682644+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T03:48:09.2703073+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T03:48:09.2712828+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T03:48:09.2724920+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T03:48:09.2738512+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T03:48:09.2750708+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T03:48:09.2761369+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T03:48:09.2773621+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T03:48:09.2787691+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T03:48:09.2799649+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T03:48:09.2811438+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T03:48:09.2827354+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T03:48:09.5768348+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T03:48:09.5785583+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:09.5807490+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:09.5824037+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:09.5842290+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:09.5858087+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:13.6067603+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:13.6111581+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:13.6168564+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:13.6205198+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:48:13.6236820+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T03:48:16.9931494+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:16.9972124+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:17.0000485+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:17.0036813+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:17.0084803+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T03:48:17.0355381+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:45.3191453+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:29:45.3719466+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:29:45.3739573+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:29:45.3751252+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:29:45.3905838+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T04:29:45.4001355+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T04:29:45.5892325+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T04:29:45.5922091+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T04:29:45.5943601+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T04:29:45.5962450+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T04:29:45.5984145+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T04:29:45.6011107+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T04:29:45.6029572+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T04:29:45.6049513+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T04:29:45.6063883+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T04:29:45.6081931+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T04:29:45.6105730+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T04:29:45.6121495+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T04:29:45.7197235+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T04:29:45.7286613+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:45.7319466+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:45.7344511+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:45.7362309+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:45.7380696+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:49.2611206+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:49.2646619+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:49.2707127+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:49.2744811+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:29:49.2798651+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:29:52.5861130+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:52.5897171+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:52.5929043+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:52.5978443+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:52.6036825+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:29:52.6260989+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:05.7639823+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:34:05.8045851+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:34:05.8061517+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:34:05.8065797+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:34:05.8175487+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T04:34:05.8269807+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T04:34:05.9501907+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T04:34:05.9516278+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T04:34:05.9534309+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T04:34:05.9546050+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T04:34:05.9558125+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T04:34:05.9574685+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T04:34:05.9585552+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T04:34:05.9599566+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T04:34:05.9609799+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T04:34:05.9618495+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T04:34:05.9627958+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T04:34:05.9638236+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T04:34:06.1438783+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T04:34:06.1459630+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:06.1733566+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:06.1771350+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:06.1791403+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:10.0070969+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:10.0098457+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:10.0117160+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:10.0145468+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:10.0168822+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:34:10.0190880+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:34:13.4466117+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:13.4770843+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:13.4799624+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:13.4830420+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:13.4877457+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:34:13.5393249+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:24.6215823+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:35:24.6627292+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:35:24.6643224+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:35:24.6647598+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:35:24.6757062+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T04:35:24.6848066+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T04:35:24.7994120+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T04:35:24.8017648+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T04:35:24.8027354+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T04:35:24.8041624+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T04:35:24.8055617+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T04:35:24.8066749+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T04:35:24.8082107+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T04:35:24.8099822+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T04:35:24.8247566+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T04:35:24.8261919+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T04:35:24.8273992+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T04:35:24.8291706+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T04:35:25.0032777+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T04:35:25.0065240+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:25.0111976+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:25.0159017+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:25.0192434+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:28.8054527+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:28.8089257+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:28.8117006+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:28.8239561+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:28.8271504+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:35:28.8300374+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:35:32.0188371+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:32.0235417+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:32.0268040+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:32.0298597+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:32.0341522+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:35:32.0566852+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:08.6728001+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:49:08.7160952+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:49:08.7177474+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-16T04:49:08.7188827+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-16T04:49:08.7336222+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-16T04:49:08.7445069+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240515202009_UpdateDBLan1"'.
+2024-05-16T04:49:08.8672569+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [ChucVu] (
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [TenChucVu] nvarchar(max) NOT NULL,
+    [MucLuongTheoChucVu] float NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_ChucVu] PRIMARY KEY ([IDChucVu])
+);"
+2024-05-16T04:49:08.8691789+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhuyenMai] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenCTKM] nvarchar(max) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhuyenMai] PRIMARY KEY ([IDKhuyenMai])
+);"
+2024-05-16T04:49:08.9045419+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiKhachHang] (
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TenLoaiKH] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiKhachHang] PRIMARY KEY ([IDLoaiKH])
+);"
+2024-05-16T04:49:08.9073961+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LoaiXe] (
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TenLoaiXe] nvarchar(max) NOT NULL,
+    [GiaThue] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LoaiXe] PRIMARY KEY ([IDLoaiXe])
+);"
+2024-05-16T04:49:08.9095306+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Login] (
+    [Email] nvarchar(450) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Login] PRIMARY KEY ([Email])
+);"
+2024-05-16T04:49:08.9110820+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhacHen] (
+    [IDNhacHen] nvarchar(450) NOT NULL,
+    [DinhKyNhacHen] int NOT NULL,
+    [NDNhacHen] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhacHen] PRIMARY KEY ([IDNhacHen])
+);"
+2024-05-16T04:49:08.9128438+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Permission] (
+    [IDPermission] nvarchar(450) NOT NULL,
+    [PermissionGroupName] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Permission] PRIMARY KEY ([IDPermission])
+);"
+2024-05-16T04:49:08.9149338+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PhongBan] (
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [TenPhongBan] nvarchar(max) NOT NULL,
+    [PhanTramMuc1] float NOT NULL,
+    [PhanTramMuc2] float NOT NULL,
+    [PhanTramMuc3] float NOT NULL,
+    [PhanTramMuc4] float NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PhongBan] PRIMARY KEY ([IDPhongBan])
+);"
+2024-05-16T04:49:08.9167357+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [QuanLyChuyenKhoan] (
+    [IDQuanLyCK] nvarchar(450) NOT NULL,
+    [NDChuyenKhoanKyGui] nvarchar(max) NULL,
+    [NDChuyenKhoanThue] nvarchar(max) NULL,
+    [NDChuyenKhoanCoc] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_QuanLyChuyenKhoan] PRIMARY KEY ([IDQuanLyCK])
+);"
+2024-05-16T04:49:08.9182364+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [SoDienThoai] (
+    [DauSo] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_SoDienThoai] PRIMARY KEY ([DauSo])
+);"
+2024-05-16T04:49:08.9200866+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TienNghi] (
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TenTienNghi] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TienNghi] PRIMARY KEY ([IDTienNghi])
+);"
+2024-05-16T04:49:08.9211424+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Token] (
+    [IDToken] nvarchar(450) NOT NULL,
+    [AccessToken] nvarchar(max) NOT NULL,
+    [RefreshToken] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Token] PRIMARY KEY ([IDToken])
+);"
+2024-05-16T04:49:09.5156035+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [User] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([IDUser])
+);"
+2024-05-16T04:49:09.5308396+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMTrenHoaDon] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [DieuKienApDung] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMTrenHoaDon] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMTrenHoaDon_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:09.5651861+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMVoucher] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDCode] nvarchar(450) NOT NULL,
+    [VoucherCode] nvarchar(max) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [Inactive] bit NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMVoucher] PRIMARY KEY ([IDKhuyenMai], [IDCode]),
+    CONSTRAINT [FK_KMVoucher_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:09.5695020+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiKH] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiKH] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiKH_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiKH_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:09.5738329+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KhachHang] (
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDLoaiKH] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [GPLX] nvarchar(max) NOT NULL,
+    [SoPassPort] nvarchar(max) NOT NULL,
+    [DiaChiThuongTru] nvarchar(max) NOT NULL,
+    [DiaChiHienTai] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [SoDienThoaiDuPhong] nvarchar(max) NULL,
+    [SoDienThoaiNguoiThamChieu] nvarchar(max) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KhachHang] PRIMARY KEY ([IDKhachHang]),
+    CONSTRAINT [FK_KhachHang_LoaiKhachHang_IDLoaiKH] FOREIGN KEY ([IDLoaiKH]) REFERENCES [LoaiKhachHang] ([IDLoaiKH]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:13.1662221+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [KMLoaiXe] (
+    [IDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TyLePhanTram] float NULL,
+    [SoTien] float NULL,
+    [SoTienToiDaDuocGiam] float NOT NULL,
+    [CreateBy] nvarchar(max) NULL,
+    [CreateAt] datetime2 NULL,
+    [DeleteBy] nvarchar(max) NULL,
+    [DeleteAt] datetime2 NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_KMLoaiXe] PRIMARY KEY ([IDKhuyenMai]),
+    CONSTRAINT [FK_KMLoaiXe_KhuyenMai_IDKhuyenMai] FOREIGN KEY ([IDKhuyenMai]) REFERENCES [KhuyenMai] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_KMLoaiXe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:13.1787508+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [Xe] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDLoaiXe] nvarchar(450) NOT NULL,
+    [TruyenDong] nvarchar(max) NULL,
+    [NhienLieu] nvarchar(max) NULL,
+    [NguyenLieuTieuHao] nvarchar(max) NULL,
+    [TenXe] nvarchar(max) NOT NULL,
+    [BienSoXe] nvarchar(max) NOT NULL,
+    [HangXe] nvarchar(max) NOT NULL,
+    [NamSanXuat] int NOT NULL,
+    [SoChoNgoi] int NOT NULL,
+    [GiaThue] float NOT NULL,
+    [MoTa] nvarchar(max) NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_Xe] PRIMARY KEY ([IDXe]),
+    CONSTRAINT [FK_Xe_LoaiXe_IDLoaiXe] FOREIGN KEY ([IDLoaiXe]) REFERENCES [LoaiXe] ([IDLoaiXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:13.1824778+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [PermissionDetail] (
+    [IDPermissionDetail] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [ActionCode] nvarchar(max) NOT NULL,
+    [CheckAction] int NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_PermissionDetail] PRIMARY KEY ([IDPermissionDetail]),
+    CONSTRAINT [FK_PermissionDetail_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:13.1854296+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [NhanVien] (
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDChucVu] nvarchar(450) NOT NULL,
+    [IDPhongBan] nvarchar(450) NOT NULL,
+    [HoTen] nvarchar(max) NOT NULL,
+    [NgaySinh] nvarchar(max) NOT NULL,
+    [CCCD] nvarchar(max) NOT NULL,
+    [DiaChi] nvarchar(max) NOT NULL,
+    [SoDienThoai] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PassWord] nvarchar(max) NOT NULL,
+    [NgayVaoLam] datetime2 NOT NULL,
+    [NgayNghiViec] datetime2 NULL,
+    [HeSoLuong] float NOT NULL,
+    [SoTaiKhoan] nvarchar(max) NOT NULL,
+    [NganHang] nvarchar(max) NOT NULL,
+    [ChiNhanhNganHang] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_NhanVien] PRIMARY KEY ([IDNhanVien]),
+    CONSTRAINT [FK_NhanVien_ChucVu_IDChucVu] FOREIGN KEY ([IDChucVu]) REFERENCES [ChucVu] ([IDChucVu]) ON DELETE CASCADE,
+    CONSTRAINT [FK_NhanVien_PhongBan_IDPhongBan] FOREIGN KEY ([IDPhongBan]) REFERENCES [PhongBan] ([IDPhongBan]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:13.1870904+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [AccessToken] (
+    [Token] nvarchar(max) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [IDUser] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [FK_AccessToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:49:13.1891471+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [RefreshToken] (
+    [Token] nvarchar(450) NOT NULL,
+    [IDUser] nvarchar(450) NOT NULL,
+    [StrTokenIDToken] nvarchar(450) NULL,
+    [JwtID] nvarchar(max) NOT NULL,
+    [IsUsed] bit NOT NULL,
+    [IsRevoked] bit NOT NULL,
+    [ExpireAt] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_RefreshToken] PRIMARY KEY ([Token], [IDUser]),
+    CONSTRAINT [FK_RefreshToken_Token_StrTokenIDToken] FOREIGN KEY ([StrTokenIDToken]) REFERENCES [Token] ([IDToken])
+);"
+2024-05-16T04:49:16.3657402+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [UserPermission] (
+    [IDUser] nvarchar(450) NOT NULL,
+    [IDPermission] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserPermission] PRIMARY KEY ([IDUser], [IDPermission]),
+    CONSTRAINT [FK_UserPermission_Permission_IDPermission] FOREIGN KEY ([IDPermission]) REFERENCES [Permission] ([IDPermission]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserPermission_User_IDUser] FOREIGN KEY ([IDUser]) REFERENCES [User] ([IDUser]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:16.3729882+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [LichXe] (
+    [IDLichXe] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [ThoiGianBatDau] datetime2 NOT NULL,
+    [ThoiGianKetThuc] datetime2 NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_LichXe] PRIMARY KEY ([IDLichXe]),
+    CONSTRAINT [FK_LichXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:16.3857434+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [TrangThaiBaoDuong] (
+    [IDTrangThaiBD] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NDBaoDuong] nvarchar(max) NOT NULL,
+    [NgayBaoDuong] datetime2 NOT NULL,
+    [HinhAnhHoaDonBD] nvarchar(max) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_TrangThaiBaoDuong] PRIMARY KEY ([IDTrangThaiBD]),
+    CONSTRAINT [FK_TrangThaiBaoDuong_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:16.3890914+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [XeTienNghi] (
+    [IDXe] nvarchar(450) NOT NULL,
+    [IDTienNghi] nvarchar(450) NOT NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_XeTienNghi] PRIMARY KEY ([IDXe], [IDTienNghi]),
+    CONSTRAINT [FK_XeTienNghi_TienNghi_IDTienNghi] FOREIGN KEY ([IDTienNghi]) REFERENCES [TienNghi] ([IDTienNghi]) ON DELETE CASCADE,
+    CONSTRAINT [FK_XeTienNghi_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:16.3940429+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongKyGui] (
+    [IDHopDongKyGui] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [PhanTramHoaHong] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongKyGui] PRIMARY KEY ([IDHopDongKyGui]),
+    CONSTRAINT [FK_HopDongKyGui_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongKyGui_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"
+2024-05-16T04:49:16.4277937+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE TABLE [HopDongThueXe] (
+    [IDHopDongThueXe] nvarchar(450) NOT NULL,
+    [SoHopDong] nvarchar(max) NOT NULL,
+    [IDKhachHang] nvarchar(450) NOT NULL,
+    [IDNhanVien] nvarchar(450) NOT NULL,
+    [IDXe] nvarchar(450) NOT NULL,
+    [NgayLap] datetime2 NOT NULL,
+    [GiaThue] float NOT NULL,
+    [SoTienCoc] float NOT NULL,
+    [TongThanhTienDuKien] float NOT NULL,
+    [TongThanhTienDuKienSauKM] float NOT NULL,
+    [TienThanhToanTheoDot] float NOT NULL,
+    [TienThanhToanTheoDotChuaKM] float NOT NULL,
+    [PhuongThucThanhToan] nvarchar(max) NOT NULL,
+    [DinhKyThanhToan] nvarchar(max) NOT NULL,
+    [ThoiDiemThanhToan] int NOT NULL,
+    [NgayHieuLuc] datetime2 NOT NULL,
+    [NgayHetHan] datetime2 NOT NULL,
+    [XacNhan] bit NOT NULL,
+    [HinhAnhHopDong] nvarchar(max) NOT NULL,
+    [IDKMLoaiKH] nvarchar(max) NULL,
+    [KMLoaiKHsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMLoaiXe] nvarchar(max) NULL,
+    [KMLoaiXesIDKhuyenMai] nvarchar(450) NOT NULL,
+    [IDKMVoucher] nvarchar(max) NULL,
+    [KMVouchersIDKhuyenMai] nvarchar(450) NOT NULL,
+    [KMVouchersIDCode] nvarchar(450) NOT NULL,
+    [IDKMTrenHoaDon] nvarchar(max) NULL,
+    [KMTrenHoaDonsIDKhuyenMai] nvarchar(450) NOT NULL,
+    [TenKMLoaiKH] nvarchar(max) NULL,
+    [TenKMLoaiXe] nvarchar(max) NULL,
+    [TenKMVoucher] nvarchar(max) NULL,
+    [VoucherCode] nvarchar(max) NULL,
+    [UpdateBy] nvarchar(max) NULL,
+    [UpdateAt] datetime2 NULL,
+    [TrangThai] nvarchar(max) NULL,
+    CONSTRAINT [PK_HopDongThueXe] PRIMARY KEY ([IDHopDongThueXe]),
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiKH_KMLoaiKHsIDKhuyenMai] FOREIGN KEY ([KMLoaiKHsIDKhuyenMai]) REFERENCES [KMLoaiKH] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMLoaiXe_KMLoaiXesIDKhuyenMai] FOREIGN KEY ([KMLoaiXesIDKhuyenMai]) REFERENCES [KMLoaiXe] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMTrenHoaDon_KMTrenHoaDonsIDKhuyenMai] FOREIGN KEY ([KMTrenHoaDonsIDKhuyenMai]) REFERENCES [KMTrenHoaDon] ([IDKhuyenMai]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KMVoucher_KMVouchersIDKhuyenMai_KMVouchersIDCode] FOREIGN KEY ([KMVouchersIDKhuyenMai], [KMVouchersIDCode]) REFERENCES [KMVoucher] ([IDKhuyenMai], [IDCode]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_KhachHang_IDKhachHang] FOREIGN KEY ([IDKhachHang]) REFERENCES [KhachHang] ([IDKhachHang]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_NhanVien_IDNhanVien] FOREIGN KEY ([IDNhanVien]) REFERENCES [NhanVien] ([IDNhanVien]) ON DELETE CASCADE,
+    CONSTRAINT [FK_HopDongThueXe_Xe_IDXe] FOREIGN KEY ([IDXe]) REFERENCES [Xe] ([IDXe]) ON DELETE CASCADE
+);"

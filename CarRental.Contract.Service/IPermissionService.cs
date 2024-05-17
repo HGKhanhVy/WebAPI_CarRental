@@ -1,0 +1,20 @@
+﻿using CarRental.Contract.Repository.Models;
+using CarRental.Core.Models.Permission;
+using CarRental.Core.Models.PermissionDetail;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CarRental.Contract.Service
+{
+    public interface IPermissionService :
+       Base.ICreateable<PermissionModel, string>,
+       Base.IUpdateable<PermissionModel, string>,
+       Base.IDeleteable<string, bool>,
+       Base.IGetable<PermissionEntity, string>,
+       Base.ICounteable<PermissionModel, int>
+    {
+    }
+}

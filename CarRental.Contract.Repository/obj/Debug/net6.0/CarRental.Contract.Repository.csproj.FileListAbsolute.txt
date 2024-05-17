@@ -1,0 +1,17 @@
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.csproj.AssemblyReference.cache
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.AssemblyInfoInputs.cache
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.AssemblyInfo.cs
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.csproj.CoreCompileInputs.cache
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Contract.Repository.deps.json
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Contract.Repository.runtimeconfig.json
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Contract.Repository.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Contract.Repository.pdb
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\refint\CarRental.Contract.Repository.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.pdb
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.genruntimeconfig.cache
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\ref\CarRental.Contract.Repository.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Core.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Core.pdb
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.csproj.CopyComplete
