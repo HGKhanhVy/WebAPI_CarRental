@@ -156,3 +156,4 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Core.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Mapper.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Repository.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Service.pdb
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\obj\Debug\net8.0\CarRental.sourcelink.json

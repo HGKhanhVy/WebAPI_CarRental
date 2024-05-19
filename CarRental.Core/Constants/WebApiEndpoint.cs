@@ -363,6 +363,17 @@
             public const string CountXeTienNghi = BaseEndpoint + "/count-xe-tiennghi";
         }
 
+        public static class TinTuc
+        {
+            private const string BaseEndpoint = "~/" + AreaName + "/tin-tuc";
+            public const string GetTinTuc = BaseEndpoint + "/get-single" + "/{IDTinTuc}";
+            public const string GetAllTinTuc = BaseEndpoint + "/get-all";
+            public const string AddTinTuc = BaseEndpoint + "/add";
+            public const string UpdateTinTuc = BaseEndpoint + "/update" + "/{IDTinTuc}";
+            public const string DeleteTinTuc = BaseEndpoint + "/delete" + "/{IDTinTuc}";
+            public const string CountTinTuc = BaseEndpoint + "/count-tin-tuc" + "/{IDTinTuc}";
+        }
+
         public static class Token
         {
             private const string BaseEndpoint = "~/" + AreaName + "/token";

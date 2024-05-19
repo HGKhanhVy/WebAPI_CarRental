@@ -12,3 +12,4 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental.Core\obj\Debug\net6.0\refint\CarRental.
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Core\obj\Debug\net6.0\CarRental.Core.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Core\obj\Debug\net6.0\CarRental.Core.genruntimeconfig.cache
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Core\obj\Debug\net6.0\ref\CarRental.Core.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Core\obj\Debug\net6.0\CarRental.Core.sourcelink.json

@@ -35,6 +35,7 @@ namespace CarRental.Repository.Infrastructure
         public DbSet<UserEntity> User { get; set; }
         public DbSet<XeEntity> Xe { get; set; }
         public DbSet<XeTienNghiEntity> XeTienNghi { get; set; }
+        public DbSet<TinTucEntity> TinTuc { get; set; }
         public DbSet<RefreshTokenEntity> RefreshToken { get; set; }
         public DbSet<AccessTokenEntity> AccessToken { get; set; }
     }

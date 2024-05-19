@@ -15,3 +15,4 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\re
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Core.dll
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\bin\Debug\net6.0\CarRental.Core.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.csproj.CopyComplete
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\obj\Debug\net6.0\CarRental.Contract.Repository.sourcelink.json

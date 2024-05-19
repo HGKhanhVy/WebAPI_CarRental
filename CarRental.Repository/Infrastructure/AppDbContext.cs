@@ -332,6 +332,10 @@ namespace CarRental.Repository.Infrastructure
                .HasForeignKey(c => c.IDTienNghi)
                .OnDelete(DeleteBehavior.Cascade);
 
+            // TinTuc
+            modelBuilder.Entity<TinTucEntity>()
+               .HasKey(e => new { e.IDTinTuc });
+
             // Login
             modelBuilder.Entity<LoginEntity>()
                .HasKey(e => new { e.Email });

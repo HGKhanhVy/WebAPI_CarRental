@@ -17,3 +17,4 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Service\bin\Debug\net6.0\CarRe
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Service\bin\Debug\net6.0\CarRental.Contract.Repository.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Service\bin\Debug\net6.0\CarRental.Core.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Service\obj\Debug\net6.0\CarRental.Contract.Service.csproj.CopyComplete
+D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Service\obj\Debug\net6.0\CarRental.Contract.Service.sourcelink.json

@@ -39,6 +39,7 @@ namespace CarRental.WebApi.Extensions
                 cfg.AddProfile(new UserProfile());
                 cfg.AddProfile(new XeProfile());
                 cfg.AddProfile(new XeTienNghiProfile());
+                cfg.AddProfile(new TinTucProfile());
                 cfg.AddProfile(new TokenProfile());
                 cfg.AddProfile(new RefreshTokenProfile());
                 cfg.AddProfile(new AccessTokenProfile());

@@ -1122,6 +1122,38 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("TienNghi");
                 });
 
+            modelBuilder.Entity("CarRental.Contract.Repository.Models.TinTucEntity", b =>
+                {
+                    b.Property<string>("IDTinTuc")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("HinhAnh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("NgayTao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NguoiTao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NoiDung")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TieuDe")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrangThai")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IDTinTuc");
+
+                    b.ToTable("TinTuc");
+                });
+
             modelBuilder.Entity("CarRental.Contract.Repository.Models.TokenEntity", b =>
                 {
                     b.Property<string>("IDToken")

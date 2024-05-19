@@ -229,4 +229,11 @@
         public const string UPDATE_XETIENNGHI_SUCCESS = "Cap nhat xe tien nghi thanh cong.";
         public const string DELETE_XETIENNGHI_SUCCESS = "Xoa xe tien nghi thanh cong.";
     }
+    public class ReponseMessageConstantsTinTuc
+    {
+        public const string TINTUC_NOT_FOUND = "Khong tim thay tin tuc.";
+        public const string TINTUC_EXISTED = "Tin tuc da ton tai.";
+        public const string UPDATE_TINTUC_SUCCESS = "Cap nhat tin tuc thanh cong.";
+        public const string DELETE_TINTUC_SUCCESS = "Xoa tin tuc thanh cong.";
+    }
 }
