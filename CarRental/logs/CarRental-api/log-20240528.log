@@ -1,0 +1,1161 @@
+2024-05-28T00:00:25.5052980+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:00:25.5109984+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 19.6257 ms
+2024-05-28T00:00:25.7695938+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:00:25.7716161+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 7.7185 ms
+2024-05-28T00:00:25.8179681+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:00:25.8199810+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 9.3001 ms
+2024-05-28T00:00:25.8434468+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:00:25.8448758+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 6.4501 ms
+2024-05-28T00:00:25.8569495+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:00:25.8588377+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 5.6139 ms
+2024-05-28T00:06:41.4997360+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:06:41.5013477+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 20.2447 ms
+2024-05-28T00:06:41.7352611+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:06:41.7370707+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 6.7656 ms
+2024-05-28T00:06:41.7796871+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:06:41.7814495+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.0120 ms
+2024-05-28T00:06:41.7990941+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:06:41.8006298+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.6006 ms
+2024-05-28T00:06:41.8108551+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:06:41.8123978+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 4.9481 ms
+2024-05-28T00:13:59.9280507+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:13:59.9297976+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 14.1700 ms
+2024-05-28T00:14:00.2122232+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:14:00.2138997+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 11.0875 ms
+2024-05-28T00:14:00.2621201+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:14:00.2638038+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.7982 ms
+2024-05-28T00:14:00.2826356+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:14:00.2843277+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.7125 ms
+2024-05-28T00:14:00.2980190+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:14:00.2995175+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 5.4128 ms
+2024-05-28T00:24:24.0424411+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:24:24.0441198+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 12.8612 ms
+2024-05-28T00:24:24.2898529+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:24:24.2916641+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 7.2749 ms
+2024-05-28T00:24:24.3424978+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:24:24.3441667+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 7.5503 ms
+2024-05-28T00:24:24.3656284+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:24:24.3670215+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.2283 ms
+2024-05-28T00:24:24.3783599+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:24:24.3800811+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 4.8044 ms
+2024-05-28T00:28:02.5296656+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:28:02.5311341+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 19.8862 ms
+2024-05-28T00:28:02.8288591+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:28:02.8302801+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 6.3438 ms
+2024-05-28T00:28:02.8731233+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:28:02.8745922+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.2687 ms
+2024-05-28T00:28:02.8976191+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:28:02.8989509+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.3208 ms
+2024-05-28T00:28:02.9097106+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:28:02.9111087+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 4.8656 ms
+2024-05-28T00:28:18.7611610+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:28:18.7630572+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 3.3113 ms
+2024-05-28T00:28:18.7670668+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:28:18.7684921+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 2.7043 ms
+2024-05-28T00:28:18.7717134+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:28:18.7736862+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 3.0376 ms
+2024-05-28T00:28:18.7774291+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:28:18.7789317+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 2.5265 ms
+2024-05-28T00:28:18.7818300+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:28:18.7835073+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 2.6594 ms
+2024-05-28T00:33:25.2148777+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:33:25.2163020+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 18.7251 ms
+2024-05-28T00:33:25.5005868+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:33:25.5020963+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 7.0879 ms
+2024-05-28T00:33:25.5452016+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:33:25.5469709+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 5.9766 ms
+2024-05-28T00:33:25.5657401+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:33:25.5670726+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.1133 ms
+2024-05-28T00:33:25.5781544+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:33:25.5803157+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 6.1318 ms
+2024-05-28T00:35:27.4094882+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:35:27.4111268+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 4.9148 ms
+2024-05-28T00:35:27.6902252+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:35:27.6920427+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 5.3117 ms
+2024-05-28T00:35:27.7525834+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:35:27.7554374+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 7.8529 ms
+2024-05-28T00:35:27.7823442+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:35:27.7851394+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 5.9991 ms
+2024-05-28T00:35:27.8000171+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:35:27.8031852+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 7.5734 ms
+2024-05-28T00:38:52.4147838+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T00:38:52.4164179+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 5.5694 ms
+2024-05-28T00:38:52.6692533+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T00:38:52.6708884+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 5.1641 ms
+2024-05-28T00:38:52.7187424+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T00:38:52.7205227+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 5.5631 ms
+2024-05-28T00:38:52.7442665+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T00:38:52.7461797+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 5.2848 ms
+2024-05-28T00:38:52.7573258+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T00:38:52.7589310+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 4.2729 ms
+2024-05-28T09:35:32.6733408+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:35:32.8230368+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("41"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:35:32.8448228+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:35:32.8535755+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:35:32.9110423+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T09:35:32.9558863+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T09:35:35.4022363+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T09:35:35.4046693+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T09:35:35.4091342+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T09:35:35.4112208+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T09:35:35.4124091+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T09:37:09.3729337+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-kygui/create" responded 400 in 727.8946 ms
+2024-05-28T09:42:09.9346632+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:42:10.0869867+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:42:10.1035619+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:42:10.1082360+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:42:10.1504163+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T09:42:10.1844365+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T09:42:11.0955685+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T09:42:11.0977103+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T09:42:11.1025692+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T09:42:11.1044438+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T09:42:11.1056112+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T09:43:52.0672200+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL) OR ([h].[TrangThai] IS NULL)"
+2024-05-28T09:43:57.4901657+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL) OR ([x].[TrangThai] IS NULL)"
+2024-05-28T09:44:14.1908103+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("145"ms) [Parameters=["@__model_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Xe] AS [x]
+        WHERE [x].[IDXe] = @__model_IDXe_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:44:14.5526289+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 450), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Xe] ([IDXe], [BienSoXe], [GiaThue], [HangXe], [IDLoaiXe], [MoTa], [NamSanXuat], [NguyenLieuTieuHao], [NhienLieu], [SoChoNgoi], [TenXe], [TrangThai], [TruyenDong])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);"
+2024-05-28T09:44:15.4300603+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__model_IDHopDongKyGui_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongKyGui] AS [h]
+        WHERE [h].[IDHopDongKyGui] = @__model_IDHopDongKyGui_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:44:15.5798106+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("29"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p4='?' (Size = 450), @p5='?' (Size = 450), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Double), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HopDongKyGui] ([IDHopDongKyGui], [DinhKyThanhToan], [HinhAnhHopDong], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhanTramHoaHong], [PhuongThucThanhToan], [SoHopDong], [ThoiDiemThanhToan], [TrangThai], [UpdateAt], [UpdateBy], [XacNhan])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);"
+2024-05-28T09:44:15.6227084+07:00 [ERR] (Microsoft.EntityFrameworkCore.Update) An exception occurred in the database while saving changes for context type '"CarRental.Repository.Infrastructure.AppDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint \"FK_HopDongKyGui_Xe_IDXe\". The conflict occurred in database \"DB_CarRental\", table \"dbo.Xe\", column 'IDXe'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:17ea394f-e85b-4161-9a02-5d666cb0b667
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_HopDongKyGui_Xe_IDXe". The conflict occurred in database "DB_CarRental", table "dbo.Xe", column 'IDXe'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:17ea394f-e85b-4161-9a02-5d666cb0b667
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-05-28T09:45:43.0530778+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:45:43.2000830+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:45:43.2175835+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:45:43.2230603+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:45:43.2594019+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T09:45:43.3045301+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T09:45:44.1410013+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T09:45:44.1431243+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T09:45:44.1484576+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T09:45:44.1511678+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T09:45:44.1532912+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T09:47:01.5988285+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-kygui/create" responded 400 in 614.6170 ms
+2024-05-28T09:47:27.5786271+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL) OR ([h].[TrangThai] IS NULL)"
+2024-05-28T09:47:28.7011105+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL) OR ([x].[TrangThai] IS NULL)"
+2024-05-28T09:47:39.2293665+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("33"ms) [Parameters=["@__model_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Xe] AS [x]
+        WHERE [x].[IDXe] = @__model_IDXe_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:47:39.5602173+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("41"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 450), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Xe] ([IDXe], [BienSoXe], [GiaThue], [HangXe], [IDLoaiXe], [MoTa], [NamSanXuat], [NguyenLieuTieuHao], [NhienLieu], [SoChoNgoi], [TenXe], [TrangThai], [TruyenDong])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);"
+2024-05-28T09:47:40.3442032+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@__model_IDHopDongKyGui_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongKyGui] AS [h]
+        WHERE [h].[IDHopDongKyGui] = @__model_IDHopDongKyGui_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:47:40.4993378+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("41"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p4='?' (Size = 450), @p5='?' (Size = 450), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Double), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HopDongKyGui] ([IDHopDongKyGui], [DinhKyThanhToan], [HinhAnhHopDong], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhanTramHoaHong], [PhuongThucThanhToan], [SoHopDong], [ThoiDiemThanhToan], [TrangThai], [UpdateAt], [UpdateBy], [XacNhan])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);"
+2024-05-28T09:47:41.6540523+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=["@__8__locals1_keyId_0='?' (Size = 450), @__idTienNghi_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [XeTienNghi] AS [x]
+        WHERE [x].[IDXe] = @__8__locals1_keyId_0 AND [x].[IDTienNghi] = @__idTienNghi_1 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:47:41.7316739+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [XeTienNghi] ([IDTienNghi], [IDXe], [TrangThai])
+VALUES (@p0, @p1, @p2);"
+2024-05-28T09:47:41.7423193+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@__8__locals1_keyId_0='?' (Size = 450), @__idTienNghi_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [XeTienNghi] AS [x]
+        WHERE [x].[IDXe] = @__8__locals1_keyId_0 AND [x].[IDTienNghi] = @__idTienNghi_1 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:47:41.7503403+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [XeTienNghi] ([IDTienNghi], [IDXe], [TrangThai])
+VALUES (@p0, @p1, @p2);"
+2024-05-28T09:47:45.2151080+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-kygui/create" responded 200 in 21928.3442 ms
+2024-05-28T09:49:17.8308972+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:49:17.9544722+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:49:17.9712465+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T09:49:17.9761544+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T09:49:18.0204965+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T09:49:18.0587801+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T09:49:18.7995171+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T09:49:18.8017664+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T09:49:18.8070824+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T09:49:18.8089614+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T09:49:18.8100582+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T09:50:15.4131340+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL) OR ([h].[TrangThai] IS NULL)"
+2024-05-28T09:50:15.9904325+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL) OR ([x].[TrangThai] IS NULL)"
+2024-05-28T09:50:27.2073317+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("40"ms) [Parameters=["@__model_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Xe] AS [x]
+        WHERE [x].[IDXe] = @__model_IDXe_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:50:27.5113892+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 450), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int32), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Xe] ([IDXe], [BienSoXe], [GiaThue], [HangXe], [IDLoaiXe], [MoTa], [NamSanXuat], [NguyenLieuTieuHao], [NhienLieu], [SoChoNgoi], [TenXe], [TrangThai], [TruyenDong])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);"
+2024-05-28T09:50:40.6764619+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@__model_IDHopDongKyGui_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongKyGui] AS [h]
+        WHERE [h].[IDHopDongKyGui] = @__model_IDHopDongKyGui_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:50:40.9088370+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("41"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p4='?' (Size = 450), @p5='?' (Size = 450), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Double), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Int32), @p13='?' (Size = 4000), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HopDongKyGui] ([IDHopDongKyGui], [DinhKyThanhToan], [HinhAnhHopDong], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhanTramHoaHong], [PhuongThucThanhToan], [SoHopDong], [ThoiDiemThanhToan], [TrangThai], [UpdateAt], [UpdateBy], [XacNhan])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);"
+2024-05-28T09:50:47.2998210+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@__8__locals1_keyId_0='?' (Size = 450), @__idTienNghi_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [XeTienNghi] AS [x]
+        WHERE [x].[IDXe] = @__8__locals1_keyId_0 AND [x].[IDTienNghi] = @__idTienNghi_1 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:50:47.3903062+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("39"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [XeTienNghi] ([IDTienNghi], [IDXe], [TrangThai])
+VALUES (@p0, @p1, @p2);"
+2024-05-28T09:50:47.4010868+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@__8__locals1_keyId_0='?' (Size = 450), @__idTienNghi_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [XeTienNghi] AS [x]
+        WHERE [x].[IDXe] = @__8__locals1_keyId_0 AND [x].[IDTienNghi] = @__idTienNghi_1 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T09:50:47.4080459+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [XeTienNghi] ([IDTienNghi], [IDXe], [TrangThai])
+VALUES (@p0, @p1, @p2);"
+2024-05-28T09:51:04.1472945+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-kygui/create" responded 200 in 52656.1081 ms
+2024-05-28T14:33:46.3200026+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T14:33:46.4230109+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T14:33:46.4284508+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T14:33:46.4364243+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T14:33:46.4742739+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T14:33:46.4971912+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T14:33:48.4738200+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T14:33:48.4780803+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T14:33:48.4844031+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T14:33:48.4863296+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T14:33:48.4877264+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T14:33:59.1874427+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("173"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:33:59.3738495+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 1240.5603 ms
+2024-05-28T14:34:00.5473096+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:34:00.5678249+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 155.7789 ms
+2024-05-28T14:34:00.6961004+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:34:00.7281975+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 75.6083 ms
+2024-05-28T14:34:00.7900236+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:34:00.8112706+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 47.3747 ms
+2024-05-28T14:34:00.9006999+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:34:00.9254250+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 63.6105 ms
+2024-05-28T14:36:09.8879899+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:36:09.8913686+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 27.0945 ms
+2024-05-28T14:36:10.2988194+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:36:10.3022736+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 15.9301 ms
+2024-05-28T14:36:10.3961413+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:36:10.4000647+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 23.6966 ms
+2024-05-28T14:36:10.4531934+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:36:10.4567224+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 16.6795 ms
+2024-05-28T14:36:10.4934043+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:36:10.5038657+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 26.5667 ms
+2024-05-28T14:39:09.8420610+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:39:09.8451261+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 10.1250 ms
+2024-05-28T14:39:10.2673680+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:39:10.2712673+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 10.5919 ms
+2024-05-28T14:39:10.3652982+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:39:10.3739427+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 19.1763 ms
+2024-05-28T14:39:10.4358324+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:39:10.4632340+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 38.5041 ms
+2024-05-28T14:39:10.5051319+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:39:10.5100606+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 18.8346 ms
+2024-05-28T14:47:25.0385361+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:47:25.0422258+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 30.3221 ms
+2024-05-28T14:47:25.4659236+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:47:25.4689895+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 11.9956 ms
+2024-05-28T14:47:25.5751287+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:47:25.5813482+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 14.4129 ms
+2024-05-28T14:47:25.6404207+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:47:25.6425961+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 6.5513 ms
+2024-05-28T14:47:25.6588422+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:47:25.6617029+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 7.1564 ms
+2024-05-28T14:48:54.0052347+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:48:54.0121806+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 12.7610 ms
+2024-05-28T14:48:54.3182207+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:48:54.3204315+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 7.3451 ms
+2024-05-28T14:48:54.3790229+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:48:54.3813291+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.5566 ms
+2024-05-28T14:48:54.4064938+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:48:54.4088827+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 6.5067 ms
+2024-05-28T14:48:54.4277323+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:48:54.4300823+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 7.0856 ms
+2024-05-28T14:52:48.5589718+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:52:48.5628582+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 13.4689 ms
+2024-05-28T14:52:48.8669677+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:52:48.8693230+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 7.0395 ms
+2024-05-28T14:52:48.9264780+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:52:48.9300500+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 10.4492 ms
+2024-05-28T14:52:48.9548168+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:52:48.9566729+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 5.7761 ms
+2024-05-28T14:52:48.9700314+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:52:48.9740468+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 8.2534 ms
+2024-05-28T14:52:51.2451507+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [c].[IDChucVu], [c].[MucLuongTheoChucVu], [c].[PhanTramMuc1], [c].[TenChucVu], [c].[TrangThai]
+FROM [ChucVu] AS [c]
+WHERE [c].[TrangThai] <> N'Da xoa' OR ([c].[TrangThai] IS NULL)"
+2024-05-28T14:52:51.2503231+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/chuc-vu/get-all" responded 200 in 31.2319 ms
+2024-05-28T14:52:51.4734586+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [p].[IDPhongBan], [p].[PhanTramMuc1], [p].[PhanTramMuc2], [p].[PhanTramMuc3], [p].[PhanTramMuc4], [p].[TenPhongBan], [p].[TrangThai]
+FROM [PhongBan] AS [p]
+WHERE [p].[TrangThai] <> N'Da xoa' OR ([p].[TrangThai] IS NULL)"
+2024-05-28T14:52:51.4802002+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/phong-ban/get-all" responded 200 in 21.7237 ms
+2024-05-28T14:52:51.4975076+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:52:51.5012901+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.3525 ms
+2024-05-28T14:54:09.3262718+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:54:09.3300041+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 10.7106 ms
+2024-05-28T14:54:09.6186318+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:54:09.6209948+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 8.3177 ms
+2024-05-28T14:54:09.6648248+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:54:09.6671013+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.2574 ms
+2024-05-28T14:54:09.6947490+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:54:09.6972611+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 7.6503 ms
+2024-05-28T14:54:09.7199399+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:54:09.7232350+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 10.9385 ms
+2024-05-28T14:56:51.8688861+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:56:51.8712869+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 7.6944 ms
+2024-05-28T14:56:52.2009721+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:56:52.2030286+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 6.3917 ms
+2024-05-28T14:56:52.2732768+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:56:52.2757045+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 8.8285 ms
+2024-05-28T14:56:52.3091397+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:56:52.3122960+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 8.5891 ms
+2024-05-28T14:56:52.3334310+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:56:52.3355418+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 9.1311 ms
+2024-05-28T14:59:05.4778806+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T14:59:05.4806971+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 9.6714 ms
+2024-05-28T14:59:05.8508991+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T14:59:05.8534562+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 9.7887 ms
+2024-05-28T14:59:05.9161689+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T14:59:05.9183761+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 7.2660 ms
+2024-05-28T14:59:05.9552566+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T14:59:05.9682617+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 23.5270 ms
+2024-05-28T14:59:05.9842681+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T14:59:05.9861181+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 7.5652 ms
+2024-05-28T15:01:12.1985763+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T15:01:12.2005923+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 9.1045 ms
+2024-05-28T15:01:12.5211281+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T15:01:12.5234836+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 6.7466 ms
+2024-05-28T15:01:12.5828304+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T15:01:12.5851175+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 6.2831 ms
+2024-05-28T15:01:12.6060576+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T15:01:12.6077611+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 5.0160 ms
+2024-05-28T15:01:12.6221121+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T15:01:12.6237447+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 5.3311 ms
+2024-05-28T16:47:22.9136009+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTienNghi], [t].[TenTienNghi], [t].[TrangThai]
+FROM [TienNghi] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-05-28T16:47:22.9158021+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tien-nghi/get-all" responded 200 in 31.8004 ms
+2024-05-28T16:47:23.5032864+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [k].[IDKhachHang], [k].[CCCD], [k].[ChiNhanhNganHang], [k].[DiaChiHienTai], [k].[DiaChiThuongTru], [k].[Email], [k].[GPLX], [k].[HoTen], [k].[IDLoaiKH], [k].[NganHang], [k].[NgaySinh], [k].[PassWord], [k].[SoDienThoai], [k].[SoDienThoaiDuPhong], [k].[SoDienThoaiNguoiThamChieu], [k].[SoPassPort], [k].[SoTaiKhoan], [k].[TrangThai]
+FROM [KhachHang] AS [k]
+WHERE [k].[TrangThai] <> N'Da xoa' OR ([k].[TrangThai] IS NULL)"
+2024-05-28T16:47:23.5059914+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/khach-hang/get-all" responded 200 in 9.0909 ms
+2024-05-28T16:47:23.5634020+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [n].[IDNhanVien], [n].[CCCD], [n].[ChiNhanhNganHang], [n].[DiaChi], [n].[Email], [n].[HeSoLuong], [n].[HoTen], [n].[IDChucVu], [n].[IDPhongBan], [n].[NganHang], [n].[NgayNghiViec], [n].[NgaySinh], [n].[NgayVaoLam], [n].[PassWord], [n].[SoDienThoai], [n].[SoTaiKhoan], [n].[TrangThai]
+FROM [NhanVien] AS [n]
+WHERE [n].[TrangThai] <> N'Da xoa' OR ([n].[TrangThai] IS NULL)"
+2024-05-28T16:47:23.5652518+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/nhan-vien/get-all" responded 200 in 10.3925 ms
+2024-05-28T16:47:23.5859844+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [l].[IDLoaiXe], [l].[GiaThue], [l].[TenLoaiXe], [l].[TrangThai]
+FROM [LoaiXe] AS [l]
+WHERE [l].[TrangThai] <> N'Da xoa' OR ([l].[TrangThai] IS NULL)"
+2024-05-28T16:47:23.5875627+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/loai-xe/get-all" responded 200 in 4.8535 ms
+2024-05-28T16:47:23.6017808+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T16:47:23.6034389+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/hopdong-kygui/get-all" responded 200 in 6.0491 ms
+2024-05-28T22:08:31.1094250+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("55"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:08:31.2743751+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("57"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:08:31.2895859+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:08:31.3050125+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:08:31.3535470+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T22:08:31.3868064+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T22:08:34.1905036+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T22:08:34.1921803+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T22:08:34.1967785+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T22:08:34.1989961+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T22:08:34.2003514+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T22:12:12.5611496+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("184"ms) [Parameters=["@__model_IDHopDongThueXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongThueXe] AS [h]
+        WHERE [h].[IDHopDongThueXe] = @__model_IDHopDongThueXe_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T22:12:13.0668693+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("21"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 450), @p9='?' (Size = 450), @p10='?' (Size = 450), @p11='?' (DbType = DateTime2), @p12='?' (DbType = DateTime2), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Double), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Double), @p22='?' (DbType = Double), @p23='?' (DbType = Double), @p24='?' (DbType = Double), @p25='?' (Size = 4000), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [HopDongThueXe] ([IDHopDongThueXe], [DinhKyThanhToan], [GiaThue], [HinhAnhHopDong], [IDKMLoaiKH], [IDKMLoaiXe], [IDKMTrenHoaDon], [IDKMVoucher], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhuongThucThanhToan], [SoHopDong], [SoTienCoc], [TenKMLoaiKH], [TenKMLoaiXe], [TenKMVoucher], [ThoiDiemThanhToan], [TienThanhToanTheoDot], [TienThanhToanTheoDotChuaKM], [TongThanhTienDuKien], [TongThanhTienDuKienSauKM], [TrangThai], [UpdateAt], [UpdateBy], [VoucherCode], [XacNhan])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29);"
+2024-05-28T22:12:13.1072840+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-thuexe/add" responded 200 in 2174.2339 ms
+2024-05-28T22:13:52.4065086+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:13:52.6107599+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:13:52.6196245+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:13:52.6254187+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:13:52.6648177+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T22:13:52.6952954+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T22:13:53.8845758+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T22:13:53.8873882+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T22:13:53.8935380+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T22:13:53.8955840+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T22:13:53.8969685+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T22:15:56.1506473+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("45"ms) [Parameters=["@__model_IDHopDongThueXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongThueXe] AS [h]
+        WHERE [h].[IDHopDongThueXe] = @__model_IDHopDongThueXe_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T22:16:01.2553003+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongThueXe], [h].[DinhKyThanhToan], [h].[GiaThue], [h].[HinhAnhHopDong], [h].[IDKMLoaiKH], [h].[IDKMLoaiXe], [h].[IDKMTrenHoaDon], [h].[IDKMVoucher], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[SoTienCoc], [h].[TenKMLoaiKH], [h].[TenKMLoaiXe], [h].[TenKMVoucher], [h].[ThoiDiemThanhToan], [h].[TienThanhToanTheoDot], [h].[TienThanhToanTheoDotChuaKM], [h].[TongThanhTienDuKien], [h].[TongThanhTienDuKienSauKM], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[VoucherCode], [h].[XacNhan]
+FROM [HopDongThueXe] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL)"
+2024-05-28T22:16:40.9595904+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=["@__xe_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDXe] = @__xe_IDXe_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:17:06.6911877+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHoaDonKyGui], [h].[HinhThucThanhToan], [h].[IDHopDongKyGui], [h].[IDKhachHang], [h].[IDNhanVien], [h].[NgayLap], [h].[SoHoaDon], [h].[SoHoaDonThue], [h].[TongThanhToan], [h].[TrangThai], [h].[TrangThaiThanhToan], [h].[UpdateAt], [h].[UpdateBy]
+FROM [HoaDonKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL) OR ([h].[TrangThai] IS NULL)"
+2024-05-28T22:17:31.5806902+07:00 [ERR] (Microsoft.EntityFrameworkCore.Database.Command) Failed executing DbCommand ("45"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Double), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 450), @p14='?' (Size = 4000), @p15='?' (DbType = Double), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 450), @p22='?' (Size = 450), @p23='?' (Size = 450), @p24='?' (DbType = DateTime2), @p25='?' (DbType = DateTime2), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Double), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = Int32), @p34='?' (DbType = Double), @p35='?' (DbType = Double), @p36='?' (DbType = Double), @p37='?' (DbType = Double), @p38='?' (Size = 4000), @p39='?' (DbType = DateTime2), @p40='?' (Size = 4000), @p41='?' (Size = 4000), @p42='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET NOCOUNT ON;
+INSERT INTO [HoaDonKyGui] ([IDHoaDonKyGui], [HinhThucThanhToan], [IDHopDongKyGui], [IDKhachHang], [IDNhanVien], [NgayLap], [SoHoaDon], [SoHoaDonThue], [TongThanhToan], [TrangThai], [TrangThaiThanhToan], [UpdateAt], [UpdateBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+INSERT INTO [HopDongThueXe] ([IDHopDongThueXe], [DinhKyThanhToan], [GiaThue], [HinhAnhHopDong], [IDKMLoaiKH], [IDKMLoaiXe], [IDKMTrenHoaDon], [IDKMVoucher], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhuongThucThanhToan], [SoHopDong], [SoTienCoc], [TenKMLoaiKH], [TenKMLoaiXe], [TenKMVoucher], [ThoiDiemThanhToan], [TienThanhToanTheoDot], [TienThanhToanTheoDotChuaKM], [TongThanhTienDuKien], [TongThanhTienDuKienSauKM], [TrangThai], [UpdateAt], [UpdateBy], [VoucherCode], [XacNhan])
+VALUES (@p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42);"
+2024-05-28T22:17:31.6295070+07:00 [ERR] (Microsoft.EntityFrameworkCore.Update) An exception occurred in the database while saving changes for context type '"CarRental.Repository.Infrastructure.AppDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.HopDongThueXe' with unique index 'IX_HopDongThueXe_IDXe'. The duplicate key value is (X001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:9aa2f01e-8cb6-47b2-bdbb-4cc72a1b9eaa
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.HopDongThueXe' with unique index 'IX_HopDongThueXe_IDXe'. The duplicate key value is (X001).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:9aa2f01e-8cb6-47b2-bdbb-4cc72a1b9eaa
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-05-28T22:17:37.0669095+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-thuexe/add" responded 400 in 108237.2433 ms
+2024-05-28T22:19:47.8618577+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:19:48.0914947+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("107"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:19:48.1031055+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:19:48.1090114+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:19:48.1514151+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T22:19:48.1984355+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T22:19:49.1551032+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T22:19:49.1571070+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T22:19:49.1620150+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T22:19:49.1646342+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T22:19:49.1662320+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T22:21:55.1217467+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("133"ms) [Parameters=["@__model_IDHopDongThueXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [HopDongThueXe] AS [h]
+        WHERE [h].[IDHopDongThueXe] = @__model_IDHopDongThueXe_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2024-05-28T22:21:55.2230389+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=["@__model_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[IDXe] = @__model_IDXe_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))"
+2024-05-28T22:21:55.2510212+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=["@__xe_IDXe_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDXe] = @__xe_IDXe_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:21:55.2815106+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [h].[IDHoaDonKyGui], [h].[HinhThucThanhToan], [h].[IDHopDongKyGui], [h].[IDKhachHang], [h].[IDNhanVien], [h].[NgayLap], [h].[SoHoaDon], [h].[SoHoaDonThue], [h].[TongThanhToan], [h].[TrangThai], [h].[TrangThaiThanhToan], [h].[UpdateAt], [h].[UpdateBy]
+FROM [HoaDonKyGui] AS [h]
+WHERE [h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL) OR ([h].[TrangThai] IS NULL)"
+2024-05-28T22:21:55.8063942+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("21"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Double), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 450), @p14='?' (Size = 4000), @p15='?' (DbType = Double), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Size = 450), @p22='?' (Size = 450), @p23='?' (Size = 450), @p24='?' (DbType = DateTime2), @p25='?' (DbType = DateTime2), @p26='?' (DbType = DateTime2), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (DbType = Double), @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?' (DbType = Int32), @p34='?' (DbType = Double), @p35='?' (DbType = Double), @p36='?' (DbType = Double), @p37='?' (DbType = Double), @p38='?' (Size = 4000), @p39='?' (DbType = DateTime2), @p40='?' (Size = 4000), @p41='?' (Size = 4000), @p42='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET NOCOUNT ON;
+INSERT INTO [HoaDonKyGui] ([IDHoaDonKyGui], [HinhThucThanhToan], [IDHopDongKyGui], [IDKhachHang], [IDNhanVien], [NgayLap], [SoHoaDon], [SoHoaDonThue], [TongThanhToan], [TrangThai], [TrangThaiThanhToan], [UpdateAt], [UpdateBy])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+INSERT INTO [HopDongThueXe] ([IDHopDongThueXe], [DinhKyThanhToan], [GiaThue], [HinhAnhHopDong], [IDKMLoaiKH], [IDKMLoaiXe], [IDKMTrenHoaDon], [IDKMVoucher], [IDKhachHang], [IDNhanVien], [IDXe], [NgayHetHan], [NgayHieuLuc], [NgayLap], [PhuongThucThanhToan], [SoHopDong], [SoTienCoc], [TenKMLoaiKH], [TenKMLoaiXe], [TenKMVoucher], [ThoiDiemThanhToan], [TienThanhToanTheoDot], [TienThanhToanTheoDotChuaKM], [TongThanhTienDuKien], [TongThanhTienDuKienSauKM], [TrangThai], [UpdateAt], [UpdateBy], [VoucherCode], [XacNhan])
+VALUES (@p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42);"
+2024-05-28T22:21:55.8617230+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "POST" "/api/hopdong-thuexe/add" responded 200 in 2202.0634 ms
+2024-05-28T22:36:07.8266793+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:36:08.0247499+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("62"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:36:08.0392057+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-05-28T22:36:08.0545208+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-05-28T22:36:08.0989017+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-05-28T22:36:08.1330634+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-05-28T22:36:10.4108705+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-05-28T22:36:10.4129244+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-05-28T22:36:10.4183748+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-05-28T22:36:10.4207291+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-05-28T22:36:10.4217906+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental"
+2024-05-28T22:36:58.8346035+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("86"ms) [Parameters=["@__Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDHopDongKyGui] = @__Id_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:36:59.0160460+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__model_IDHopDongKyGui_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDHopDongKyGui] = @__model_IDHopDongKyGui_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:36:59.3454620+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("36"ms) [Parameters=["@p16='?' (Size = 450), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (Size = 450), @p4='?' (Size = 450), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Double), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [HopDongKyGui] SET [DinhKyThanhToan] = @p0, [HinhAnhHopDong] = @p1, [IDKhachHang] = @p2, [IDNhanVien] = @p3, [IDXe] = @p4, [NgayHetHan] = @p5, [NgayHieuLuc] = @p6, [NgayLap] = @p7, [PhanTramHoaHong] = @p8, [PhuongThucThanhToan] = @p9, [SoHopDong] = @p10, [ThoiDiemThanhToan] = @p11, [TrangThai] = @p12, [UpdateAt] = @p13, [UpdateBy] = @p14, [XacNhan] = @p15
+OUTPUT 1
+WHERE [IDHopDongKyGui] = @p16;"
+2024-05-28T22:36:59.3923216+07:00 [ERR] (Microsoft.EntityFrameworkCore.Update) An exception occurred in the database while saving changes for context type '"CarRental.Repository.Infrastructure.AppDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint \"FK_HopDongKyGui_KhachHang_IDKhachHang\". The conflict occurred in database \"DB_CarRental\", table \"dbo.KhachHang\", column 'IDKhachHang'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:222df0b9-86b6-4df2-8703-472c2014d9b1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_HopDongKyGui_KhachHang_IDKhachHang". The conflict occurred in database "DB_CarRental", table "dbo.KhachHang", column 'IDKhachHang'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:222df0b9-86b6-4df2-8703-472c2014d9b1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-05-28T22:36:59.6704335+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "PUT" "/api/hopdong-kygui/update/HDKG001" responded 400 in 2439.7406 ms
+2024-05-28T22:37:41.7536099+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=["@__Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDHopDongKyGui] = @__Id_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:37:41.7651170+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=["@__model_IDHopDongKyGui_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [h].[IDHopDongKyGui], [h].[DinhKyThanhToan], [h].[HinhAnhHopDong], [h].[IDKhachHang], [h].[IDNhanVien], [h].[IDXe], [h].[NgayHetHan], [h].[NgayHieuLuc], [h].[NgayLap], [h].[PhanTramHoaHong], [h].[PhuongThucThanhToan], [h].[SoHopDong], [h].[ThoiDiemThanhToan], [h].[TrangThai], [h].[UpdateAt], [h].[UpdateBy], [h].[XacNhan]
+FROM [HopDongKyGui] AS [h]
+WHERE [h].[IDHopDongKyGui] = @__model_IDHopDongKyGui_0 AND ([h].[TrangThai] <> N'Da xoa' OR ([h].[TrangThai] IS NULL))"
+2024-05-28T22:37:41.7996223+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("23"ms) [Parameters=["@p16='?' (Size = 450), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 450), @p3='?' (Size = 450), @p4='?' (Size = 450), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Double), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Int32), @p12='?' (Size = 4000), @p13='?' (DbType = DateTime2), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean)"], CommandType='Text', CommandTimeout='1200']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [HopDongKyGui] SET [DinhKyThanhToan] = @p0, [HinhAnhHopDong] = @p1, [IDKhachHang] = @p2, [IDNhanVien] = @p3, [IDXe] = @p4, [NgayHetHan] = @p5, [NgayHieuLuc] = @p6, [NgayLap] = @p7, [PhanTramHoaHong] = @p8, [PhuongThucThanhToan] = @p9, [SoHopDong] = @p10, [ThoiDiemThanhToan] = @p11, [TrangThai] = @p12, [UpdateAt] = @p13, [UpdateBy] = @p14, [XacNhan] = @p15
+OUTPUT 1
+WHERE [IDHopDongKyGui] = @p16;"
+2024-05-28T22:37:41.8062477+07:00 [ERR] (Microsoft.EntityFrameworkCore.Update) An exception occurred in the database while saving changes for context type '"CarRental.Repository.Infrastructure.AppDbContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint \"FK_HopDongKyGui_KhachHang_IDKhachHang\". The conflict occurred in database \"DB_CarRental\", table \"dbo.KhachHang\", column 'IDKhachHang'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:222df0b9-86b6-4df2-8703-472c2014d9b1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_HopDongKyGui_KhachHang_IDKhachHang". The conflict occurred in database "DB_CarRental", table "dbo.KhachHang", column 'IDKhachHang'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+ClientConnectionId:222df0b9-86b6-4df2-8703-472c2014d9b1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-05-28T22:37:41.8768084+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "PUT" "/api/hopdong-kygui/update/HDKG001" responded 400 in 282.0918 ms

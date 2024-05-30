@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CarRental.Contract.Repository
-build_property.ProjectDir = D:\DuAnThueXe\WebAPI_CarRental\CarRental.Contract.Repository\
+build_property.ProjectDir = D:\HOCTAP_HUFI\HOCKY8_23_24\KhoaLuanTotNghiep\Project_KhoaLuan\WebAPI_CarRental\CarRental.Contract.Repository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

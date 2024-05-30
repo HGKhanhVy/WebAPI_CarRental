@@ -1,0 +1,981 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\hoadonkyguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\hoadonkyguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\hoadonkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\hoadonkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\phongbanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\phongbanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\interface\\iphongbanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\interface\\iphongbanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\chucvuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\chucvuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\kmloaikhservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\kmloaikhservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\lib\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\lib\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\ihoadonkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\ihoadonkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\hoadonthuexeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\hoadonthuexeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\vnpay\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\vnpay\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\xeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\xeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\ixeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\ixeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\base\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\base\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\userpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\userpermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\tiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\tiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\interface\\iloaikhachhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\interface\\iloaikhachhangrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\base\\baserepository{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\base\\baserepository{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\base\\basedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\base\\basedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\appsettingsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\appsettingsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\interface\\ichucvurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\interface\\ichucvurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\carrental.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\carrental.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\libraries\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\libraries\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\kmloaixecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\kmloaixecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\vnpay\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\vnpay\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\vnpay\\paymentinformationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\vnpay\\paymentinformationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\vnpay\\paymentresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\vnpay\\paymentresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\hopdongkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\hopdongkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\xecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\xecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\khachhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\khachhangservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\hopdongkyguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\hopdongkyguicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\hopdongthuexeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\hopdongthuexeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\ihopdongkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\ihopdongkyguiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\migrations\\20240529071320_addimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\migrations\\20240529071320_addimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\models\\xeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\models\\xeentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\xe\\xemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\xe\\xemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\models\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.repository\\nhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7028998C-CB8B-4CE2-9133-60C995980445}|CarRental.Repository\\CarRental.Repository.csproj|solutionrelative:carrental.repository\\nhanvienrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15ECC9D-F576-4ACB-A955-C199A63249FC}|CarRental.Mapper\\CarRental.Mapper.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.mapper\\xeprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15ECC9D-F576-4ACB-A955-C199A63249FC}|CarRental.Mapper\\CarRental.Mapper.csproj|solutionrelative:carrental.mapper\\xeprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\tiennghicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\tiennghicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.repository\\ibase\\ibaserepository{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B507B232-528C-46A8-9A88-DA96BECA6E52}|CarRental.Contract.Repository\\CarRental.Contract.Repository.csproj|solutionrelative:carrental.contract.repository\\ibase\\ibaserepository{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15ECC9D-F576-4ACB-A955-C199A63249FC}|CarRental.Mapper\\CarRental.Mapper.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.mapper\\chucvuprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15ECC9D-F576-4ACB-A955-C199A63249FC}|CarRental.Mapper\\CarRental.Mapper.csproj|solutionrelative:carrental.mapper\\chucvuprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\base\\iupdateable{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\base\\iupdateable{t}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\hoadonthuexecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\hoadonthuexecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\xetiennghi\\xetiennghimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\xetiennghi\\xetiennghimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\xetiennghicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\xetiennghicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.service\\xetiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F3C61CB-8DB5-41E0-8CCB-BD0A2D194640}|CarRental.Service\\CarRental.Service.csproj|solutionrelative:carrental.service\\xetiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\ixetiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\ixetiennghiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\base\\icreateablelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\base\\icreateablelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.contract.service\\base\\icreateable{t,tkey}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BDFFD3F-67F6-4371-9527-075E2D156FDF}|CarRental.Contract.Service\\CarRental.Contract.Service.csproj|solutionrelative:carrental.contract.service\\base\\icreateable{t,tkey}.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental.core\\models\\xetiennghi\\xetiennghismodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3BC3B-6486-4539-9C7E-F67A7AA73542}|CarRental.Core\\CarRental.Core.csproj|solutionrelative:carrental.core\\models\\xetiennghi\\xetiennghismodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|d:\\hoctap_hufi\\hocky8_23_24\\khoaluantotnghiep\\project_khoaluan\\webapi_carrental\\carrental\\controllers\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CFF2E06-DCCD-4FDC-9DC5-1B757BD9A851}|CarRental\\CarRental.csproj|solutionrelative:carrental\\controllers\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HoaDonKyGuiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HoaDonKyGuiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\HoaDonKyGuiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HoaDonKyGuiService.cs",
+              "RelativeToolTip": "CarRental.Service\\HoaDonKyGuiService.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAUwJEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:34:29.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDonKyGuiController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HoaDonKyGuiController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\HoaDonKyGuiController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HoaDonKyGuiController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\HoaDonKyGuiController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T14:56:09.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\Lib\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\Lib\\VnPayLibrary.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\Lib\\VnPayLibrary.cs",
+              "RelativeToolTip": "CarRental.Service\\Lib\\VnPayLibrary.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAMcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:38:40.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IHoaDonKyGuiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IHoaDonKyGuiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\IHoaDonKyGuiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IHoaDonKyGuiService.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\IHoaDonKyGuiService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:33:26.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Service.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\Base\\Service.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\Base\\Service.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\Base\\Service.cs",
+              "RelativeToolTip": "CarRental.Service\\Base\\Service.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:52:54.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Startup.cs",
+              "RelativeDocumentMoniker": "CarRental\\Startup.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Startup.cs",
+              "RelativeToolTip": "CarRental\\Startup.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAzwGEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:47:28.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\appsettings.json",
+              "RelativeDocumentMoniker": "CarRental\\appsettings.json",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\appsettings.json",
+              "RelativeToolTip": "CarRental\\appsettings.json",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-30T14:25:14.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KMLoaiKHService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\KMLoaiKHService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\KMLoaiKHService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\KMLoaiKHService.cs",
+              "RelativeToolTip": "CarRental.Service\\KMLoaiKHService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:40:28.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChucVuService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\ChucVuService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\ChucVuService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\ChucVuService.cs",
+              "RelativeToolTip": "CarRental.Service\\ChucVuService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:40:32.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPhongBanRepository.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\IPhongBanRepository.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\Interface\\IPhongBanRepository.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\IPhongBanRepository.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\Interface\\IPhongBanRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:40:40.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PhongBanRepository.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\PhongBanRepository.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\PhongBanRepository.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\PhongBanRepository.cs",
+              "RelativeToolTip": "CarRental.Repository\\PhongBanRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:40:44.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IXeService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IXeService.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\IXeService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IXeService.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\IXeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:31:17.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "XeService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\XeService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\XeService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\XeService.cs",
+              "RelativeToolTip": "CarRental.Service\\XeService.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:28:15.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VnPayService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\VnPay\\VnPayService.cs",
+              "RelativeDocumentMoniker": "CarRental\\VnPay\\VnPayService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\VnPay\\VnPayService.cs",
+              "RelativeToolTip": "CarRental\\VnPay\\VnPayService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:02:50.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HoaDonThueXeService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HoaDonThueXeService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\HoaDonThueXeService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HoaDonThueXeService.cs",
+              "RelativeToolTip": "CarRental.Service\\HoaDonThueXeService.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAACgAAACQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T14:56:28.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserPermissionService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\UserPermissionService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\UserPermissionService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\UserPermissionService.cs",
+              "RelativeToolTip": "CarRental.Service\\UserPermissionService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:56:39.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\UserService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\UserService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\UserService.cs",
+              "RelativeToolTip": "CarRental.Service\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:57:52.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TienNghiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\TienNghiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\TienNghiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\TienNghiService.cs",
+              "RelativeToolTip": "CarRental.Service\\TienNghiService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:56:07.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\RoomService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\RoomService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\RoomService.cs",
+              "RelativeToolTip": "CarRental.Service\\RoomService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:56:02.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ILoaiKhachHangRepository.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\ILoaiKhachHangRepository.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\Interface\\ILoaiKhachHangRepository.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\ILoaiKhachHangRepository.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\Interface\\ILoaiKhachHangRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:54:48.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseRepository{T}.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Base\\BaseRepository{T}.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\Base\\BaseRepository{T}.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Base\\BaseRepository{T}.cs",
+              "RelativeToolTip": "CarRental.Repository\\Base\\BaseRepository{T}.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:53:51.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseDbContext.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Base\\BaseDbContext.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\Base\\BaseDbContext.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Base\\BaseDbContext.cs",
+              "RelativeToolTip": "CarRental.Repository\\Base\\BaseDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:53:50.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettingsconfig.json",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\appsettingsconfig.json",
+              "RelativeDocumentMoniker": "CarRental.Repository\\appsettingsconfig.json",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\appsettingsconfig.json",
+              "RelativeToolTip": "CarRental.Repository\\appsettingsconfig.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-30T14:53:43.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IChucVuRepository.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\IChucVuRepository.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\Interface\\IChucVuRepository.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Interface\\IChucVuRepository.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\Interface\\IChucVuRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:53:31.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "KMLoaiXeController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\KMLoaiXeController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\KMLoaiXeController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\KMLoaiXeController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\KMLoaiXeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:33:26.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\VnPay\\ErrorViewModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\ErrorViewModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\VnPay\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:32:47.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CarRental",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\CarRental.csproj",
+              "RelativeDocumentMoniker": "CarRental\\CarRental.csproj",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\CarRental.csproj",
+              "RelativeToolTip": "CarRental\\CarRental.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-30T14:28:34.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Program.cs",
+              "RelativeDocumentMoniker": "CarRental\\Program.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Program.cs",
+              "RelativeToolTip": "CarRental\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:51:04.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PaymentInformationModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\PaymentInformationModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\VnPay\\PaymentInformationModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\PaymentInformationModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\VnPay\\PaymentInformationModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:31:47.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PaymentResponseModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\PaymentResponseModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\VnPay\\PaymentResponseModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\VnPay\\PaymentResponseModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\VnPay\\PaymentResponseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:32:13.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\libraries\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "CarRental\\libraries\\VnPayLibrary.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\libraries\\VnPayLibrary.cs",
+              "RelativeToolTip": "CarRental\\libraries\\VnPayLibrary.cs",
+              "ViewState": "AQIAALQAAAAAAAAAAAAAAMIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T14:29:40.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "HopDongKyGuiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HopDongKyGuiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\HopDongKyGuiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HopDongKyGuiService.cs",
+              "RelativeToolTip": "CarRental.Service\\HopDongKyGuiService.cs",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAzwJEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:26:42.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "HopDongThueXeService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HopDongThueXeService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\HopDongThueXeService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\HopDongThueXeService.cs",
+              "RelativeToolTip": "CarRental.Service\\HopDongThueXeService.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAqwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T14:56:52.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NhanVienService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\NhanVienService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\NhanVienService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\NhanVienService.cs",
+              "RelativeToolTip": "CarRental.Service\\NhanVienService.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAEEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:32:07.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "XeController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\XeController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\XeController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\XeController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\XeController.cs",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAYwMMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T08:30:39.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IHopDongKyGuiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IHopDongKyGuiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\IHopDongKyGuiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IHopDongKyGuiService.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\IHopDongKyGuiService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T02:30:18.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "KhachHangService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\KhachHangService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\KhachHangService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\KhachHangService.cs",
+              "RelativeToolTip": "CarRental.Service\\KhachHangService.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADcAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T13:57:05.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HopDongKyGuiController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HopDongKyGuiController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\HopDongKyGuiController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HopDongKyGuiController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\HopDongKyGuiController.cs",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAzwNYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T01:49:19.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\Infrastructure\\AppDbContext.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "CarRental.Repository\\Infrastructure\\AppDbContext.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:11:18.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "XeEntity.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Models\\XeEntity.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\Models\\XeEntity.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Models\\XeEntity.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\Models\\XeEntity.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:11:45.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Models\\UserEntity.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\Models\\UserEntity.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\Models\\UserEntity.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\Models\\UserEntity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:11:44.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "XeProfile.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Mapper\\XeProfile.cs",
+              "RelativeDocumentMoniker": "CarRental.Mapper\\XeProfile.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Mapper\\XeProfile.cs",
+              "RelativeToolTip": "CarRental.Mapper\\XeProfile.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:10:41.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "NhanVienRepository.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\NhanVienRepository.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\NhanVienRepository.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\NhanVienRepository.cs",
+              "RelativeToolTip": "CarRental.Repository\\NhanVienRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:11:07.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20240529071320_addimage.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Migrations\\20240529071320_addimage.cs",
+              "RelativeDocumentMoniker": "CarRental.Repository\\Migrations\\20240529071320_addimage.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Repository\\Migrations\\20240529071320_addimage.cs",
+              "RelativeToolTip": "CarRental.Repository\\Migrations\\20240529071320_addimage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T07:13:21.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "XeModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\Xe\\XeModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\Xe\\XeModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\Xe\\XeModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\Xe\\XeModel.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB0AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T01:53:55.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TienNghiController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\TienNghiController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\TienNghiController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\TienNghiController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\TienNghiController.cs",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAiwLEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T02:15:51.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IUpdateable{T}.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\IUpdateable{T}.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\Base\\IUpdateable{T}.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\IUpdateable{T}.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\Base\\IUpdateable{T}.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T15:26:01.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ChucVuProfile.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Mapper\\ChucVuProfile.cs",
+              "RelativeDocumentMoniker": "CarRental.Mapper\\ChucVuProfile.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Mapper\\ChucVuProfile.cs",
+              "RelativeToolTip": "CarRental.Mapper\\ChucVuProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T15:27:11.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IBaseRepository{T}.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\IBase\\IBaseRepository{T}.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Repository\\IBase\\IBaseRepository{T}.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Repository\\IBase\\IBaseRepository{T}.cs",
+              "RelativeToolTip": "CarRental.Contract.Repository\\IBase\\IBaseRepository{T}.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T15:27:29.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "HoaDonThueXeController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HoaDonThueXeController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\HoaDonThueXeController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\HoaDonThueXeController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\HoaDonThueXeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T14:56:08.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "XeTienNghiController.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\XeTienNghiController.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\XeTienNghiController.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\XeTienNghiController.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\XeTienNghiController.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAADwv1UAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:59:22.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "XeTienNghiModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\XeTienNghi\\XeTienNghiModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\XeTienNghi\\XeTienNghiModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\XeTienNghi\\XeTienNghiModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\XeTienNghi\\XeTienNghiModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:32:43.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "XeTienNghiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\XeTienNghiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Service\\XeTienNghiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Service\\XeTienNghiService.cs",
+              "RelativeToolTip": "CarRental.Service\\XeTienNghiService.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAADwv6gAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:32:52.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IXeTienNghiService.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IXeTienNghiService.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\IXeTienNghiService.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\IXeTienNghiService.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\IXeTienNghiService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADgvxMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:32:37.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ICreateable{T,TKey}.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\ICreateable{T,TKey}.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\Base\\ICreateable{T,TKey}.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\ICreateable{T,TKey}.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\Base\\ICreateable{T,TKey}.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:31:30.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "XeTienNghiSModel.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\XeTienNghi\\XeTienNghiSModel.cs",
+              "RelativeDocumentMoniker": "CarRental.Core\\Models\\XeTienNghi\\XeTienNghiSModel.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Core\\Models\\XeTienNghi\\XeTienNghiSModel.cs",
+              "RelativeToolTip": "CarRental.Core\\Models\\XeTienNghi\\XeTienNghiSModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:39:02.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ICreateableList.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\ICreateableList.cs",
+              "RelativeDocumentMoniker": "CarRental.Contract.Service\\Base\\ICreateableList.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental.Contract.Service\\Base\\ICreateableList.cs",
+              "RelativeToolTip": "CarRental.Contract.Service\\Base\\ICreateableList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:44:17.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "CarRental\\Controllers\\NotificationHub.cs",
+              "ToolTip": "D:\\HOCTAP_HUFI\\HOCKY8_23_24\\KhoaLuanTotNghiep\\Project_KhoaLuan\\WebAPI_CarRental\\CarRental\\Controllers\\NotificationHub.cs",
+              "RelativeToolTip": "CarRental\\Controllers\\NotificationHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T14:22:50.751Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
