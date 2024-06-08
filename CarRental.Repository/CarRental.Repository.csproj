@@ -40,8 +40,4 @@
     <ProjectReference Include="..\CarRental.Contract.Repository\CarRental.Contract.Repository.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

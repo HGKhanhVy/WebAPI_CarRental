@@ -23,23 +23,37 @@ namespace CarRental.Service
     {
 
         private readonly IKhachHangRepository _khRepository;
+        private readonly INhanVienRepository _nvRepository;
         private readonly IMapper _mapper;
         ILogger _logger;
 
         public KhachHangService(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             _khRepository = serviceProvider.GetRequiredService<IKhachHangRepository>();
+            _nvRepository = serviceProvider.GetRequiredService<INhanVienRepository>();
             _mapper = serviceProvider.GetRequiredService<IMapper>();
             _logger = Log.Logger;
         }
 
         public Task<string> CreateAsync(KhachHangModel model, CancellationToken cancellationToken = default)
         {
-            if (_khRepository.Get(_ => _.IDKhachHang.Equals(model.IDKhachHang) && !_.TrangThai.Equals("Da xoa")).Any())
+            if (_khRepository.Get(_ => _.IDKhachHang.Equals(model.IDKhachHang) 
+            || _.SoTaiKhoan.Equals(model.SoTaiKhoan)
+            || _.Email.Equals(model.Email)
+            || _.CCCD.Equals(model.CCCD)
+            && !_.TrangThai.Equals("Da xoa")).Any())
             {
                 _logger.Information(ErrorCode.NotUnique, model.IDKhachHang);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
+            if(_nvRepository.Get(_ => _.Email.Equals(model.Email) && !_.TrangThai.Equals("Da xoa")).Any()){
+                _logger.Information(ErrorCode.NotUnique, model.IDKhachHang);
+                throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+            }
+            int count = _khRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
+            count += 1;
+            string maKH = "KH00" + count.ToString();
+            model.IDKhachHang = maKH;
             var entity = _mapper.Map<KhachHangEntity>(model);
             entity.IDKhachHang = model.IDKhachHang;
             _khRepository.Add(entity);
@@ -76,6 +90,16 @@ namespace CarRental.Service
         public Task UpdateAsync(string Id, KhachHangModel model, CancellationToken cancellationToken = default)
         {
             var entity = _khRepository.GetTracking(x => x.IDKhachHang.Equals(Id) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+            var isDuplicateUpdate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDKhachHang)
+                                    || x.Email.Equals(model.Email)
+                                    || x.SoTaiKhoan.Equals(model.SoTaiKhoan)
+                                    || x.CCCD.Equals(model.CCCD)
+                                    && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+            if (isDuplicateUpdate != null)
+            {
+                _logger.Information(ErrorCode.NotUnique, Id);
+                throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+            }
             if (entity == null)
             {
                 _logger.Information(ErrorCode.NotFound, Id);
@@ -83,7 +107,11 @@ namespace CarRental.Service
             }
             if (model.IDKhachHang != Id)
             {
-                var isDuplicate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDKhachHang) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+                var isDuplicate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDKhachHang)
+                                    || x.Email.Equals(model.Email)
+                                    || x.SoTaiKhoan.Equals(model.SoTaiKhoan)
+                                    || x.CCCD.Equals(model.CCCD) 
+                                    && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
                 if (isDuplicate != null)
                 {
                     _logger.Information(ErrorCode.NotUnique, Id);
@@ -152,6 +180,11 @@ namespace CarRental.Service
         public Task DeleteByAnotherKeyAsync(string idAnother, bool isPhysical, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
+        }
+
+        public string getIDKhachHang()
+        {
+            return "";
         }
     }
 }

@@ -24,5 +24,9 @@ namespace CarRental.Core.Models.Xe
         public int SoChoNgoi { get; set; }
         public double GiaThue { get; set; }
         public string? MoTa { get; set; }
+        public string? HinhAnh1 { get; set;}
+        public string? HinhAnh2 { get; set; }
+        public string? HinhAnh3 { get; set; }
+        public string? HinhAnh4 { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using AngleSharp.Dom;
+using AutoMapper;
 using CarRental.Contract.Repository.Interface;
 using CarRental.Contract.Repository.Models;
 using CarRental.Contract.Service;
@@ -119,6 +120,27 @@ namespace CarRental.Service
             return (ICollection<XeTienNghiEntity>)entities;
         }
 
-
+        public Task<string> CreateableList(string keyId, string[] id, CancellationToken cancellationToken = default)
+        {
+            foreach(var item in id)
+            {
+                if (_xetnRepository.Get(_ => _.IDXe.Equals(keyId) && _.IDTienNghi.Equals(item) && !_.TrangThai.Equals("Da xoa")).Any())
+                {
+                    _logger.Information(ErrorCode.NotUnique, keyId + " - " + item);
+                    throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsXeTienNghi.XETIENNGHI_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+                }
+                XeTienNghiEntity model = new XeTienNghiEntity
+                {
+                    IDXe = keyId,
+                    IDTienNghi = item
+                };
+                var entity = _mapper.Map<XeTienNghiEntity>(model);
+                entity.IDXe = model.IDXe;
+                entity.IDTienNghi = model.IDTienNghi;
+                _xetnRepository.Add(entity);
+                UnitOfWork.SaveChange();
+            }
+            return Task.FromResult("Thanh cong");
+        }
     }
 }

@@ -19,8 +19,11 @@
         {
             private const string BaseEndpoint = "~/" + AreaName + "/hoadon-kygui";
             public const string GetHoaDonKyGui = BaseEndpoint + "/get-single" + "/{IDHoaDonKyGui}";
+            public const string ThanhToanVnPay = BaseEndpoint + "/thanh-toan";
+            public const string ThanhToanThanhCong= BaseEndpoint + "/thanh-cong";
             public const string GetAllHoaDonKyGui = BaseEndpoint + "/get-all";
             public const string AddHoaDonKyGui = BaseEndpoint + "/add";
+            public const string XacNhanThanhToanTienMat = BaseEndpoint + "/xacnhanthanhtoan" + "/{IDHoaDonKyGui}";
             public const string UpdateHoaDonKyGui = BaseEndpoint + "/update" + "/{IDHoaDonKyGui}";
             public const string DeleteHoaDonKyGui = BaseEndpoint + "/delete" + "/{IDHoaDonKyGui}";
             public const string CountHoaDonKyGui = BaseEndpoint + "/count-hoadon-kygui";
@@ -41,8 +44,10 @@
         {
             private const string BaseEndpoint = "~/" + AreaName + "/hopdong-kygui";
             public const string GetHopDongKyGui = BaseEndpoint + "/get-single" + "/{IDHopDongKyGui}";
+            public const string InhHopDong = BaseEndpoint + "/in-hop-dong" + "/{IDHopDongKyGui}";
             public const string GetAllHopDongKyGui = BaseEndpoint + "/get-all";
             public const string AddHopDongKyGui = BaseEndpoint + "/add";
+            public const string CreateHopDongKyGui = BaseEndpoint + "/create";
             public const string UpdateHopDongKyGui = BaseEndpoint + "/update" + "/{IDHopDongKyGui}";
             public const string DeleteHopDongKyGui = BaseEndpoint + "/delete" + "/{IDHopDongKyGui}";
             public const string CountHopDongKyGui = BaseEndpoint + "/count-hopdong-kygui" + "/{IDHopDongKyGui}";
@@ -63,7 +68,7 @@
         {
             private const string BaseEndpoint = "~/" + AreaName + "/khach-hang";
             public const string GetKhachHang = BaseEndpoint + "/get-single" + "/{IDKhachHang}";
-            public const string GetKhachHangBySDT = BaseEndpoint + "/get-single" + "/{SoDienThoai}";
+            public const string GetKhachHangBySDT = BaseEndpoint + "/get-singlesdt" + "/{SoDienThoai}";
             public const string GetAllKhachHang = BaseEndpoint + "/get-all";
             public const string AddKhachHang = BaseEndpoint + "/add";
             public const string UpdateKhachHang = BaseEndpoint + "/update" + "/{IDKhachHang}";
@@ -356,6 +361,7 @@
             public const string GetXeTienNghi = BaseEndpoint + "/get-single" + "/{IDXe}-{IDTienNghi}";
             public const string GetAllXeTienNghi = BaseEndpoint + "/get-all";
             public const string AddXeTienNghi = BaseEndpoint + "/add";
+            public const string AddXeTienNghiList = BaseEndpoint + "/adds";
             public const string UpdateXeTienNghi = BaseEndpoint + "/update" + "/{IDXe}-{IDTienNghi}";
             public const string DeleteXeTienNghi = BaseEndpoint + "/delete" + "/{IDXe}-{IDTienNghi}";
             public const string PrintAllXeTienNghiByIDXe = BaseEndpoint + "/print-xe-tiennghi-byidxe" + "/{IDXe}";

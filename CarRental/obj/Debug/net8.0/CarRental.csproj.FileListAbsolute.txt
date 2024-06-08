@@ -157,3 +157,13 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Mapper.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Repository.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\CarRental.Service.pdb
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\obj\Debug\net8.0\CarRental.sourcelink.json
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Aspose.Words.Pdf2Word.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Aspose.Words.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\SkiaSharp.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\osx\native\libSkiaSharp.dylib
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll

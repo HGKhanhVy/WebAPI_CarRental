@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using CarRental.Contract.Repository.Models;
 using AngleSharp;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using Microsoft.Extensions.FileProviders;
 
 namespace CarRental.WebApi
 {
@@ -103,6 +104,13 @@ namespace CarRental.WebApi
             app.UseEndpoints(endpoint =>
             {
                 endpoint.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+            var currentDirectory = Directory.GetCurrentDirectory();
+            var uploadsFolder = Path.Combine(currentDirectory, "img");
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(uploadsFolder),
+                RequestPath = "/uploads"
             });
         }
     }

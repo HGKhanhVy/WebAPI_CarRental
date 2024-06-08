@@ -15,7 +15,8 @@ namespace CarRental.Contract.Service
        Base.IUpdateable2Fields<XeTienNghiModel, string, string>,
        Base.IDeleteable2Fields<string, string, bool>,
        Base.IGetable2Fields<XeTienNghiEntity, string, string>,
-       Base.ICounteable<XeTienNghiModel, int>
+       Base.ICounteable<XeTienNghiModel, int>,
+       Base.ICreateableList<string, string>
     {
     }
 }

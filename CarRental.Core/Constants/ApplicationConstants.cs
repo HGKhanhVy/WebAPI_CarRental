@@ -25,6 +25,7 @@
         public const string HOADONKYGUI_EXISTED = "Hoa don ky gui da ton tai.";
         public const string UPDATE_HOADONKYGUI_SUCCESS = "Cap nhat hoa don ky gui thanh cong.";
         public const string DELETE_HOADONKYGUI_SUCCESS = "Xoa hoa don ky gui thanh cong.";
+        public const string THANHTOAN_HOADONKYGUI_SUCCESS = "Thanh toan hoa don thanh cong";
     }
     public class ReponseMessageConstantsHoaDonThueXe
     {

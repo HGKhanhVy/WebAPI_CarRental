@@ -1260,6 +1260,18 @@ namespace CarRental.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("HinhAnh1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HinhAnh4")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("IDLoaiXe")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");

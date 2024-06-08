@@ -23,23 +23,39 @@ namespace CarRental.Service
     {
 
         private readonly INhanVienRepository _nvRepository;
+        private readonly IKhachHangRepository _khRepository;
         private readonly IMapper _mapper;
         ILogger _logger;
 
         public NhanVienService(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             _nvRepository = serviceProvider.GetRequiredService<INhanVienRepository>();
+            _khRepository = serviceProvider.GetRequiredService<IKhachHangRepository>();
             _mapper = serviceProvider.GetRequiredService<IMapper>();
             _logger = Log.Logger;
         }
 
         public Task<string> CreateAsync(NhanVienModel model, CancellationToken cancellationToken = default)
         {
-            if (_nvRepository.Get(_ => _.IDNhanVien.Equals(model.IDNhanVien) && !_.TrangThai.Equals("Da xoa")).Any())
+            if (_nvRepository.Get(_ => _.IDNhanVien.Equals(model.IDNhanVien)
+            || _.SoTaiKhoan.Equals(model.SoTaiKhoan)
+            || _.Email.Equals(model.Email)
+            || _.SoTaiKhoan.Equals(model.SoTaiKhoan)
+            || _.CCCD.Equals(model.CCCD)
+            && !_.TrangThai.Equals("Da xoa")).Any())
             {
                 _logger.Information(ErrorCode.NotUnique, model.IDNhanVien);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsNhanVien.NHANVIEN_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
+            if (_khRepository.Get(_ => _.Email.Equals(model.Email) && !_.TrangThai.Equals("Da xoa")).Any())
+            {
+                _logger.Information(ErrorCode.NotUnique, model.IDNhanVien);
+                throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+            }
+            int count = _khRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
+            count += 1;
+            string maNV = "NV00" + count.ToString();
+            model.IDNhanVien = maNV;
             var entity = _mapper.Map<NhanVienEntity>(model);
             entity.IDNhanVien = model.IDNhanVien;
             _nvRepository.Add(entity);
@@ -76,6 +92,17 @@ namespace CarRental.Service
         public Task UpdateAsync(string Id, NhanVienModel model, CancellationToken cancellationToken = default)
         {
             var entity = _nvRepository.GetTracking(x => x.IDNhanVien.Equals(Id) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+            var isDuplicateUpdate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDNhanVien)
+                                    || x.Email.Equals(model.Email)
+                                    || x.SoTaiKhoan.Equals(model.SoTaiKhoan)
+                                    || x.CCCD.Equals(model.CCCD)
+                                    && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+            if (isDuplicateUpdate != null)
+            {
+                _logger.Information(ErrorCode.NotUnique, Id);
+                throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+            }
+
             if (entity == null)
             {
                 _logger.Information(ErrorCode.NotFound, Id);
@@ -83,7 +110,11 @@ namespace CarRental.Service
             }
             if (model.IDNhanVien != Id)
             {
-                var isDuplicate = _nvRepository.GetTracking(x => x.IDNhanVien.Equals(model.IDNhanVien) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+                var isDuplicate = _nvRepository.GetTracking(x => x.IDNhanVien.Equals(model.IDNhanVien)
+                                    || x.Email.Equals(model.Email)
+                                    || x.SoTaiKhoan.Equals(model.SoTaiKhoan)
+                                    || x.CCCD.Equals(model.CCCD)
+                                    && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
                 if (isDuplicate != null)
                 {
                     _logger.Information(ErrorCode.NotUnique, Id);

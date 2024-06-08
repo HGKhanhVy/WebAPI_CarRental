@@ -27,6 +27,10 @@ namespace CarRental.Contract.Repository.Models
         public int SoChoNgoi { get; set; }
         public double GiaThue { get; set; }
         public string? MoTa { get; set; }
+        public string? HinhAnh1 { get; set; }
+        public string? HinhAnh2 { get; set; }
+        public string? HinhAnh3 { get; set; }
+        public string? HinhAnh4 { get; set; }
 
         public HopDongKyGuiEntity HopDongKyGuis { get; set; }
         public HopDongThueXeEntity HopDongThueXes { get; set; }

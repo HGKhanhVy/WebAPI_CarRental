@@ -141,5 +141,10 @@ namespace CarRental.Service
         {
             throw new NotImplementedException();
         }
+
+        public int getIDXe()
+        {
+            return _xeRepository.Get(_ => _.TrangThai == null && !_.TrangThai.Equals("Da xoa")).ToList().Count();
+        }
     }
 }

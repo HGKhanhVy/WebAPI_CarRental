@@ -41,6 +41,10 @@ namespace CarRental.Service
                 _logger.Information(ErrorCode.NotUnique, model.IDTinTuc);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsTinTuc.TINTUC_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
+            int count = _tinRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
+            count += 1;
+            string maKH = "TT00" + count.ToString();
+            model.IDTinTuc = maKH;
             var entity = _mapper.Map<TinTucEntity>(model);
             entity.IDTinTuc = model.IDTinTuc;
             _tinRepository.Add(entity);

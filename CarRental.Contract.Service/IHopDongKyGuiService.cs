@@ -15,7 +15,11 @@ namespace CarRental.Contract.Service
        Base.IDeleteable<string, bool>,
        Base.IGetable<HopDongKyGuiEntity, string>,
        Base.ICounteable<HopDongKyGuiModel, int>,
-       Base.IPrintByID<HopDongKyGuiEntity, string>
+       Base.IPrintByID<HopDongKyGuiEntity, string>,
+       Base.IPrintHopDong<HopDongKyGuiEntity, string>
     {
+        public int getIDHopDongKyGui();
+        public Task ThanhLyHopDong(string Id);
+        public Task DuyetHopDong(string Id);
     }
 }

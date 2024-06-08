@@ -17,5 +17,6 @@ namespace CarRental.Contract.Service
        Base.ICounteable<KhachHangModel, int>,
        Base.ILogin<KhachHangEntity, string, string>
     {
+        public string getIDKhachHang();
     }
 }

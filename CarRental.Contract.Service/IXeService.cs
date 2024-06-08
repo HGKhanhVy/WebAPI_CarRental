@@ -16,5 +16,6 @@ namespace CarRental.Contract.Service
        Base.IGetable<XeEntity, string>,
        Base.ICounteable<XeModel, int>
     {
+        public int getIDXe();
     }
 }
