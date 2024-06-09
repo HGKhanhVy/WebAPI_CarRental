@@ -7,6 +7,7 @@ using CarRental.Core.Exceptions;
 using CarRental.Core.Models.HopDongKyGui;
 using CarRental.Core.Models.Login;
 using CarRental.Core.Models.ThanhLyHopDong;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Packaging;
 using Invedia.DI.Attributes;
 using Microsoft.AspNetCore.Http;
@@ -30,6 +31,7 @@ namespace CarRental.Service
         private readonly IXeRepository _xeRepository;
         private readonly IKhachHangRepository _khachHangRepository;
         private readonly IHopDongThueXeRepository _hdtxReposRepository;
+        private readonly IXeTienNghiRepository _xeTienNghiRepository;
         private readonly IMapper _mapper;
         ILogger _logger;
 
@@ -39,6 +41,7 @@ namespace CarRental.Service
             _hdtxReposRepository = serviceProvider.GetRequiredService<IHopDongThueXeRepository>();
             _xeRepository = serviceProvider.GetRequiredService<IXeRepository>();
             _khachHangRepository = serviceProvider.GetRequiredService<IKhachHangRepository>();
+            _xeTienNghiRepository = serviceProvider.GetRequiredService<IXeTienNghiRepository>();
             _mapper = serviceProvider.GetRequiredService<IMapper>();
             _logger = Log.Logger;
         }
@@ -318,6 +321,47 @@ namespace CarRental.Service
             _xeRepository.Update(xe);
 
             await UnitOfWork.SaveChangeAsync();
+        }
+
+        public HopDongKyGuiCreate ShowDetailHopDong(string Id)
+        {
+            var entity = _hdkgRepository.GetSingle(_ => _.IDHopDongKyGui.Equals(Id) && !_.TrangThai.Equals("Da xoa"));
+            if(entity == null)
+            {
+                _logger.Information(ErrorCode.NotFound, Id);
+                throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: ReponseMessageConstantsHopDongKyGui.HOPDONGKYGUI_NOT_FOUND, statusCode: StatusCodes.Status404NotFound);
+            }
+            var xe = _xeRepository.GetSingle(_ => _.IDXe.Equals(entity.IDXe) && !_.TrangThai.Equals("Da xoa"));
+            if (xe == null)
+            {
+                _logger.Information(ErrorCode.NotFound, xe.IDXe);
+                throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: ReponseMessageConstantsXe.XE_NOT_FOUND, statusCode: StatusCodes.Status404NotFound);
+            }
+            var xetiennghi = _xeTienNghiRepository.Get(_ => _.IDXe.Equals(xe.IDXe));
+            HopDongKyGuiCreate detail = new HopDongKyGuiCreate
+            {
+                IDHopDongKyGui = entity.IDHopDongKyGui,
+                SoHopDong = entity.SoHopDong,
+                NgayLap = entity.NgayLap,
+                NgayHetHan = entity.NgayHetHan,
+                NgayHieuLuc = entity.NgayHieuLuc,
+                PhanTramHoaHong = entity.PhanTramHoaHong,
+                PhuongThucThanhToan = entity.PhuongThucThanhToan,
+                IDXe = xe.IDXe,
+                NhienLieu = xe.NhienLieu,
+                TenXe = xe.TenXe,
+                BienSoXe = xe.BienSoXe,
+                HangXe = xe.HangXe,
+                NamSanXuat = xe.NamSanXuat,
+                SoChoNgoi = xe.SoChoNgoi,
+                GiaThue = xe.GiaThue,
+                MoTa = xe.MoTa,
+                HinhAnh1 = xe.HinhAnh1,
+                HinhAnh2 = xe.HinhAnh2,
+                HinhAnh3 = xe.HinhAnh3,
+                HinhAnh4 = xe.HinhAnh4            
+            };
+            return detail;
         }
     }
 }

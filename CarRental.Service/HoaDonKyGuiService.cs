@@ -22,6 +22,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AngleSharp.Dom;
+using System.Linq.Expressions;
 
 namespace CarRental.Service
 {
@@ -30,12 +31,14 @@ namespace CarRental.Service
     {
         private readonly IConfiguration _configuration;
         private readonly IHoaDonKyGuiRepository _hdkgRepository;
+        private readonly IHoaDonThueXeRepository _hdtxRepository;
         private readonly IMapper _mapper;
         ILogger _logger;
 
         public HoaDonKyGuiService(IServiceProvider serviceProvider) : base(serviceProvider)
         {
             _hdkgRepository = serviceProvider.GetRequiredService<IHoaDonKyGuiRepository>();
+            _hdtxRepository = serviceProvider.GetRequiredService<IHoaDonThueXeRepository>();
             _configuration = serviceProvider.GetRequiredService<IConfiguration>();
             _mapper = serviceProvider.GetRequiredService<IMapper>();
             _logger = Log.Logger;
@@ -245,7 +248,7 @@ namespace CarRental.Service
 
         public async Task CapNhatTrangThaiThanhToan(string Id)
         {
-            var entity = _hdkgRepository.GetTracking(x => x.IDHopDongKyGui.Equals(Id) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+            var entity = _hdkgRepository.GetTracking(x => x.IDHoaDonKyGui.Equals(Id) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
             if (entity == null)
             {
                 _logger.Information(ErrorCode.NotFound, Id);
@@ -253,15 +256,63 @@ namespace CarRental.Service
             }
 
             // Kiểm tra nếu hợp đồng đã được thanh lý
-            if (entity.TrangThai.Equals("Da thanh toan"))
+            if (entity.TrangThaiThanhToan.Equals("Da thanh toan"))
             {
                 _logger.Information(ErrorCode.NotFound, Id);
                 throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Hóa đơn đã được thanh toán", statusCode: StatusCodes.Status400BadRequest);
             }       
-            entity.TrangThai = "Da thanh ly";
+            entity.TrangThaiThanhToan = "Da thanh toan";
             _hdkgRepository.Update(entity);
 
             await UnitOfWork.SaveChangeAsync();
+        }
+
+
+        public (double totalRevenueHoaDonKyGui, double totalRevenueHoaDonThueXe) GetTotalRevenueByTimePeriod(DateTime? startTime, DateTime? endTime)
+        {
+            // Khởi tạo điều kiện mặc định là không có điều kiện (lấy tất cả hóa đơn)
+            Expression<Func<HoaDonKyGuiEntity, bool>> hoaDonKyGuiCondition = _ => !_.TrangThai.Equals("Da xoa");
+            Expression<Func<HoaDonThueXeEntity, bool>> hoaDonThueXeCondition = _ => !_.TrangThai.Equals("Da xoa");
+
+            // Nếu có ngày bắt đầu được chỉ định
+            if (startTime.HasValue)
+            {
+                hoaDonKyGuiCondition = CombineExpressions(hoaDonKyGuiCondition, _ => _.NgayLap >= startTime.Value);
+                hoaDonThueXeCondition = CombineExpressions(hoaDonThueXeCondition, _ => _.NgayLap >= startTime.Value);
+            }
+
+            // Nếu có ngày kết thúc được chỉ định
+            if (endTime.HasValue)
+            {
+                hoaDonKyGuiCondition = CombineExpressions(hoaDonKyGuiCondition, _ => _.NgayLap <= endTime.Value);
+                hoaDonThueXeCondition = CombineExpressions(hoaDonThueXeCondition, _ => _.NgayLap <= endTime.Value);
+            }
+
+            // Truy vấn cơ sở dữ liệu để lấy các hóa đơn ký gửi trong khoảng thời gian đã cho
+            var hoaDonKyGuiEntities = _hdkgRepository.Get(hoaDonKyGuiCondition).ToList();
+
+            // Truy vấn cơ sở dữ liệu để lấy các hóa đơn thuê xe trong khoảng thời gian đã cho
+            var hoaDonThueXeEntities = _hdtxRepository.Get(hoaDonThueXeCondition).ToList();
+
+            // Tính tổng doanh thu của các hóa đơn ký gửi
+            double totalRevenueHoaDonKyGui = hoaDonKyGuiEntities.Sum(hdkg => hdkg.TongThanhToan);
+
+            // Tính tổng doanh thu của các hóa đơn thuê xe
+            double totalRevenueHoaDonThueXe = hoaDonThueXeEntities.Sum(hdtx => hdtx.TongThanhToan);
+
+            return (totalRevenueHoaDonKyGui, totalRevenueHoaDonThueXe);
+        }
+
+        private Expression<Func<T, bool>> CombineExpressions<T>(Expression<Func<T, bool>> expression1, Expression<Func<T, bool>> expression2)
+        {
+            var parameter = Expression.Parameter(typeof(T));
+
+            var body = Expression.AndAlso(
+                Expression.Invoke(expression1, parameter),
+                Expression.Invoke(expression2, parameter)
+            );
+
+            return Expression.Lambda<Func<T, bool>>(body, parameter);
         }
     }
 }

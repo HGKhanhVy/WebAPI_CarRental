@@ -23,5 +23,6 @@ namespace CarRental.Contract.Service
         string CreatePaymentUrl(string idhoadon, HttpContext context);
         PaymentResponseModel PaymentExecute(IQueryCollection collections);
         Task SavePaymentData(PaymentResponseModel collections);
+        public (double totalRevenueHoaDonKyGui, double totalRevenueHoaDonThueXe) GetTotalRevenueByTimePeriod(DateTime? startTime, DateTime? endTime);
     }
 }

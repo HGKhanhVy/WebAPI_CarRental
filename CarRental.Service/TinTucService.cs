@@ -16,6 +16,7 @@ using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
 using CarRental.Core.Models.Login;
 using CarRental.Core.Models.TinTuc;
+using FirebaseAdmin.Messaging;
 
 namespace CarRental.Service
 {
@@ -131,6 +132,25 @@ namespace CarRental.Service
         public ICollection<TinTucEntity> GetAllByAnotherKeyAsync(string str)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task SendNotificationAsync(TinTucModel tintuc)
+        {
+            var message = new Message()
+            {
+                Notification = new Notification()
+                {
+                    Title = tintuc.TieuDe,
+                    Body = tintuc.NoiDung,
+                    ImageUrl = tintuc.HinhAnh,
+                },
+                Topic = "news"
+            };
+
+            // Send a message to the devices subscribed to the provided topic.
+            string response = await FirebaseMessaging.DefaultInstance.SendAsync(message);
+            // Response is a message ID string.
+            Console.WriteLine("Successfully sent message: " + response);
         }
     }
 }

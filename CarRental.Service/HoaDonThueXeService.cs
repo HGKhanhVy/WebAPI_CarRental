@@ -90,7 +90,10 @@ namespace CarRental.Service
                 _logger.Information(ErrorCode.NotFound, xe.IDXe);
                 throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Hợp đồng ký gửi không tồn tại hoặc đã bị xóa.", statusCode: StatusCodes.Status404NotFound);
             }
-
+            int count = _hdkgRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
+            count += 1;
+            string maKH = "HOADONKG00" + count.ToString();
+            string So = "0000" + count.ToString();
             HoaDonKyGuiEntity hoadonkygui = new HoaDonKyGuiEntity
             {
                 IDHoaDonKyGui = "",

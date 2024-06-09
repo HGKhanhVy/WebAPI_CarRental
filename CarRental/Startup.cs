@@ -14,6 +14,8 @@ using CarRental.Contract.Repository.Models;
 using AngleSharp;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 using Microsoft.Extensions.FileProviders;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace CarRental.WebApi
 {
@@ -69,6 +71,11 @@ namespace CarRental.WebApi
             services.AddDI();
             services.PrintServiceAddedToConsole();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(_configuration.GetConnectionString("CarRentalConnection")));
+
+            FirebaseApp.Create(new AppOptions()
+            {
+                Credential = GoogleCredential.FromFile("secrets/kyguixe-a0112-firebase-adminsdk-z2tmu-8bfb42a5e2.json")
+            });
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)

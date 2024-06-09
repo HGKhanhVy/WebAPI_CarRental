@@ -167,3 +167,12 @@ D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\osx\native\li
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
 D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\secrets\kyguixe-a0112-firebase-adminsdk-z2tmu-8bfb42a5e2.json
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\FirebaseAdmin.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Google.Api.Gax.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Google.Apis.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Google.Apis.Auth.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\Google.Apis.Core.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\System.Management.dll
+D:\DuAnThueXe\WebAPI_CarRental\CarRental\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

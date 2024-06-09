@@ -40,20 +40,6 @@ namespace CarRental.Service
             _logger = Log.Logger;
         }
 
-        //public Task<string> CreateAsync(HopDongThueXeModel model, CancellationToken cancellationToken = default)
-        //{
-        //    if (_hdtxRepository.Get(_ => _.IDHopDongThueXe.Equals(model.IDHopDongThueXe) && !_.TrangThai.Equals("Da xoa")).Any())
-        //    {
-        //        _logger.Information(ErrorCode.NotUnique, model.IDHopDongThueXe);
-        //        throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsHopDongThueXe.HOPDONGTHUEXE_EXISTED, statusCode: StatusCodes.Status400BadRequest);
-        //    }
-        //    var entity = _mapper.Map<HopDongThueXeEntity>(model);
-        //    entity.IDHopDongThueXe = model.IDHopDongThueXe;
-        //    _hdtxRepository.Add(entity);
-        //    UnitOfWork.SaveChange();
-        //    return Task.FromResult(entity.IDHopDongThueXe);
-        //}
-
         public Task<string> CreateAsync(HopDongThueXeModel model, CancellationToken cancellationToken = default)
         {
             if (_hdtxRepository.Get(_ => _.IDHopDongThueXe.Equals(model.IDHopDongThueXe) && !_.TrangThai.Equals("Da xoa")).Any())
@@ -61,50 +47,64 @@ namespace CarRental.Service
                 _logger.Information(ErrorCode.NotUnique, model.IDHopDongThueXe);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsHopDongThueXe.HOPDONGTHUEXE_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
-           
-            var xe = _xeRepository.Get(_ => _.IDXe.Equals(model.IDXe)
-                && !_.TrangThai.Equals("Da xoa")).FirstOrDefault();
-
-            if (xe == null)
-            {
-                _logger.Information(ErrorCode.NotFound, xe.IDXe);
-                throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Xe không tồn tại hoặc đã bị xóa.", statusCode: StatusCodes.Status404NotFound);
-            }
-
-            var hopdongkygui = _hopdongkgRepository.Get(_ => _.IDXe.Equals(xe.IDXe)
-                && !_.TrangThai.Equals("Da xoa")).FirstOrDefault();
-
-            if (hopdongkygui == null)
-            {
-                _logger.Information(ErrorCode.NotFound, xe.IDXe);
-                throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Hợp đồng ký gửi không tồn tại hoặc đã bị xóa.", statusCode: StatusCodes.Status404NotFound);
-            }
-            int count = _hdkgRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
-            count += 1;
-            string maKH = "HOADONKG00" + count.ToString();
-            string So = "0000" + count.ToString();
-            HoaDonKyGuiEntity hoadonkygui = new HoaDonKyGuiEntity
-            {
-                IDHoaDonKyGui = maKH,
-                IDHopDongKyGui = hopdongkygui.IDHopDongKyGui,
-                SoHoaDon = So,
-                IDKhachHang = hopdongkygui.IDKhachHang,
-                IDNhanVien = hopdongkygui.IDNhanVien,
-                SoHoaDonThue = model.SoHopDong,
-                NgayLap = DateTime.Now,
-                TongThanhToan = model.GiaThue * hopdongkygui.PhanTramHoaHong / 100,
-                TrangThaiThanhToan = "Chua thanh toan",
-                HinhThucThanhToan = hopdongkygui.PhuongThucThanhToan,
-                UpdateBy = "",
-                UpdateAt = DateTime.Now,
-            };
             var entity = _mapper.Map<HopDongThueXeEntity>(model);
             entity.IDHopDongThueXe = model.IDHopDongThueXe;
             _hdtxRepository.Add(entity);
-            _hdkgRepository.Add(hoadonkygui);
             UnitOfWork.SaveChange();
             return Task.FromResult(entity.IDHopDongThueXe);
         }
+
+        //public Task<string> CreateAsync(HopDongThueXeModel model, CancellationToken cancellationToken = default)
+        //{
+        //    if (_hdtxRepository.Get(_ => _.IDHopDongThueXe.Equals(model.IDHopDongThueXe) && !_.TrangThai.Equals("Da xoa")).Any())
+        //    {
+        //        _logger.Information(ErrorCode.NotUnique, model.IDHopDongThueXe);
+        //        throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsHopDongThueXe.HOPDONGTHUEXE_EXISTED, statusCode: StatusCodes.Status400BadRequest);
+        //    }
+
+        //    var xe = _xeRepository.Get(_ => _.IDXe.Equals(model.IDXe)
+        //        && !_.TrangThai.Equals("Da xoa")).FirstOrDefault();
+
+        //    if (xe == null)
+        //    {
+        //        _logger.Information(ErrorCode.NotFound, xe.IDXe);
+        //        throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Xe không tồn tại hoặc đã bị xóa.", statusCode: StatusCodes.Status404NotFound);
+        //    }
+
+        //    var hopdongkygui = _hopdongkgRepository.Get(_ => _.IDXe.Equals(xe.IDXe)
+        //        && !_.TrangThai.Equals("Da xoa")).FirstOrDefault();
+
+        //    if (hopdongkygui == null)
+        //    {
+        //        _logger.Information(ErrorCode.NotFound, xe.IDXe);
+        //        throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: "Hợp đồng ký gửi không tồn tại hoặc đã bị xóa.", statusCode: StatusCodes.Status404NotFound);
+        //    }
+        //    int count = _hdkgRepository.Get(_ => !_.TrangThai.Equals("Da Xoa") || _.TrangThai == null).ToList().Count();
+        //    count += 1;
+        //    string maKH = "HOADONKG00" + count.ToString();
+        //    string So = "0000" + count.ToString();
+        //    HoaDonKyGuiEntity hoadonkygui = new HoaDonKyGuiEntity
+        //    {
+        //        IDHoaDonKyGui = maKH,
+        //        IDHopDongKyGui = hopdongkygui.IDHopDongKyGui,
+        //        SoHoaDon = So,
+        //        IDKhachHang = hopdongkygui.IDKhachHang,
+        //        IDNhanVien = hopdongkygui.IDNhanVien,
+        //        SoHoaDonThue = model.SoHopDong,
+        //        NgayLap = DateTime.Now,
+        //        TongThanhToan = model.GiaThue * hopdongkygui.PhanTramHoaHong / 100,
+        //        TrangThaiThanhToan = "Chua thanh toan",
+        //        HinhThucThanhToan = hopdongkygui.PhuongThucThanhToan,
+        //        UpdateBy = "",
+        //        UpdateAt = DateTime.Now,
+        //    };
+        //    var entity = _mapper.Map<HopDongThueXeEntity>(model);
+        //    entity.IDHopDongThueXe = model.IDHopDongThueXe;
+        //    _hdtxRepository.Add(entity);
+        //    _hdkgRepository.Add(hoadonkygui);
+        //    UnitOfWork.SaveChange();
+        //    return Task.FromResult(entity.IDHopDongThueXe);
+        //}
 
         public Task DeleteAsync(string id, bool isPhysical, CancellationToken cancellationToken = default)
         {

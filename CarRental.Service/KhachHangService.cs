@@ -40,13 +40,21 @@ namespace CarRental.Service
             if (_khRepository.Get(_ => _.IDKhachHang.Equals(model.IDKhachHang) 
             || _.SoTaiKhoan.Equals(model.SoTaiKhoan)
             || _.Email.Equals(model.Email)
+            || _.SoTaiKhoan.Equals(model.SoTaiKhoan)
             || _.CCCD.Equals(model.CCCD)
             && !_.TrangThai.Equals("Da xoa")).Any())
             {
                 _logger.Information(ErrorCode.NotUnique, model.IDKhachHang);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
-            if(_nvRepository.Get(_ => _.Email.Equals(model.Email) && !_.TrangThai.Equals("Da xoa")).Any()){
+
+            if (_nvRepository.Get(_ => _.Email.Equals(model.Email) && !_.TrangThai.Equals("Da xoa")).Any())
+            {
+                _logger.Information(ErrorCode.NotUnique, model.Email);
+                throw new CoreException(code: ResponseCodeConstants.EXISTED, message: "Email da ton tai o mot user khac", statusCode: StatusCodes.Status400BadRequest);
+            }
+
+            if (_nvRepository.Get(_ => _.Email.Equals(model.Email) && !_.TrangThai.Equals("Da xoa")).Any()){
                 _logger.Information(ErrorCode.NotUnique, model.IDKhachHang);
                 throw new CoreException(code: ResponseCodeConstants.EXISTED, message: ReponseMessageConstantsKhachHang.KHACHHANG_EXISTED, statusCode: StatusCodes.Status400BadRequest);
             }
@@ -74,7 +82,6 @@ namespace CarRental.Service
             UnitOfWork.SaveChange();
             return Task.CompletedTask;
         }
-
         public ICollection<KhachHangEntity> GetAllAsync()
         {
             var entities = _khRepository.Get(_ => !_.TrangThai.Equals("Da xoa")).ToList();
@@ -107,11 +114,7 @@ namespace CarRental.Service
             }
             if (model.IDKhachHang != Id)
             {
-                var isDuplicate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDKhachHang)
-                                    || x.Email.Equals(model.Email)
-                                    || x.SoTaiKhoan.Equals(model.SoTaiKhoan)
-                                    || x.CCCD.Equals(model.CCCD) 
-                                    && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
+                var isDuplicate = _khRepository.GetTracking(x => x.IDKhachHang.Equals(model.IDKhachHang) && !x.TrangThai.Equals("Da xoa")).FirstOrDefault();
                 if (isDuplicate != null)
                 {
                     _logger.Information(ErrorCode.NotUnique, Id);

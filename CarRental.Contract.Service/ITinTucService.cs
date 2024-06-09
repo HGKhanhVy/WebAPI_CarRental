@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 namespace CarRental.Contract.Service
 {
     public interface ITinTucService :
-    Base.ICreateable<TinTucModel, string>,
+       Base.ICreateable<TinTucModel, string>,
        Base.IUpdateable<TinTucModel, string>,
        Base.IDeleteable<string, bool>,
        Base.IGetable<TinTucEntity, string>
     {
+        Task SendNotificationAsync(TinTucModel tintuc);
     }
 }

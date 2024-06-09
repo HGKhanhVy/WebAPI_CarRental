@@ -63,7 +63,7 @@ namespace CarRental.Service
 
         public ICollection<XeEntity> GetAllAsync()
         {
-            var entities = _xeRepository.Get(_ => !_.TrangThai.Equals("Da xoa")).ToList();
+            var entities = _xeRepository.Get(_ => _.TrangThai.Equals("Da duyet")).ToList();
             return (ICollection<XeEntity>)entities;
         }
         public XeEntity GetByKeyIdAsync(string id)

@@ -21,5 +21,6 @@ namespace CarRental.Contract.Service
         public int getIDHopDongKyGui();
         public Task ThanhLyHopDong(string Id);
         public Task DuyetHopDong(string Id);
+        public HopDongKyGuiCreate ShowDetailHopDong(string Id);
     }
 }

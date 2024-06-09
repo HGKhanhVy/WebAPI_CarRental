@@ -816,6 +816,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "HostBuilder.Extensions": {
               "target": "Package",
               "version": "[1.2.0, )"

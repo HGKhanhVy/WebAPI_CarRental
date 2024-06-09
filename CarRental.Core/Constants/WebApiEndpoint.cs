@@ -44,6 +44,7 @@
         {
             private const string BaseEndpoint = "~/" + AreaName + "/hopdong-kygui";
             public const string GetHopDongKyGui = BaseEndpoint + "/get-single" + "/{IDHopDongKyGui}";
+            public const string ShowDetail = BaseEndpoint + "/show-detail" + "/{IDHopDongKyGui}";
             public const string InhHopDong = BaseEndpoint + "/in-hop-dong" + "/{IDHopDongKyGui}";
             public const string GetAllHopDongKyGui = BaseEndpoint + "/get-all";
             public const string AddHopDongKyGui = BaseEndpoint + "/add";
