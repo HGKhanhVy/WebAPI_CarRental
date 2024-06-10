@@ -84,6 +84,37 @@ namespace CarRental.WebApi.Controllers
             }
         }
 
+        [HttpPost]
+        [Route(WebApiEndpoint.XeTienNghi.AddXeTienNghiList)]
+        public async Task<IActionResult> CreateXeTienNghiList(string idXe, [FromBody] string[] idTienNghi)
+        {
+            try
+            {
+                var result = await _iXeTienNghiService.CreateableList(idXe, idTienNghi);
+                return Ok(new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status201Created,
+                    code: ResponseCodeConstants.SUCCESS,
+                    data: result));
+            }
+            catch (Exception e)
+            {
+                dynamic result;
+                if (e is CoreException error)
+                {
+                    result = new BaseResponseModel<string>(
+                        statusCode: error.StatusCode,
+                        code: error.Code,
+                        message: error.Message);
+                    return BadRequest(result);
+                }
+                result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status500InternalServerError,
+                    code: ResponseCodeConstants.FAILED,
+                    message: e.Message);
+                return BadRequest(result);
+            }
+        }
+
         [HttpPut]
         [Route(WebApiEndpoint.XeTienNghi.UpdateXeTienNghi)]
         public async Task<IActionResult> UpdateXeTienNghi([FromRoute] string IDXe, [FromRoute] string IDTienNghi, XeTienNghiModel model)

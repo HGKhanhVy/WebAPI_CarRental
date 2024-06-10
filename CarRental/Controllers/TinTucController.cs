@@ -5,6 +5,7 @@ using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
 using CarRental.Core.Models.TinTuc;
 using CarRental.Core.Models;
+using FirebaseAdmin.Messaging;
 
 namespace CarRental.WebApi.Controllers
 {
@@ -48,12 +49,50 @@ namespace CarRental.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("subscribe")]
+        public async Task<IActionResult> SubscribeToTopic([FromBody] SubscribeModel model)
+        {
+            try
+            {
+                var registrationTokens = new List<string> { model.Token };
+                var response = await FirebaseMessaging.DefaultInstance.SubscribeToTopicAsync(registrationTokens, model.Topic);
+
+                return Ok(new { success = true, response });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { success = false, message = ex.Message });
+            }
+        }
+
+        public class SubscribeModel
+        {
+            public string Token { get; set; }
+            public string Topic { get; set; }
+        }
+
+
+        [HttpPost]
         [Route(WebApiEndpoint.TinTuc.AddTinTuc)]
         public async Task<IActionResult> CreateTinTuc(TinTucModel model)
         {
             try
             {
                 var result = await _iTinTucService.CreateAsync(model);
+
+                var message = new FirebaseAdmin.Messaging.Message()
+                {
+                    Notification = new FirebaseAdmin.Messaging.Notification()
+                    {
+                        Title = model.TieuDe,
+                        Body = model.NoiDung,
+                        ImageUrl = "https://localhost:7046/uploads/" + model.HinhAnh,
+                    },
+                    Topic = "news"
+                };
+
+                string response = await FirebaseAdmin.Messaging.FirebaseMessaging.DefaultInstance.SendAsync(message);
+                Console.WriteLine("Firebase notification response: " + response);
                 return Ok(new BaseResponseModel<string>(
                     statusCode: StatusCodes.Status201Created,
                     code: ResponseCodeConstants.SUCCESS,
@@ -140,5 +179,43 @@ namespace CarRental.WebApi.Controllers
                 return BadRequest(result);
             }
         }
+        [HttpPost("uploads")]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            try
+            {
+                if (file.Length > 0)
+                {
+                    var currentDirectory = Directory.GetCurrentDirectory();
+                    var parentDirectory = Directory.GetParent(currentDirectory)?.FullName;
+                    if (parentDirectory == null)
+                    {
+                        return BadRequest(new { message = "Failed to get parent directory." });
+                    }
+                    var uploadsFolder = Path.Combine(parentDirectory, "CarRental", "img");
+                    var filePath = Path.Combine(uploadsFolder, file.FileName);
+
+                    if (!System.IO.File.Exists(filePath))
+                    {
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+                    }
+
+                    return Ok(new { filePath });
+                }
+                else
+                {
+                    return BadRequest(new { message = "No file uploaded." });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while uploading the file.", details = ex.Message });
+            }
+        }
+
+
     }
 }

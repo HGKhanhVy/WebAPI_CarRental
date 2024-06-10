@@ -7,6 +7,7 @@ using CarRental.Core.Exceptions;
 using CarRental.Core.Models.HoaDonKyGui;
 using static CarRental.Core.Constants.WebApiEndpoint;
 using CarRental.Core.Models;
+using CarRental.Contract.Repository.Models.VnPay;
 
 namespace CarRental.WebApi.Controllers
 {
@@ -110,7 +111,7 @@ namespace CarRental.WebApi.Controllers
                 return BadRequest(result);
             }
 
-        }
+        }       
 
         [HttpDelete]
         [Route(WebApiEndpoint.HoaDonKyGui.DeleteHoaDonKyGui)]
@@ -123,6 +124,37 @@ namespace CarRental.WebApi.Controllers
                     statusCode: StatusCodes.Status200OK,
                     code: ResponseCodeConstants.SUCCESS,
                     data: ReponseMessageConstantsHoaDonKyGui.DELETE_HOADONKYGUI_SUCCESS));
+            }
+            catch (Exception e)
+            {
+                dynamic result;
+                if (e is CoreException error)
+                {
+                    result = new BaseResponseModel<string>(
+                        statusCode: error.StatusCode,
+                        code: error.Code,
+                        message: error.Message);
+                    return BadRequest(result);
+                }
+                result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status500InternalServerError,
+                    code: ResponseCodeConstants.FAILED,
+                    message: e.Message);
+                return BadRequest(result);
+            }
+        }
+
+        [HttpPut]
+        [Route(WebApiEndpoint.HoaDonKyGui.XacNhanThanhToanTienMat)]
+        public async Task<IActionResult> XácNhanThanhToanTienMat([FromRoute] string IDHoaDonKyGui)
+        {
+            try
+            {
+                await _iHoaDonKyGuiService.CapNhatTrangThaiThanhToan(IDHoaDonKyGui);
+                return Ok(new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status200OK,
+                    code: ResponseCodeConstants.SUCCESS,
+                    data: ReponseMessageConstantsHoaDonKyGui.THANHTOAN_HOADONKYGUI_SUCCESS));
             }
             catch (Exception e)
             {
@@ -171,6 +203,62 @@ namespace CarRental.WebApi.Controllers
                     code: ResponseCodeConstants.FAILED,
                     message: e.Message);
                 return BadRequest(result);
+            }
+        }
+
+        [HttpPost]
+        [Route(WebApiEndpoint.HoaDonKyGui.ThanhToanVnPay)]
+        public async Task<IActionResult> CreatePaymentUrl(string idhoadon)
+        {
+            var url = _iHoaDonKyGuiService.CreatePaymentUrl(idhoadon, HttpContext);
+
+            return Ok(url);
+        }
+
+        //[HttpGet]
+        //[Route(WebApiEndpoint.HoaDonKyGui.ThanhToanThanhCong)]
+        //public IActionResult PaymentCallback()
+        //{
+        //    var response = _iHoaDonKyGuiService.PaymentExecute(Request.Query);
+        //    _iHoaDonKyGuiService.SavePaymentData(response);
+        //    var success = response.VnPayResponseCode == "00";
+        //    return RedirectToAction("Index", "HoaDonKyGui", new { success = success });
+        //}
+
+        [HttpGet]
+        [Route(WebApiEndpoint.HoaDonKyGui.ThanhToanThanhCong)]
+        public IActionResult PaymentCallback()
+        {
+            var response = _iHoaDonKyGuiService.PaymentExecute(Request.Query);
+            _iHoaDonKyGuiService.SavePaymentData(response);
+            var success = response.VnPayResponseCode == "00";
+            return Ok(new { success });
+        }
+
+
+        [HttpGet]
+        [Route("total-revenue")]
+        public IActionResult GetTotalRevenueByTimePeriod(DateTime? startTime, DateTime? endTime)
+            {
+            try
+            {
+                // Gọi hàm từ service để tính tổng doanh thu
+                var (totalRevenueHoaDonKyGui, totalRevenueHoaDonThueXe) = _iHoaDonKyGuiService.GetTotalRevenueByTimePeriod(startTime, endTime);
+
+                // Chuẩn bị dữ liệu để trả về
+                var responseData = new
+                {
+                    TotalRevenueHoaDonKyGui = totalRevenueHoaDonKyGui,
+                    TotalRevenueHoaDonThueXe = totalRevenueHoaDonThueXe
+                };
+
+                // Trả về kết quả thành công
+                return Ok(responseData);
+            }
+            catch (Exception ex)
+            {
+                // Trả về lỗi nếu có lỗi xảy ra trong quá trình xử lý
+                return StatusCode(500, new { Message = "Internal server error", Error = ex.Message });
             }
         }
     }

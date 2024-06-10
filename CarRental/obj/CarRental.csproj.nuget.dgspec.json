@@ -985,6 +985,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Google.Cloud.Dialogflow.V2": {
+              "target": "Package",
+              "version": "[4.20.0, )"
+            },
             "HostBuilder.Extensions": {
               "target": "Package",
               "version": "[1.2.0, )"
@@ -1044,6 +1048,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.11.0, )"
             },
             "Serilog": {
               "target": "Package",

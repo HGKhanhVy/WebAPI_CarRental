@@ -10,6 +10,11 @@ using CarRental.Core.Models.Room;
 using CarRental.Core.Models;
 using static CarRental.Core.Constants.WebApiEndpoint;
 using CarRental.Service;
+using OpenAI_API;
+using OpenAI_API.Completions;
+using Newtonsoft.Json;
+using Microsoft.Identity.Client;
+using Google.Cloud.Dialogflow.V2;
 
 namespace CarRental.WebApi.Controllers
 {
@@ -17,10 +22,12 @@ namespace CarRental.WebApi.Controllers
     public class RoomController : ControllerBase
     {
         private readonly IRoomService _iRoomService;
+        private readonly SessionsClient _sessionsClient;
 
         public RoomController(IRoomService iRoomService)
         {
             _iRoomService = iRoomService;
+            _sessionsClient = SessionsClient.Create();
         }
 
         [HttpGet]
@@ -176,6 +183,34 @@ namespace CarRental.WebApi.Controllers
                 return BadRequest(result);
             }
         }
+
+        [HttpPost]
+        [Route("Chatbox")]
+        public async Task<IActionResult> ChatGPT(string query)
+        {
+            string output = "";
+            var apiKey = "sk-proj-WSYpfHyjqc1k19e6KG7BT3BlbkFJfY7yffa99tJS9uzRIMhj";
+            string answer = string.Empty;
+            var openai = new OpenAIAPI(apiKey);
+            CompletionRequest completion = new CompletionRequest();
+            completion.Prompt = query;
+            completion.Model = OpenAI_API.Models.Model.ChatGPTTurbo_16k;
+            completion.MaxTokens = 200;
+            var result = openai.Completions.CreateCompletionAsync(completion);
+            if (result != null)
+            {
+                foreach (var item in result.Result.Completions)
+                {
+                    answer = item.Text;
+                }
+                return Ok(answer);
+            }
+            else
+            {
+                return BadRequest("Not found");
+            }
+        }
+
     }
 }
 

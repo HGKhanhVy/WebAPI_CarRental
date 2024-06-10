@@ -193,6 +193,56 @@ namespace CarRental.WebApi.Controllers
                 return BadRequest(result);
             }
         }
+        [HttpPost("uploads-xe")]
+        public async Task<IActionResult> Upload(List<IFormFile> files)
+        {
+            try
+            {
+                if (files == null || files.Count == 0)
+                {
+                    return BadRequest(new { message = "No files uploaded." });
+                }
+
+                var currentDirectory = Directory.GetCurrentDirectory();
+                var parentDirectory = Directory.GetParent(currentDirectory)?.FullName;
+                if (parentDirectory == null)
+                {
+                    return BadRequest(new { message = "Failed to get parent directory." });
+                }
+
+                var uploadsFolder = Path.Combine(parentDirectory, "CarRental", "img");
+                Directory.CreateDirectory(uploadsFolder); // Ensure the directory exists
+
+                var uploadedFiles = new List<string>();
+                var duplicateFiles = new List<string>();
+
+                foreach (var file in files)
+                {
+                    var filePath = Path.Combine(uploadsFolder, file.FileName);
+                    if (System.IO.File.Exists(filePath))
+                    {
+                        duplicateFiles.Add(file.FileName);
+                        continue;
+                    }
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                    uploadedFiles.Add(file.FileName);
+                }
+
+                return Ok(new
+                {
+                    uploadedFiles = uploadedFiles,
+                    duplicateFiles = duplicateFiles
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while uploading the files.", details = ex.Message });
+            }
+        }
+
     }
 }
 
