@@ -48,7 +48,7 @@ namespace CarRental.Repository.Infrastructure
                   var connectionString = configuration.GetConnectionString("DefaultConnection");*/
                 // data source = KHANHVY\SQLEXPRESS; initial catalog = DB_WeddingRestaurant; user id = sa; password =<< YourPassword >>
                 var connectionString = SystemHelper.AppDb;
-                connectionString = "Data Source=(local);initial Catalog=DB_CarRental;user=sa;pwd=123;Trusted_Connection=True;Trust Server Certificate=True; Integrated Security=false";
+                connectionString = "Data Source=KHANHVY;initial Catalog=DB_CarRental;user=sa;pwd=123;Trusted_Connection=True;Trust Server Certificate=True; Integrated Security=false";
 
                 optionsBuilder.UseSqlServer(connectionString, sqlServerOptionsAction =>
                 {
@@ -102,10 +102,10 @@ namespace CarRental.Repository.Infrastructure
                 .WithMany(t => t.HopDongKyGuis)
                 .HasForeignKey(c => c.IDNhanVien)
                 .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<XeEntity>()
-                .HasOne(d => d.HopDongKyGuis)
-                .WithOne(h => h.Xes)
-                .HasForeignKey<HopDongKyGuiEntity>(h => h.IDXe)
+            modelBuilder.Entity<HopDongKyGuiEntity>()
+                .HasOne(c => c.Xes)
+                .WithMany(t => t.HopDongKyGuis)
+                .HasForeignKey(c => c.IDXe)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // HopDongThueXe
@@ -121,10 +121,10 @@ namespace CarRental.Repository.Infrastructure
                 .WithMany(t => t.HopDongThueXes)
                 .HasForeignKey(c => c.IDNhanVien)
                 .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<XeEntity>()
-                .HasOne(d => d.HopDongThueXes)
-                .WithOne(h => h.Xes)
-                .HasForeignKey<HopDongThueXeEntity>(h => h.IDXe)
+            modelBuilder.Entity<HopDongThueXeEntity>()
+                .HasOne(c => c.Xes)
+                .WithMany(t => t.HopDongThueXes)
+                .HasForeignKey(c => c.IDXe)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // KhachHang
@@ -148,10 +148,10 @@ namespace CarRental.Repository.Infrastructure
                 .WithMany(t => t.KMLoaiKHs)
                 .HasForeignKey(c => c.IDKhuyenMai)
                 .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<LoaiKhachHangEntity>()
-                .HasOne(d => d.KMLoaiKHs)
-                .WithOne(h => h.LoaiKhachHangs)
-                .HasForeignKey<KMLoaiKHEntity>(h => h.IDLoaiKH)
+            modelBuilder.Entity<KMLoaiKHEntity>()
+                .HasOne(c => c.LoaiKhachHangs)
+                .WithMany(t => t.KMLoaiKHs)
+                .HasForeignKey(c => c.IDLoaiKH)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // KMLoaiXe
@@ -162,10 +162,10 @@ namespace CarRental.Repository.Infrastructure
                 .WithMany(t => t.KMLoaiXes)
                 .HasForeignKey(c => c.IDKhuyenMai)
                 .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<LoaiXeEntity>()
-                .HasOne(d => d.KMLoaiXes)
-                .WithOne(h => h.LoaiXes)
-                .HasForeignKey<KMLoaiXeEntity>(h => h.IDLoaiXe)
+            modelBuilder.Entity<KMLoaiXeEntity>()
+                .HasOne(c => c.LoaiXes)
+                .WithMany(t => t.KMLoaiXes)
+                .HasForeignKey(c => c.IDLoaiXe)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // KMTrenHoaDon
@@ -203,10 +203,6 @@ namespace CarRental.Repository.Infrastructure
             modelBuilder.Entity<LoaiXeEntity>()
                .HasKey(e => new { e.IDLoaiXe });
 
-            // NhacHen
-            modelBuilder.Entity<NhacHenEntity>()
-               .HasKey(e => new { e.IDNhacHen });
-
             // NhanVien
             modelBuilder.Entity<NhanVienEntity>()
                .HasKey(e => new { e.IDNhanVien });
@@ -221,44 +217,9 @@ namespace CarRental.Repository.Infrastructure
                 .HasForeignKey(c => c.IDPhongBan)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // PermissionDetail
-            modelBuilder.Entity<PermissionDetailEntity>()
-               .HasKey(e => new { e.IDPermissionDetail });
-            modelBuilder.Entity<PermissionDetailEntity>()
-                .HasOne(c => c.Permissions)
-                .WithMany(t => t.PermissionDetails)
-                .HasForeignKey(c => c.IDPermission)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // Permission
-            modelBuilder.Entity<PermissionEntity>()
-               .HasKey(e => new { e.IDPermission });
-
             // PhongBan
             modelBuilder.Entity<PhongBanEntity>()
                .HasKey(e => new { e.IDPhongBan });
-
-            // QuanLyChuyenKhoan
-            modelBuilder.Entity<QuanLyChuyenKhoanEntity>()
-               .HasKey(e => new { e.IDQuanLyCK });
-
-            // Room
-            modelBuilder.Entity<RoomEntity>()
-               .HasKey(e => new { e.IDRoom });
-            modelBuilder.Entity<RoomEntity>()
-                .HasOne(c => c.KhachHangs)
-                .WithMany(t => t.Rooms)
-                .HasForeignKey(c => c.IDKhachHang)
-                .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<RoomEntity>()
-                .HasOne(c => c.NhanViens)
-                .WithMany(t => t.Rooms)
-                .HasForeignKey(c => c.IDNhanVien)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            // SoDienThoai
-            modelBuilder.Entity<SoDienThoaiEntity>()
-               .HasKey(e => new { e.DauSo });
 
             // ThamDinhXe
             modelBuilder.Entity<ThamDinhXeEntity>()
@@ -291,24 +252,6 @@ namespace CarRental.Repository.Infrastructure
                 .HasForeignKey(c => c.IDXe)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // User
-            modelBuilder.Entity<UserEntity>()
-               .HasKey(e => new { e.IDUser });
-
-            // UserPermission
-            modelBuilder.Entity<UserPermissionEntity>()
-               .HasKey(e => new { e.IDUser, e.IDPermission });
-            modelBuilder.Entity<UserPermissionEntity>()
-                .HasOne(c => c.Users)
-                .WithMany(t => t.UserPermissions)
-                .HasForeignKey(c => c.IDUser)
-                .OnDelete(DeleteBehavior.Cascade);
-            modelBuilder.Entity<UserPermissionEntity>()
-               .HasOne(c => c.Permissions)
-               .WithMany(t => t.UserPermissions)
-               .HasForeignKey(c => c.IDPermission)
-               .OnDelete(DeleteBehavior.Cascade);
-
             // Xe
             modelBuilder.Entity<XeEntity>()
                .HasKey(e => new { e.IDXe });
@@ -335,17 +278,6 @@ namespace CarRental.Repository.Infrastructure
             // TinTuc
             modelBuilder.Entity<TinTucEntity>()
                .HasKey(e => new { e.IDTinTuc });
-
-            // Login
-            modelBuilder.Entity<LoginEntity>()
-               .HasKey(e => new { e.Email });
-
-            // Phân Quyền
-            modelBuilder.Entity<AccessTokenEntity>().HasNoKey();
-            modelBuilder.Entity<RefreshTokenEntity>()
-                .HasKey(e => new { e.Token, e.IDUser });
-            modelBuilder.Entity<UserEntity>()
-                .HasKey(e => e.IDUser);
         }
     }
 }

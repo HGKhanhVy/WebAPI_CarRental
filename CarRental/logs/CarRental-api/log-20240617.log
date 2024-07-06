@@ -1,0 +1,88 @@
+2024-06-17T14:49:41.8593528+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-06-17T14:49:41.9440142+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-06-17T14:49:41.9509183+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-06-17T14:49:41.9535557+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-06-17T14:49:41.9743462+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-06-17T14:49:41.9906120+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-06-17T14:49:43.2673110+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-06-17T14:49:43.2706684+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-06-17T14:49:43.2745595+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-06-17T14:49:43.2762950+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-06-17T14:49:43.2835386+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-06-17T14:50:38.6699643+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("173"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:50:39.4222006+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 3837.9193 ms
+2024-06-17T14:50:41.2311276+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-06-17T14:50:41.2550849+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 281.5860 ms
+2024-06-17T14:50:42.4681146+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:50:42.5161389+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 81.6958 ms
+2024-06-17T14:50:42.6344144+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-06-17T14:50:42.6409587+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 60.4848 ms
+2024-06-17T14:55:26.0364918+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:55:26.0489240+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 55.5874 ms
+2024-06-17T14:55:26.2919962+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:55:26.2972067+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 8.7332 ms
+2024-06-17T14:57:36.6675255+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:57:36.6737943+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 10.2154 ms
+2024-06-17T14:57:36.7592908+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:57:36.7645853+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 13.9281 ms
+2024-06-17T14:57:39.5142888+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:57:39.5194163+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 7.7725 ms
+2024-06-17T14:57:39.5317846+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-06-17T14:57:39.5345980+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 9.6433 ms
+2024-06-17T14:57:39.6448846+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-17T14:57:39.6497303+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 21.0390 ms
+2024-06-17T14:57:39.6833733+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-06-17T14:57:39.6911605+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 34.1175 ms
+2024-06-17T14:57:43.6105729+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("84"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[IDXe] = @__id_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))"
+2024-06-17T14:57:43.6208616+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-single/X01" responded 200 in 217.3769 ms
+2024-06-17T14:57:43.7002671+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[IDXe] = @__id_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))"
+2024-06-17T14:57:43.7042155+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-single/X01" responded 200 in 7.2136 ms

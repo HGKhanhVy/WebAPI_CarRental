@@ -37,24 +37,6 @@ namespace CarRental.WebApi
             services.AddControllers();
             services.AddEndpointsApiExplorer();
 
-            services.Configure<AppSettings>(_configuration.GetSection("AppSettings"));
-            var secretKey = _configuration["AppSettings:SecretKey"];
-            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(o =>
-            {
-                o.TokenValidationParameters = new TokenValidationParameters
-                {
-                    // tự cấp token
-                    ValidateIssuer = false, // sử dụng dịch vụ thì chọn true => chỉ ra đường dẫn
-                    ValidateAudience = false,
-
-                    // ký vào token
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(secretKeyBytes), // thuật toán đối xứng key
-
-                    ClockSkew = TimeSpan.Zero
-                };
-            });
             services.AddSwaggerGen(o =>
             {
                 o.SwaggerDoc("v1", new OpenApiInfo { Title = "CarRental", Version = "v1" });

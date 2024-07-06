@@ -62,7 +62,7 @@
             public const string AddHopDongThueXe = BaseEndpoint + "/add";
             public const string UpdateHopDongThueXe = BaseEndpoint + "/update" + "/{IDHopDongThueXe}";
             public const string DeleteHopDongThueXe = BaseEndpoint + "/delete" + "/{IDHopDongThueXe}";
-            public const string CountHopDongThueXe = BaseEndpoint + "/count-hopdong-thuexe" + "/{IDHopDongThueXe}";
+            public const string CountHopDongThueXe = BaseEndpoint + "/count-hopdong-thuexe";
         }
 
         public static class KhachHang
@@ -116,6 +116,7 @@
             public const string CountKMLoaiXe = BaseEndpoint + "/count-km-loai-xe";
             public const string PrintAllKMLoaiXeByIDLoaiXe = BaseEndpoint + "/print-khuyenmai-loai-xe-byid-loaixe" + "/{IDLoaiXe}";
             public const string UpdateStatus = BaseEndpoint + "/update-status";
+            public const string GetKMChuaCo = BaseEndpoint + "/get-kmchuaco";
         }
 
         public static class KMTrenHoaDon
@@ -178,17 +179,6 @@
             public const string CountLoaiXe = BaseEndpoint + "/count-loai-xe" + "/{IDLoaiXe}";
         }
 
-        public static class NhacHen
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/nhac-hen";
-            public const string GetNhacHen = BaseEndpoint + "/get-single" + "/{IDNhacHen}";
-            public const string GetAllNhacHen = BaseEndpoint + "/get-all";
-            public const string AddNhacHen = BaseEndpoint + "/add";
-            public const string UpdateNhacHen = BaseEndpoint + "/update" + "/{IDNhacHen}";
-            public const string DeleteNhacHen = BaseEndpoint + "/delete" + "/{IDNhacHen}";
-            public const string CountNhacHen = BaseEndpoint + "/count-nhac-hen" + "/{IDNhacHen}";
-        }
-
         public static class NhanVien
         {
             private const string BaseEndpoint = "~/" + AreaName + "/nhan-vien";
@@ -201,29 +191,6 @@
             public const string NhanVienLogin = BaseEndpoint + "/nv-login" + "/{Email}-{PassWord}";
         }
 
-        public static class PermissionDetail
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/permission-detail";
-            public const string GetPermissionDetail = BaseEndpoint + "/get-single" + "/{IDPermissionDetail}";
-            public const string GetAllPermissionDetail = BaseEndpoint + "/get-all";
-            public const string AddPermissionDetail = BaseEndpoint + "/add";
-            public const string UpdatePermissionDetail = BaseEndpoint + "/update" + "/{IDPermissionDetail}";
-            public const string DeletePermissionDetail = BaseEndpoint + "/delete" + "/{IDPermissionDetail}";
-            public const string PrintAllPermissionDetailByIDPermission = BaseEndpoint + "/print-permission-detail-byid-permission" + "/{IDPermission}";
-            public const string CountPermissionDetail = BaseEndpoint + "/count-permission-detail" + "/{IDPermissionDetail}";
-        }
-
-        public static class Permission
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/permission";
-            public const string GetPermission = BaseEndpoint + "/get-single" + "/{IDPermission}";
-            public const string GetAllPermission = BaseEndpoint + "/get-all";
-            public const string AddPermission = BaseEndpoint + "/add";
-            public const string UpdatePermission = BaseEndpoint + "/update" + "/{IDPermission}";
-            public const string DeletePermission = BaseEndpoint + "/delete" + "/{IDPermission}";
-            public const string CountPermission = BaseEndpoint + "/count-permission" + "/{IDPermission}";
-        }
-
         public static class PhongBan
         {
             private const string BaseEndpoint = "~/" + AreaName + "/phong-ban";
@@ -233,38 +200,6 @@
             public const string UpdatePhongBan = BaseEndpoint + "/update" + "/{IDPhongBan}";
             public const string DeletePhongBan = BaseEndpoint + "/delete" + "/{IDPhongBan}";
             public const string CountPhongBan = BaseEndpoint + "/count-phong-ban" + "/{IDPhongBan}";
-        }
-
-        public static class QuanLyChuyenKhoan
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/ql-chuyenkhoan";
-            public const string GetQuanLyChuyenKhoan = BaseEndpoint + "/get-single" + "/{IDQuanLyCK}";
-            public const string GetAllQuanLyChuyenKhoan = BaseEndpoint + "/get-all";
-            public const string AddQuanLyChuyenKhoan = BaseEndpoint + "/add";
-            public const string UpdateQuanLyChuyenKhoan = BaseEndpoint + "/update" + "/{IDQuanLyCK}";
-            public const string DeleteQuanLyChuyenKhoan = BaseEndpoint + "/delete" + "/{IDQuanLyCK}";
-            public const string CountQuanLyChuyenKhoan = BaseEndpoint + "/count-ql-chuyenkhoan" + "/{IDQuanLyCK}";
-        }
-
-        public static class Room
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/room";
-            public const string GetRoom = BaseEndpoint + "/get-single" + "/{IDRoom}";
-            public const string GetAllRoom = BaseEndpoint + "/get-all";
-            public const string AddRoom = BaseEndpoint + "/add";
-            public const string UpdateRoom = BaseEndpoint + "/update" + "/{IDRoom}";
-            public const string DeleteRoom = BaseEndpoint + "/delete" + "/{IDRoom}";
-            public const string CountRoom = BaseEndpoint + "/count-room" + "/{IDRoom}";
-        }
-
-        public static class SoDienThoai
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/dau-so";
-            public const string GetDauSo = BaseEndpoint + "/get-single" + "/{DauSo}";
-            public const string GetAllDauSo = BaseEndpoint + "/get-all";
-            public const string AddDauSo = BaseEndpoint + "/add";
-            public const string UpdateDauSo = BaseEndpoint + "/update" + "/{DauSo}";
-            public const string DeleteDauSo = BaseEndpoint + "/delete" + "/{DauSo}";
         }
 
         public static class ThamDinhXe
@@ -320,30 +255,6 @@
             public const string CountTrangThaiBaoDuong = BaseEndpoint + "/count-trthai-baoduong" + "/{IDTrangThaiBD}";
         }
 
-        public static class User
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/user";
-            public const string GetUser = BaseEndpoint + "/get-single" + "/{IDUser}";
-            public const string GetAllUser = BaseEndpoint + "/get-all";
-            public const string AddUser = BaseEndpoint + "/add";
-            public const string UpdateUser = BaseEndpoint + "/update" + "/{IDUser}";
-            public const string DeleteUser = BaseEndpoint + "/delete" + "/{IDUser}";
-            public const string GetUserByEmail = BaseEndpoint + "/get-single" + "/{Email}";
-        }
-
-        public static class UserPermission
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/user-permission";
-            public const string GetUserPermission = BaseEndpoint + "/get-single" + "/{IDUser}-{IDPermission}";
-            public const string GetAllUserPermission = BaseEndpoint + "/get-all";
-            public const string AddUserPermission = BaseEndpoint + "/add";
-            public const string UpdateUserPermission = BaseEndpoint + "/update" + "/{IDUser}-{IDPermission}";
-            public const string DeleteUserPermission = BaseEndpoint + "/delete" + "/{IDUser}-{IDPermission}";
-            public const string PrintAllUserPermissionByIDUser = BaseEndpoint + "/print-user-permission-byidxe" + "/{IDUser}";
-            public const string PrintAllUserPermissionByIDPer = BaseEndpoint + "/print-user-permission-byidper" + "/{IDPermission}";
-            public const string CountUserPermission = BaseEndpoint + "/count-user-permission";
-        }
-
         public static class Xe
         {
             private const string BaseEndpoint = "~/" + AreaName + "/xe";
@@ -354,6 +265,13 @@
             public const string DeleteXe = BaseEndpoint + "/delete" + "/{IDXe}";
             public const string PrintAllXeByIDLoaiXe = BaseEndpoint + "/print-xe-byid-loaixe" + "/{IDLoaiXe}";
             public const string CountXe = BaseEndpoint + "/count-xe" + "/{IDXe}";
+            public const string XeKhongCoLich = BaseEndpoint + "/xe-khong-lich" + "/{ThoiGianBatDau}-{ThoiGianKetThuc}";
+            public const string GetAllSoTuDong = BaseEndpoint + "/get-xe-sotudong";
+            public const string GetAllXeDien = BaseEndpoint + "/get-xe-dien";
+            public const string GetAllSoSan = BaseEndpoint + "/get-xe-sosan";
+            public const string GetAllByHangXe = BaseEndpoint + "/get-xe-hangxe" + "/{HangXe}";
+            public const string GetTienNghiXe = BaseEndpoint + "/get-tiennghi-xe" + "/{IDXe}";
+            public const string CheckLichXe = BaseEndpoint + "/check-lich-xe" + "/{IDXe}-{ThoiGianBatDau}-{ThoiGianKetThuc}";
         }
 
         public static class XeTienNghi
@@ -364,6 +282,7 @@
             public const string AddXeTienNghi = BaseEndpoint + "/add";
             public const string AddXeTienNghiList = BaseEndpoint + "/adds";
             public const string UpdateXeTienNghi = BaseEndpoint + "/update" + "/{IDXe}-{IDTienNghi}";
+            public const string DeleteXeAllTienNghi = BaseEndpoint + "/delete" + "/{IDXe}";
             public const string DeleteXeTienNghi = BaseEndpoint + "/delete" + "/{IDXe}-{IDTienNghi}";
             public const string PrintAllXeTienNghiByIDXe = BaseEndpoint + "/print-xe-tiennghi-byidxe" + "/{IDXe}";
             public const string PrintAllXeTienNghiByIDTienNghi = BaseEndpoint + "/print-xe-tiennghi-byid-tiennghi" + "/{IDTienNghi}";
@@ -381,10 +300,5 @@
             public const string CountTinTuc = BaseEndpoint + "/count-tin-tuc" + "/{IDTinTuc}";
         }
 
-        public static class Token
-        {
-            private const string BaseEndpoint = "~/" + AreaName + "/token";
-            public const string RenewToken = BaseEndpoint + "/renew-token";
-        }
     }
 }

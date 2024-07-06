@@ -8,6 +8,7 @@ using CarRental.Core.Models.Xe;
 using CarRental.Core.Models;
 using static CarRental.Core.Constants.WebApiEndpoint;
 using CarRental.Service;
+using OpenAI_API.Moderation;
 
 namespace CarRental.WebApi.Controllers
 {
@@ -243,6 +244,104 @@ namespace CarRental.WebApi.Controllers
             }
         }
 
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.XeKhongCoLich)]
+        public async Task<IActionResult> GetXeKhongCoLich([FromRoute] string ThoiGianBatDau, [FromRoute] string ThoiGianKetThuc)
+        {
+            var data = await _iXeService.XeKhongCoLichAsync(ThoiGianBatDau, ThoiGianKetThuc); 
+
+            if (data == null || !data.Any())
+            {
+                var result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    code: ResponseCodeConstants.NOT_FOUND,
+                    message: ReponseMessageConstantsXe.XE_NOT_FOUND);
+                return BadRequest(result);
+            }
+
+            return Ok(new BaseResponseModel<ICollection<XeEntity>>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS,
+                data: data));
+        }
+
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.GetAllSoTuDong)]
+        public IActionResult GetAllSoTuDong()
+        {
+            var result = _iXeService.GetAllSoTuDongAsync();
+            return Ok(new BaseResponseModel<ICollection<XeEntity>?>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS, data: result));
+        }
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.GetAllSoSan)]
+        public IActionResult GetAllSoSan()
+        {
+            var result = _iXeService.GetAllSoSanAsync();
+            return Ok(new BaseResponseModel<ICollection<XeEntity>?>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS, data: result));
+        }
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.GetAllXeDien)]
+        public IActionResult GetAllXeDien()
+        {
+            var result = _iXeService.GetAllXeDienAsync();
+            return Ok(new BaseResponseModel<ICollection<XeEntity>?>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS, data: result));
+        }
+
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.GetAllByHangXe)]
+        public IActionResult GetAllByHangXe([FromRoute] string HangXe)
+        {
+            var result = _iXeService.GetAllByHangXeAsync(HangXe);
+            return Ok(new BaseResponseModel<ICollection<XeEntity>?>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS, data: result));
+        }
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.GetTienNghiXe)]
+        public async Task<IActionResult> GetTienNghiXe([FromRoute] string IDXe)
+        {
+            var data = await _iXeService.GetTienNghiXeAsync(IDXe);
+
+            if (data == null || !data.Any())
+            {
+                var result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    code: ResponseCodeConstants.NOT_FOUND,
+                    message: ReponseMessageConstantsXe.XE_NOT_FOUND);
+                return BadRequest(result);
+            }
+
+            return Ok(new BaseResponseModel<ICollection<TienNghiEntity>>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS,
+                data: data));
+        }
+        [HttpGet]
+        [Route(WebApiEndpoint.Xe.CheckLichXe)]
+        public IActionResult CheckLichXe([FromRoute] string IDXe, [FromRoute] string ThoiGianBatDau, [FromRoute] string ThoiGianKetThuc)
+        {
+            var data = _iXeService.CheckLichXeAsync(IDXe, ThoiGianBatDau, ThoiGianKetThuc);
+
+            if (data == null)
+            {
+                var result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    code: ResponseCodeConstants.NOT_FOUND,
+                    message: ReponseMessageConstantsXe.XE_NOT_FOUND);
+                return BadRequest(result);
+            }
+
+            return Ok(new BaseResponseModel<bool>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS,
+                data: data));
+        }
     }
 }
 

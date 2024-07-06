@@ -22,36 +22,6 @@ namespace CarRental.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.AccessTokenEntity", b =>
-                {
-                    b.Property<DateTime>("ExpireAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("IDUser")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsRevoked")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsUsed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("StrTokenIDToken")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Token")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasIndex("StrTokenIDToken");
-
-                    b.ToTable("AccessToken");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.ChucVuEntity", b =>
                 {
                     b.Property<string>("IDChucVu")
@@ -136,7 +106,6 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("HinhAnhThanhToan")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HinhThucThanhToan")
@@ -198,7 +167,6 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HinhAnhHopDong")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IDKhachHang")
@@ -254,8 +222,7 @@ namespace CarRental.Repository.Migrations
 
                     b.HasIndex("IDNhanVien");
 
-                    b.HasIndex("IDXe")
-                        .IsUnique();
+                    b.HasIndex("IDXe");
 
                     b.ToTable("HopDongKyGui");
                 });
@@ -273,7 +240,6 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("HinhAnhHopDong")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IDKMLoaiKH")
@@ -365,8 +331,7 @@ namespace CarRental.Repository.Migrations
 
                     b.HasIndex("IDNhanVien");
 
-                    b.HasIndex("IDXe")
-                        .IsUnique();
+                    b.HasIndex("IDXe");
 
                     b.ToTable("HopDongThueXe");
                 });
@@ -412,8 +377,7 @@ namespace CarRental.Repository.Migrations
 
                     b.HasKey("IDKhuyenMai");
 
-                    b.HasIndex("IDLoaiKH")
-                        .IsUnique();
+                    b.HasIndex("IDLoaiKH");
 
                     b.ToTable("KMLoaiKH");
                 });
@@ -459,8 +423,7 @@ namespace CarRental.Repository.Migrations
 
                     b.HasKey("IDKhuyenMai");
 
-                    b.HasIndex("IDLoaiXe")
-                        .IsUnique();
+                    b.HasIndex("IDLoaiXe");
 
                     b.ToTable("KMLoaiXe");
                 });
@@ -623,7 +586,6 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SoPassPort")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SoTaiKhoan")
@@ -731,43 +693,6 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("LoaiXe");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.LoginEntity", b =>
-                {
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("PassWord")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Email");
-
-                    b.ToTable("Login");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.NhacHenEntity", b =>
-                {
-                    b.Property<string>("IDNhacHen")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("DinhKyNhacHen")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NDNhacHen")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDNhacHen");
-
-                    b.ToTable("NhacHen");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.NhanVienEntity", b =>
                 {
                     b.Property<string>("IDNhanVien")
@@ -842,49 +767,6 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("NhanVien");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.PermissionDetailEntity", b =>
-                {
-                    b.Property<string>("IDPermissionDetail")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ActionCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CheckAction")
-                        .HasColumnType("int");
-
-                    b.Property<string>("IDPermission")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDPermissionDetail");
-
-                    b.HasIndex("IDPermission");
-
-                    b.ToTable("PermissionDetail");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.PermissionEntity", b =>
-                {
-                    b.Property<string>("IDPermission")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("PermissionGroupName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDPermission");
-
-                    b.ToTable("Permission");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.PhongBanEntity", b =>
                 {
                     b.Property<string>("IDPhongBan")
@@ -914,110 +796,12 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("PhongBan");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.QuanLyChuyenKhoanEntity", b =>
-                {
-                    b.Property<string>("IDQuanLyCK")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("NDChuyenKhoanCoc")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NDChuyenKhoanKyGui")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NDChuyenKhoanThue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDQuanLyCK");
-
-                    b.ToTable("QuanLyChuyenKhoan");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.RefreshTokenEntity", b =>
-                {
-                    b.Property<string>("Token")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IDUser")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("ExpireAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsRevoked")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsUsed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("JwtID")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StrTokenIDToken")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Token", "IDUser");
-
-                    b.HasIndex("StrTokenIDToken");
-
-                    b.ToTable("RefreshToken");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.RoomEntity", b =>
-                {
-                    b.Property<string>("IDRoom")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IDKhachHang")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IDNhanVien")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("ThoiGianRoom")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDRoom");
-
-                    b.HasIndex("IDKhachHang");
-
-                    b.HasIndex("IDNhanVien");
-
-                    b.ToTable("Room");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.SoDienThoaiEntity", b =>
-                {
-                    b.Property<string>("DauSo")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("DauSo");
-
-                    b.ToTable("SoDienThoai");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.ThamDinhXeEntity", b =>
                 {
                     b.Property<string>("IDThamDinh")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BienBanThamDinh")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeThongDongCo")
@@ -1128,7 +912,6 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("HinhAnh")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("NgayTao")
@@ -1139,10 +922,13 @@ namespace CarRental.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NoiDung")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TieuDe")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Topic")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -1154,34 +940,12 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("TinTuc");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.TokenEntity", b =>
-                {
-                    b.Property<string>("IDToken")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AccessToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RefreshToken")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDToken");
-
-                    b.ToTable("Token");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.TrangThaiBaoDuongEntity", b =>
                 {
                     b.Property<string>("IDTrangThaiBD")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("HinhAnhHoaDonBD")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IDXe")
@@ -1203,45 +967,6 @@ namespace CarRental.Repository.Migrations
                     b.HasIndex("IDXe");
 
                     b.ToTable("TrangThaiBaoDuong");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.UserEntity", b =>
-                {
-                    b.Property<string>("IDUser")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PassWord")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDUser");
-
-                    b.ToTable("User");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.UserPermissionEntity", b =>
-                {
-                    b.Property<string>("IDUser")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("IDPermission")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("TrangThai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IDUser", "IDPermission");
-
-                    b.HasIndex("IDPermission");
-
-                    b.ToTable("UserPermission");
                 });
 
             modelBuilder.Entity("CarRental.Contract.Repository.Models.XeEntity", b =>
@@ -1326,15 +1051,6 @@ namespace CarRental.Repository.Migrations
                     b.ToTable("XeTienNghi");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.AccessTokenEntity", b =>
-                {
-                    b.HasOne("CarRental.Contract.Repository.Models.TokenEntity", "StrToken")
-                        .WithMany()
-                        .HasForeignKey("StrTokenIDToken");
-
-                    b.Navigation("StrToken");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.HoaDonKyGuiEntity", b =>
                 {
                     b.HasOne("CarRental.Contract.Repository.Models.HopDongKyGuiEntity", "HopDongKyGuis")
@@ -1372,8 +1088,8 @@ namespace CarRental.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("CarRental.Contract.Repository.Models.XeEntity", "Xes")
-                        .WithOne("HopDongKyGuis")
-                        .HasForeignKey("CarRental.Contract.Repository.Models.HopDongKyGuiEntity", "IDXe")
+                        .WithMany("HopDongKyGuis")
+                        .HasForeignKey("IDXe")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1399,8 +1115,8 @@ namespace CarRental.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("CarRental.Contract.Repository.Models.XeEntity", "Xes")
-                        .WithOne("HopDongThueXes")
-                        .HasForeignKey("CarRental.Contract.Repository.Models.HopDongThueXeEntity", "IDXe")
+                        .WithMany("HopDongThueXes")
+                        .HasForeignKey("IDXe")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1420,8 +1136,8 @@ namespace CarRental.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("CarRental.Contract.Repository.Models.LoaiKhachHangEntity", "LoaiKhachHangs")
-                        .WithOne("KMLoaiKHs")
-                        .HasForeignKey("CarRental.Contract.Repository.Models.KMLoaiKHEntity", "IDLoaiKH")
+                        .WithMany("KMLoaiKHs")
+                        .HasForeignKey("IDLoaiKH")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1439,8 +1155,8 @@ namespace CarRental.Repository.Migrations
                         .IsRequired();
 
                     b.HasOne("CarRental.Contract.Repository.Models.LoaiXeEntity", "LoaiXes")
-                        .WithOne("KMLoaiXes")
-                        .HasForeignKey("CarRental.Contract.Repository.Models.KMLoaiXeEntity", "IDLoaiXe")
+                        .WithMany("KMLoaiXes")
+                        .HasForeignKey("IDLoaiXe")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1512,45 +1228,6 @@ namespace CarRental.Repository.Migrations
                     b.Navigation("PhongBans");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.PermissionDetailEntity", b =>
-                {
-                    b.HasOne("CarRental.Contract.Repository.Models.PermissionEntity", "Permissions")
-                        .WithMany("PermissionDetails")
-                        .HasForeignKey("IDPermission")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Permissions");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.RefreshTokenEntity", b =>
-                {
-                    b.HasOne("CarRental.Contract.Repository.Models.TokenEntity", "StrToken")
-                        .WithMany("RefreshTokens")
-                        .HasForeignKey("StrTokenIDToken");
-
-                    b.Navigation("StrToken");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.RoomEntity", b =>
-                {
-                    b.HasOne("CarRental.Contract.Repository.Models.KhachHangEntity", "KhachHangs")
-                        .WithMany("Rooms")
-                        .HasForeignKey("IDKhachHang")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CarRental.Contract.Repository.Models.NhanVienEntity", "NhanViens")
-                        .WithMany("Rooms")
-                        .HasForeignKey("IDNhanVien")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("KhachHangs");
-
-                    b.Navigation("NhanViens");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.ThamDinhXeEntity", b =>
                 {
                     b.HasOne("CarRental.Contract.Repository.Models.NhanVienEntity", "NhanViens")
@@ -1582,25 +1259,6 @@ namespace CarRental.Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Xes");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.UserPermissionEntity", b =>
-                {
-                    b.HasOne("CarRental.Contract.Repository.Models.PermissionEntity", "Permissions")
-                        .WithMany("UserPermissions")
-                        .HasForeignKey("IDPermission")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CarRental.Contract.Repository.Models.UserEntity", "Users")
-                        .WithMany("UserPermissions")
-                        .HasForeignKey("IDUser")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Permissions");
-
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("CarRental.Contract.Repository.Models.XeEntity", b =>
@@ -1653,8 +1311,6 @@ namespace CarRental.Repository.Migrations
                     b.Navigation("HopDongKyGuis");
 
                     b.Navigation("HopDongThueXes");
-
-                    b.Navigation("Rooms");
                 });
 
             modelBuilder.Entity("CarRental.Contract.Repository.Models.KhuyenMaiEntity", b =>
@@ -1670,8 +1326,7 @@ namespace CarRental.Repository.Migrations
 
             modelBuilder.Entity("CarRental.Contract.Repository.Models.LoaiKhachHangEntity", b =>
                 {
-                    b.Navigation("KMLoaiKHs")
-                        .IsRequired();
+                    b.Navigation("KMLoaiKHs");
 
                     b.Navigation("KhachHangs");
                 });
@@ -1689,18 +1344,9 @@ namespace CarRental.Repository.Migrations
 
                     b.Navigation("HopDongThueXes");
 
-                    b.Navigation("Rooms");
-
                     b.Navigation("ThamDinhXes");
 
                     b.Navigation("ThanhLyHopDongs");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.PermissionEntity", b =>
-                {
-                    b.Navigation("PermissionDetails");
-
-                    b.Navigation("UserPermissions");
                 });
 
             modelBuilder.Entity("CarRental.Contract.Repository.Models.PhongBanEntity", b =>
@@ -1713,23 +1359,11 @@ namespace CarRental.Repository.Migrations
                     b.Navigation("XeTienNghis");
                 });
 
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.TokenEntity", b =>
-                {
-                    b.Navigation("RefreshTokens");
-                });
-
-            modelBuilder.Entity("CarRental.Contract.Repository.Models.UserEntity", b =>
-                {
-                    b.Navigation("UserPermissions");
-                });
-
             modelBuilder.Entity("CarRental.Contract.Repository.Models.XeEntity", b =>
                 {
-                    b.Navigation("HopDongKyGuis")
-                        .IsRequired();
+                    b.Navigation("HopDongKyGuis");
 
-                    b.Navigation("HopDongThueXes")
-                        .IsRequired();
+                    b.Navigation("HopDongThueXes");
 
                     b.Navigation("LichXes");
 

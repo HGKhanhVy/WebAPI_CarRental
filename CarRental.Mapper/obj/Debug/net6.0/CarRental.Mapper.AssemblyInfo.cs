@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarRental.Mapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37389874d4064e52d55912f114654834102adb8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6527b19e62bcefb97fce5e7d682d0222b7407f7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarRental.Mapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarRental.Mapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,7 +25,7 @@ namespace CarRental.Contract.Repository.Models
         public string IDKhachHang { get; set; }
 
         public DateTime NgayThamDinh { get; set; }
-        public string BienBanThamDinh { get; set; }
+        public string? BienBanThamDinh { get; set; }
         public string NoiDungHoSoXe { get; set; }
         public string TinhTrangNgoaiThat { get; set; }
         public string TinhTrangNoiThat { get; set; }

@@ -1,5 +1,4 @@
 ﻿using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.Login;
 
 namespace CarRental.Contract.Service.Base
 {
@@ -10,7 +9,5 @@ namespace CarRental.Contract.Service.Base
         ICollection<T> GetAllByAnotherKeyAsync(string str);
         T GetByKeyIdAsync(TKey keyId);
         T GetByStrAsync(string str);
-        T GetByLoginAsync(LoginModel model);
-        UserEntity GetByUserNameAsync(RefreshTokenEntity model);
     }
 }

@@ -11,6 +11,7 @@ using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
 using CarRental.Core.Models;
 using System.Security;
+using CarRental.Service;
 
 namespace CarRental.WebApi.Controllers
 {
@@ -245,6 +246,37 @@ namespace CarRental.WebApi.Controllers
             return Ok(new BaseResponseModel<ICollection<XeTienNghiEntity>?>(
                 statusCode: StatusCodes.Status200OK,
                 code: ResponseCodeConstants.SUCCESS, data: data));
+        }
+
+        [HttpDelete]
+        [Route(WebApiEndpoint.XeTienNghi.DeleteXeAllTienNghi)]
+        public async Task<IActionResult> DeleteXeAllTienNghi([FromRoute] string IDXe)
+        {
+            try
+            {
+                await _iXeTienNghiService.DeleteAsync(IDXe, false);
+                return Ok(new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status200OK,
+                    code: ResponseCodeConstants.SUCCESS,
+                    data: ReponseMessageConstantsXe.DELETE_XE_SUCCESS));
+            }
+            catch (Exception e)
+            {
+                dynamic result;
+                if (e is CoreException error)
+                {
+                    result = new BaseResponseModel<string>(
+                        statusCode: error.StatusCode,
+                        code: error.Code,
+                        message: error.Message);
+                    return BadRequest(result);
+                }
+                result = new BaseResponseModel<string>(
+                    statusCode: StatusCodes.Status500InternalServerError,
+                    code: ResponseCodeConstants.FAILED,
+                    message: e.Message);
+                return BadRequest(result);
+            }
         }
     }
 }

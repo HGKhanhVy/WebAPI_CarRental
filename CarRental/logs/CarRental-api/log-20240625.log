@@ -1,0 +1,42 @@
+2024-06-25T23:54:22.7476140+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-06-25T23:54:22.8636769+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-06-25T23:54:22.8716071+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-06-25T23:54:22.8762877+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-06-25T23:54:22.9126159+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-06-25T23:54:22.9446354+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-06-25T23:54:23.7617861+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://0.0.0.0:7046"
+2024-06-25T23:54:23.7690288+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-06-25T23:54:23.7708628+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-06-25T23:54:23.7719205+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-06-25T23:54:55.8707468+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-06-25T23:54:55.9708068+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 596.7176 ms
+2024-06-25T23:54:56.0687185+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-06-25T23:54:56.0780430+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 96.5124 ms
+2024-06-25T23:54:57.4061875+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hero-banner.jpg" responded 200 in 40.9832 ms
+2024-06-25T23:54:59.7489322+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/" responded 405 in 0.4010 ms
+2024-06-25T23:55:04.9182575+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("23"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[IDXe] = @__id_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))"
+2024-06-25T23:55:04.9271305+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-single/X03" responded 200 in 87.8008 ms
+2024-06-25T23:55:05.5284836+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/xe3-4.jpg" responded 200 in 32.6057 ms
+2024-06-25T23:55:05.5300223+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/xe3-2.jpg" responded 200 in 34.6762 ms
+2024-06-25T23:55:05.5311272+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/xe3-3.jpg" responded 200 in 35.4039 ms
+2024-06-25T23:55:07.2326017+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=["@__id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='1200']"
+""SELECT TOP(1) [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[IDXe] = @__id_0 AND ([x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL))"
+2024-06-25T23:55:07.2399846+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-single/X03" responded 200 in 17.7970 ms

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.User;
 using CarRental.Core.Models.Xe;
 using System;
 using System.Collections.Generic;

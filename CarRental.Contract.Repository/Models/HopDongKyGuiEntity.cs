@@ -25,7 +25,7 @@ namespace CarRental.Contract.Repository.Models
 
         // Khóa ngoại Xe 1-1
         public string IDXe { get; set; }
-        public XeEntity Xes { get; set; }
+        public virtual XeEntity Xes { get; set; }
 
         public DateTime NgayLap { get; set; }
         public double PhanTramHoaHong { get; set; }
@@ -35,7 +35,7 @@ namespace CarRental.Contract.Repository.Models
         public DateTime NgayHieuLuc { get; set; }
         public DateTime NgayHetHan { get; set; }
         public bool XacNhan { get; set; }
-        public string HinhAnhHopDong { get; set; }
+        public string? HinhAnhHopDong { get; set; }
         public string? UpdateBy { get; set; }
         public DateTime? UpdateAt { get; set; }
 

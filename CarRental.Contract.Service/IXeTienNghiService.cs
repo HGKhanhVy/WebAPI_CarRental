@@ -1,5 +1,4 @@
 ﻿using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.UserPermission;
 using CarRental.Core.Models.Xe;
 using CarRental.Core.Models.XeTienNghi;
 using System;
@@ -16,7 +15,8 @@ namespace CarRental.Contract.Service
        Base.IDeleteable2Fields<string, string, bool>,
        Base.IGetable2Fields<XeTienNghiEntity, string, string>,
        Base.ICounteable<XeTienNghiModel, int>,
-       Base.ICreateableList<string, string>
+       Base.ICreateableList<string, string>,
+       Base.IDeleteable<string, bool>
     {
     }
 }

@@ -16,7 +16,7 @@ namespace CarRental.Contract.Repository.Models
 
         // Khóa ngoại bảng LoaiKhachHang
         public string IDLoaiKH { get; set; }
-        public LoaiKhachHangEntity LoaiKhachHangs { get; set; }
+        public virtual LoaiKhachHangEntity LoaiKhachHangs { get; set; }
 
         public double? TyLePhanTram { get; set; }
         public double? SoTien { get; set; }

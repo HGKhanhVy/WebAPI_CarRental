@@ -21,7 +21,7 @@ namespace CarRental.Contract.Repository.Models
         public string NgaySinh { get; set; }
         public string CCCD { get; set; }
         public string GPLX { get; set; }
-        public string SoPassPort { get; set; }
+        public string? SoPassPort { get; set; }
         public string DiaChiThuongTru { get; set; }
         public string DiaChiHienTai { get; set; }
         public string SoDienThoai { get; set; }
@@ -35,6 +35,5 @@ namespace CarRental.Contract.Repository.Models
 
         public virtual ICollection<HopDongThueXeEntity>? HopDongThueXes { get; set; }
         public virtual ICollection<HopDongKyGuiEntity>? HopDongKyGuis { get; set; }
-        public virtual ICollection<RoomEntity>? Rooms { get; set; }
     }
 }

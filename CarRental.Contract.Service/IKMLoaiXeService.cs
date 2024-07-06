@@ -16,7 +16,8 @@ namespace CarRental.Contract.Service
        Base.IGetable<KMLoaiXeEntity, string>,
        Base.ICounteable<KMLoaiXeModel, int>,
        Base.IPrintByID<KMLoaiXeEntity, string>,
-       Base.IUpdateStatus
+       Base.IUpdateStatus,
+       Base.IGetForKMLoaiXe<KMLoaiXeEntity, string>
     {
     }
 }

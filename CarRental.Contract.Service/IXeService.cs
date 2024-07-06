@@ -1,5 +1,4 @@
 ﻿using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.UserPermission;
 using CarRental.Core.Models.Xe;
 using System;
 using System.Collections.Generic;
@@ -14,7 +13,9 @@ namespace CarRental.Contract.Service
        Base.IUpdateable<XeModel, string>,
        Base.IDeleteable<string, bool>,
        Base.IGetable<XeEntity, string>,
-       Base.ICounteable<XeModel, int>
+       Base.ICounteable<XeModel, int>,
+       Base.ICheckLichXe<XeEntity>,
+       Base.IGetForXe<XeEntity, string>
     {
         public int getIDXe();
     }

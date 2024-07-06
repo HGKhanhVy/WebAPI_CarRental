@@ -28,5 +28,6 @@ namespace CarRental.Core.Models.Xe
         public string? HinhAnh2 { get; set; }
         public string? HinhAnh3 { get; set; }
         public string? HinhAnh4 { get; set; }
+        public string? TrangThai { get; set; }
     }
 }

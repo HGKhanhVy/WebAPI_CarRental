@@ -34,7 +34,7 @@ namespace CarRental.Core.Models.HopDongThueXe
         public DateTime NgayHieuLuc { get; set; }
         public DateTime NgayHetHan { get; set; }
         public bool XacNhan { get; set; }
-        public string HinhAnhHopDong { get; set; }
+        public string? HinhAnhHopDong { get; set; }
 
         // Khóa ngoại KMLoaiKH
         public string? IDKMLoaiKH { get; set; }

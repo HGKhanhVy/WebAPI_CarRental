@@ -142,5 +142,30 @@ namespace CarRental.Service
             }
             return Task.FromResult("Thanh cong");
         }
+
+        public Task DeleteAsync(string id, bool isPhysical, CancellationToken cancellationToken = default)
+        {
+            var entity = _xetnRepository.Get(x => x.IDXe.Equals(id) && !x.TrangThai.Equals("Da xoa")).ToList();
+            if (entity == null)
+            {
+                _logger.Information(ErrorCode.NotFound, id);
+                throw new CoreException(code: ResponseCodeConstants.NOT_FOUND, message: ReponseMessageConstantsXe.XE_NOT_FOUND, statusCode: StatusCodes.Status404NotFound);
+            }
+
+            // Xóa các XeTienNghi liên quan
+            foreach (var xeTienNghi in entity)
+            {
+                _xetnRepository.Delete(xeTienNghi, isPhysicalDelete: isPhysical);
+                xeTienNghi.TrangThai = "Da xoa";
+                UnitOfWork.SaveChange();
+            }
+            return Task.CompletedTask;
+        }
+
+
+        public Task DeleteByAnotherKeyAsync(string idAnother, bool isPhysical, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

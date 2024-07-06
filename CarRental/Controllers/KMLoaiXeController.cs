@@ -224,6 +224,15 @@ namespace CarRental.WebApi.Controllers
                 return BadRequest(result);
             }
         }
+        [HttpGet]
+        [Route(WebApiEndpoint.KMLoaiXe.GetKMChuaCo)]
+        public IActionResult GetKMChuaCo()
+        {
+            var result = _iKMLoaiXeService.GetKMChuaCoAsync();
+            return Ok(new BaseResponseModel<ICollection<KMLoaiXeEntity>?>(
+                statusCode: StatusCodes.Status200OK,
+                code: ResponseCodeConstants.SUCCESS, data: result));
+        }
     }
 }
 

@@ -39,6 +39,7 @@ public class Program
     {
         var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         var builder = WebApplication.CreateBuilder(args);
+        
         builder.Services.AddCors(options =>
         {
             options.AddPolicy(MyAllowSpecificOrigins,
@@ -52,7 +53,7 @@ public class Program
                                   });
         });
 
-
+        builder.WebHost.UseUrls("http://0.0.0.0:7046");
 
         _ = builder.Host.UseSerilog((hostContext, loggerConfiguration) =>
            _ = loggerConfiguration.ReadFrom.Configuration(builder.Configuration));

@@ -14,7 +14,6 @@ using CarRental.Contract.Service.Base;
 using CarRental.Contract.Service;
 using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
-using CarRental.Core.Models.Login;
 using CarRental.Core.Models.TinTuc;
 using FirebaseAdmin.Messaging;
 
@@ -104,17 +103,7 @@ namespace CarRental.Service
             return Task.CompletedTask;
         }
 
-        public TinTucEntity GetByLoginAsync(LoginModel model)
-        {
-            throw new NotImplementedException();
-        }
-
         public TinTucEntity GetByStrAsync(string sdt)
-        {
-            throw new NotImplementedException();
-        }
-
-        public UserEntity GetByUserNameAsync(RefreshTokenEntity model)
         {
             throw new NotImplementedException();
         }

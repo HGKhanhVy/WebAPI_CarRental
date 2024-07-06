@@ -118,13 +118,6 @@
         public const string UPDATE_LOGIN_SUCCESS = "Cap nhat thong tin dang nhap thanh cong.";
         public const string DELETE_LOGIN_SUCCESS = "Xoa thong tin dang nhap thanh cong.";
     }
-    public class ReponseMessageConstantsNhacHen
-    {
-        public const string NHACHEN_NOT_FOUND = "Khong tim thay nhac hen.";
-        public const string NHACHEN_EXISTED = "Nhac hen da ton tai.";
-        public const string UPDATE_NHACHEN_SUCCESS = "Cap nhat nhac hen thanh cong.";
-        public const string DELETE_NHACHEN_SUCCESS = "Xoa nhac hen thanh cong.";
-    }
     public class ReponseMessageConstantsNhanVien
     {
         public const string NHANVIEN_NOT_FOUND = "Khong tim thay nhan vien.";
@@ -132,47 +125,13 @@
         public const string UPDATE_NHANVIEN_SUCCESS = "Cap nhat nhan vien thanh cong.";
         public const string DELETE_NHANVIEN_SUCCESS = "Xoa nhan vien thanh cong.";
     }
-    public class ReponseMessageConstantsPermissionDetail
-    {
-        public const string PERMISSIONDETAIL_NOT_FOUND = "Khong tim thay chi tiet quyen.";
-        public const string PERMISSIONDETAIL_EXISTED = "Chi tiet quyen da ton tai.";
-        public const string UPDATE_PERMISSIONDETAIL_SUCCESS = "Cap nhat chi tiet quyen thanh cong.";
-        public const string DELETE_PERMISSIONDETAIL_SUCCESS = "Xoa chi tiet quyen thanh cong.";
-    }
-    public class ReponseMessageConstantsPermission
-    {
-        public const string PERMISSION_NOT_FOUND = "Khong tim thay quyen.";
-        public const string PERMISSION_EXISTED = "Quyen da ton tai.";
-        public const string UPDATE_PERMISSION_SUCCESS = "Cap nhat quyen thanh cong.";
-        public const string DELETE_PERMISSION_SUCCESS = "Xoa quyen thanh cong.";
-    }
+
     public class ReponseMessageConstantsPhongBan
     {
         public const string PHONGBAN_NOT_FOUND = "Khong tim thay phong ban.";
         public const string PHONGBAN_EXISTED = "Phong ban da ton tai.";
         public const string UPDATE_PHONGBAN_SUCCESS = "Cap nhat phong ban thanh cong.";
         public const string DELETE_PHONGBAN_SUCCESS = "Xoa phong ban thanh cong.";
-    }
-    public class ReponseMessageConstantsQuanLyChuyenKhoan
-    {
-        public const string QLCHUYENKHOAN_NOT_FOUND = "Khong tim thay quan ly chuyen khoan.";
-        public const string QLCHUYENKHOAN_EXISTED = "Quan ly chuyen khoan da ton tai.";
-        public const string UPDATE_QLCHUYENKHOAN_SUCCESS = "Cap nhat quan ly chuyen khoan thanh cong.";
-        public const string DELETE_QLCHUYENKHOAN_SUCCESS = "Xoa quan ly chuyen khoan thanh cong.";
-    }
-    public class ReponseMessageConstantsRoom
-    {
-        public const string ROOM_NOT_FOUND = "Khong tim thay room.";
-        public const string ROOM_EXISTED = "Room da ton tai.";
-        public const string UPDATE_ROOM_SUCCESS = "Cap nhat room thanh cong.";
-        public const string DELETE_ROOM_SUCCESS = "Xoa room thanh cong.";
-    }
-    public class ReponseMessageConstantsSoDienThoai
-    {
-        public const string DAUSO_NOT_FOUND = "Khong tim thay dau so.";
-        public const string DAUSO_EXISTED = "Dau so da ton tai.";
-        public const string UPDATE_DAUSO_SUCCESS = "Cap nhat dau so thanh cong.";
-        public const string DELETE_DAUSO_SUCCESS = "Xoa dau so thanh cong.";
     }
     public class ReponseMessageConstantsThamDinhXe
     {
@@ -202,20 +161,7 @@
         public const string UPDATE_TRANGTHAIBAODUONG_SUCCESS = "Cap nhat trang thai bao duong thanh cong.";
         public const string DELETE_TRANGTHAIBAODUONG_SUCCESS = "Xoa trang thai bao duong thanh cong.";
     }
-    public class ReponseMessageConstantsUser
-    {
-        public const string USER_NOT_FOUND = "Khong tim thay user.";
-        public const string USER_EXISTED = "User da ton tai.";
-        public const string UPDATE_USER_SUCCESS = "Cap nhat user thanh cong.";
-        public const string DELETE_USER_SUCCESS = "Xoa user thanh cong.";
-    }
-    public class ReponseMessageConstantsUserPermission
-    {
-        public const string USERPERMISSION_NOT_FOUND = "Khong tim thay quyen user.";
-        public const string USERPERMISSION_EXISTED = "Quyen user da ton tai.";
-        public const string UPDATE_USERPERMISSION_SUCCESS = "Cap nhat quyen user thanh cong.";
-        public const string DELETE_USERPERMISSION_SUCCESS = "Xoa quyen user thanh cong.";
-    }
+   
     public class ReponseMessageConstantsXe
     {
         public const string XE_NOT_FOUND = "Khong tim thay xe.";

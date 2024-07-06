@@ -18,7 +18,7 @@ namespace CarRental.Core.Models.KhachHang
         public string NgaySinh { get; set; }
         public string CCCD { get; set; }
         public string GPLX { get; set; }
-        public string SoPassPort { get; set; }
+        public string? SoPassPort { get; set; }
         public string DiaChiThuongTru { get; set; }
         public string DiaChiHienTai { get; set; }
         public string SoDienThoai { get; set; }

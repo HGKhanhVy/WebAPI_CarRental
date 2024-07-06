@@ -16,7 +16,7 @@ namespace CarRental.Contract.Repository.Models
 
         // Khóa ngoại bảng LoaiXe
         public string IDLoaiXe { get; set; }
-        public LoaiXeEntity LoaiXes { get; set; }
+        public virtual LoaiXeEntity LoaiXes { get; set; }
 
         public double? TyLePhanTram { get; set; }
         public double? SoTien { get; set; }

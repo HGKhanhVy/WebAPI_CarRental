@@ -16,6 +16,6 @@ namespace CarRental.Core.Models.TrangThaiBaoDuong
 
         public string NDBaoDuong { get; set; }
         public DateTime NgayBaoDuong { get; set; }
-        public string HinhAnhHoaDonBD { get; set; }
+        public string? HinhAnhHoaDonBD { get; set; }
     }
 }

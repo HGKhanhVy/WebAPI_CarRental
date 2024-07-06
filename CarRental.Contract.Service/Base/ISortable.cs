@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.Login;
 
 namespace CarRental.Contract.Service.Base
 {

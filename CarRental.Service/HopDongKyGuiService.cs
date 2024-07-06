@@ -5,7 +5,6 @@ using CarRental.Contract.Service;
 using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
 using CarRental.Core.Models.HopDongKyGui;
-using CarRental.Core.Models.Login;
 using CarRental.Core.Models.ThanhLyHopDong;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Packaging;
@@ -123,16 +122,8 @@ namespace CarRental.Service
         {
             throw new NotImplementedException();
         }
-        public UserEntity GetByUserNameAsync(RefreshTokenEntity model)
-        {
-            throw new NotImplementedException();
-        }
 
         public string PrintByIDAsync(string id)
-        {
-            throw new NotImplementedException();
-        }
-        public HopDongKyGuiEntity GetByLoginAsync(LoginModel model)
         {
             throw new NotImplementedException();
         }

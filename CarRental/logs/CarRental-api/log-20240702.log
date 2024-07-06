@@ -1,0 +1,393 @@
+2024-07-02T22:22:10.0193330+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:22:10.0853993+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:22:10.0876068+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:22:10.0881922+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:22:10.1089984+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T22:22:10.1238034+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702152157_UpdateNullPassport"'.
+2024-07-02T22:22:10.2409800+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[KhachHang]') AND [c].[name] = N'SoPassPort');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [KhachHang] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [KhachHang] ALTER COLUMN [SoPassPort] nvarchar(max) NULL;"
+2024-07-02T22:22:10.2433549+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702152157_UpdateNullPassport', N'7.0.9');"
+2024-07-02T22:42:11.5557470+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:42:11.6549759+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("55"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:42:11.6575070+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:42:11.6584108+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:42:11.6942369+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T22:42:11.7199758+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702154156_UpdateNullHABaoDuong"'.
+2024-07-02T22:42:11.9268947+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("134"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[TrangThaiBaoDuong]') AND [c].[name] = N'HinhAnhHoaDonBD');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [TrangThaiBaoDuong] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [TrangThaiBaoDuong] ALTER COLUMN [HinhAnhHoaDonBD] nvarchar(max) NULL;"
+2024-07-02T22:42:11.9302773+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702154156_UpdateNullHABaoDuong', N'7.0.9');"
+2024-07-02T22:46:30.0594944+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:46:30.1077660+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:46:30.1098022+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:46:30.1104412+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:46:30.1231760+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T22:46:30.1320661+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702154621_UpdateNullHAHopDong"'.
+2024-07-02T22:46:30.2290593+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[HopDongThueXe]') AND [c].[name] = N'HinhAnhHopDong');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [HopDongThueXe] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [HopDongThueXe] ALTER COLUMN [HinhAnhHopDong] nvarchar(max) NULL;"
+2024-07-02T22:46:30.2365199+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[HopDongKyGui]') AND [c].[name] = N'HinhAnhHopDong');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [HopDongKyGui] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [HopDongKyGui] ALTER COLUMN [HinhAnhHopDong] nvarchar(max) NULL;"
+2024-07-02T22:46:30.2376200+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702154621_UpdateNullHAHopDong', N'7.0.9');"
+2024-07-02T22:56:27.9390497+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:56:28.0082362+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:56:28.0102229+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:56:28.0108548+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:56:28.0277403+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T22:56:28.0391878+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702155618_UpdateXeHopDong"'.
+2024-07-02T22:56:28.1403881+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DROP INDEX [IX_HopDongThueXe_IDXe] ON [HopDongThueXe];"
+2024-07-02T22:56:28.1538496+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""CREATE INDEX [IX_HopDongThueXe_IDXe] ON [HopDongThueXe] ([IDXe]);"
+2024-07-02T22:56:28.1553530+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702155618_UpdateXeHopDong', N'7.0.9');"
+2024-07-02T22:59:40.6638101+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:59:40.7587239+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:59:40.7605142+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T22:59:40.7609740+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T22:59:40.7990677+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T22:59:40.8087952+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702155933_UpdateNullHAThanhToan"'.
+2024-07-02T22:59:40.9686657+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("94"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[HoaDonThueXe]') AND [c].[name] = N'HinhThucThanhToan');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [HoaDonThueXe] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [HoaDonThueXe] ALTER COLUMN [HinhThucThanhToan] nvarchar(max) NULL;"
+2024-07-02T22:59:40.9703134+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702155933_UpdateNullHAThanhToan', N'7.0.9');"
+2024-07-02T23:00:26.0754671+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:00:26.1195550+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:00:26.1210955+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:00:26.1216209+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:00:26.1328100+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:00:26.1413896+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702160018_UpdateNullHinhAThanhToan"'.
+2024-07-02T23:00:26.2331580+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[HoaDonThueXe]') AND [c].[name] = N'HinhThucThanhToan');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [HoaDonThueXe] DROP CONSTRAINT [' + @var0 + '];');
+UPDATE [HoaDonThueXe] SET [HinhThucThanhToan] = N'' WHERE [HinhThucThanhToan] IS NULL;
+ALTER TABLE [HoaDonThueXe] ALTER COLUMN [HinhThucThanhToan] nvarchar(max) NOT NULL;
+ALTER TABLE [HoaDonThueXe] ADD DEFAULT N'' FOR [HinhThucThanhToan];"
+2024-07-02T23:00:26.2473955+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[HoaDonThueXe]') AND [c].[name] = N'HinhAnhThanhToan');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [HoaDonThueXe] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [HoaDonThueXe] ALTER COLUMN [HinhAnhThanhToan] nvarchar(max) NULL;"
+2024-07-02T23:00:26.2488418+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702160018_UpdateNullHinhAThanhToan', N'7.0.9');"
+2024-07-02T23:02:35.7746967+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:02:35.8262369+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("15"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:02:35.8280897+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:02:35.8286501+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:02:35.8431074+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:02:35.8541206+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) Applying migration '"20240702160228_UpdateNullBienBanTD"'.
+2024-07-02T23:02:35.9260547+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[ThamDinhXe]') AND [c].[name] = N'BienBanThamDinh');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [ThamDinhXe] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [ThamDinhXe] ALTER COLUMN [BienBanThamDinh] nvarchar(max) NULL;"
+2024-07-02T23:02:35.9277769+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240702160228_UpdateNullBienBanTD', N'7.0.9');"
+2024-07-02T23:21:36.7067094+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:21:36.8451212+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:21:36.8534436+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:21:36.8580885+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:21:36.8976825+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:21:36.9309206+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-07-02T23:21:37.4182607+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://0.0.0.0:7046"
+2024-07-02T23:21:37.4220262+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-07-02T23:21:37.4234823+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-07-02T23:21:37.4247316+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-07-02T23:21:58.2087651+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-07-02T23:21:58.3854830+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 1309.0607 ms
+2024-07-02T23:21:58.5806106+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-07-02T23:21:58.6073052+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 197.3950 ms
+2024-07-02T23:22:00.3716705+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hero-banner.jpg" responded 304 in 9.4202 ms
+2024-07-02T23:22:00.3780930+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/" responded 405 in 0.2175 ms
+2024-07-02T23:22:09.5295864+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-07-02T23:22:09.5354465+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 19.3342 ms
+2024-07-02T23:23:39.4825907+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-07-02T23:23:39.4892501+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 38.1253 ms
+2024-07-02T23:23:39.5099498+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-07-02T23:23:39.5140166+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 17.7895 ms
+2024-07-02T23:23:41.1464710+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/" responded 405 in 1.4062 ms
+2024-07-02T23:40:19.4333331+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("45"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:40:19.5782043+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:40:19.5852742+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:40:19.5896679+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:40:19.6288952+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:40:19.6602393+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-07-02T23:40:20.2108936+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-07-02T23:40:20.2126895+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-07-02T23:40:20.2168166+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-07-02T23:40:20.2185156+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-07-02T23:40:20.2203114+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-07-02T23:40:41.4767133+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-07-02T23:40:41.5339973+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 640.8556 ms
+2024-07-02T23:44:48.2591085+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:44:48.3978070+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:44:48.4139164+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:44:48.4210476+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:44:48.4676000+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:44:48.5285774+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-07-02T23:44:48.9364572+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://0.0.0.0:7046"
+2024-07-02T23:44:48.9397495+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-07-02T23:44:48.9410502+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-07-02T23:44:48.9418491+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-07-02T23:45:46.1487344+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:45:46.2389010+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:45:46.2511128+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:45:46.2550755+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:45:46.2763058+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:45:46.2959124+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-07-02T23:45:46.6878120+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7046"
+2024-07-02T23:45:46.6898320+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5273"
+2024-07-02T23:45:46.6934199+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-07-02T23:45:46.6949523+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-07-02T23:45:46.6971397+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-07-02T23:46:00.1128946+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("16"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [c].[IDChucVu], [c].[MucLuongTheoChucVu], [c].[PhanTramMuc1], [c].[TenChucVu], [c].[TrangThai]
+FROM [ChucVu] AS [c]
+WHERE [c].[TrangThai] <> N'Da xoa' OR ([c].[TrangThai] IS NULL)"
+2024-07-02T23:46:00.2016597+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/chuc-vu/get-all" responded 200 in 657.0697 ms
+2024-07-02T23:46:08.7288833+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] = N'Da duyet'"
+2024-07-02T23:46:08.7373874+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 135.0622 ms
+2024-07-02T23:48:12.5757442+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:48:12.6645644+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:48:12.6772070+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT 1"
+2024-07-02T23:48:12.6803148+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2024-07-02T23:48:12.7009442+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2024-07-02T23:48:12.7199988+07:00 [INF] (Microsoft.EntityFrameworkCore.Migrations) No migrations were applied. The database is already up to date.
+2024-07-02T23:48:13.5382918+07:00 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://0.0.0.0:7046"
+2024-07-02T23:48:13.5452021+07:00 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2024-07-02T23:48:13.5479069+07:00 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2024-07-02T23:48:13.5496623+07:00 [INF] (Microsoft.Hosting.Lifetime) Content root path: "D:\DuAnThueXe\WebAPI_CarRental\CarRental"
+2024-07-02T23:48:24.2224085+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:48:24.3644837+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 801.6913 ms
+2024-07-02T23:48:24.5156977+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-07-02T23:48:24.5293223+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 150.0618 ms
+2024-07-02T23:48:26.0379155+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hyundai-grand-i10-2019-1.jpg" responded 200 in 114.9113 ms
+2024-07-02T23:48:26.0558909+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-morning-2022-1.jpg" responded 200 in 132.9929 ms
+2024-07-02T23:48:26.0764768+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/vinfast-lux-a-2.0-2020-1.jpg" responded 200 in 153.4974 ms
+2024-07-02T23:48:26.0875243+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mg-5-2023-1.jpg" responded 200 in 164.5859 ms
+2024-07-02T23:48:26.1331777+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/toyota-vios-e-2023-1.jpg" responded 200 in 210.1946 ms
+2024-07-02T23:48:26.2543936+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/vinfast-fadil-2020-1.png" responded 200 in 331.4335 ms
+2024-07-02T23:48:26.3827711+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/" responded 405 in 0.2999 ms
+2024-07-02T23:48:35.5110505+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:48:35.5172056+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 19.2935 ms
+2024-07-02T23:48:36.0824686+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/daewoo-matiz-2009-1.jpg" responded 200 in 9.7770 ms
+2024-07-02T23:48:36.0826632+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/honda-city-rs-2021-1.jpg" responded 200 in 10.2401 ms
+2024-07-02T23:48:36.0872343+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mercedes-benz-glc-200-2017-1.jpg" responded 200 in 13.4729 ms
+2024-07-02T23:48:42.3420986+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:48:42.3462063+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 9.8670 ms
+2024-07-02T23:48:42.7478100+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mitsubishi-xpander-2023-1.jpg" responded 200 in 6.9897 ms
+2024-07-02T23:48:42.7482211+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hyundai-elantra-2022-1.jpg" responded 200 in 7.7563 ms
+2024-07-02T23:48:42.7614751+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/honda-civic-2023-1.jpg" responded 200 in 21.0064 ms
+2024-07-02T23:48:45.6464986+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:48:45.6564186+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 17.1282 ms
+2024-07-02T23:48:46.0841556+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mazda-3-hatchback-2022-1.jpg" responded 200 in 39.4393 ms
+2024-07-02T23:48:46.0884801+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/ford-ranger-xls-2024-1.jpg" responded 200 in 47.9853 ms
+2024-07-02T23:48:46.0883754+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mazda-3-hatchback-2023-1.jpg" responded 200 in 47.2123 ms
+2024-07-02T23:48:46.0963166+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/ford-ranger-xls-2023-1.jpg" responded 200 in 55.8309 ms
+2024-07-02T23:48:46.0991840+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/ford-ranger-xls-2022-1.jpg" responded 200 in 58.5960 ms
+2024-07-02T23:48:46.0964633+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/ford-transit-2023-1.jpg" responded 200 in 48.0955 ms
+2024-07-02T23:48:46.1214095+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/vinfast-fadil-2020-do-1.jpg" responded 200 in 11.9134 ms
+2024-07-02T23:48:46.1135334+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hyundai-solati-2023-1.jpg" responded 200 in 6.5850 ms
+2024-07-02T23:48:46.1247293+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/ford-transit-2019-1.jpg" responded 200 in 12.5147 ms
+2024-07-02T23:49:03.4122698+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:49:03.4168945+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 8.7373 ms
+2024-07-02T23:49:03.8127900+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-carens-2023-1.jpg" responded 200 in 11.3231 ms
+2024-07-02T23:49:03.8425571+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/vinfast-vf9-plus-2023-1.jpg" responded 200 in 33.6610 ms
+2024-07-02T23:49:03.8732958+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-carnival-premium-2023-1.jpg" responded 200 in 71.2936 ms
+2024-07-02T23:49:03.8880527+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/mercedes-benz-glc-200-2021-1.jpg" responded 200 in 92.0890 ms
+2024-07-02T23:49:03.8884990+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/hyundai-stargazer-2024-1.jpg" responded 200 in 92.0171 ms
+2024-07-02T23:49:03.8815573+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-carnival-signature-2023-1.jpg" responded 200 in 21.4544 ms
+2024-07-02T23:49:03.8925769+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-carnival-premium-2024-1.jpg" responded 200 in 3.9284 ms
+2024-07-02T23:49:03.9723322+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/kia-sedona-2016-1.jpg" responded 200 in 90.7515 ms
+2024-07-02T23:49:04.0107393+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/uploads/vinfast-vf7-plus-2024-1.jpg" responded 200 in 214.7848 ms
+2024-07-02T23:51:05.8610899+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:51:05.8669909+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 23.6226 ms
+2024-07-02T23:51:05.8861132+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [t].[IDTinTuc], [t].[HinhAnh], [t].[NgayTao], [t].[NguoiTao], [t].[NoiDung], [t].[TieuDe], [t].[Topic], [t].[TrangThai]
+FROM [TinTuc] AS [t]
+WHERE [t].[TrangThai] <> N'Da xoa' OR ([t].[TrangThai] IS NULL)"
+2024-07-02T23:51:05.8911331+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/tin-tuc/get-all" responded 200 in 18.8152 ms
+2024-07-02T23:51:11.4564405+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:51:11.4623170+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 9.8895 ms
+2024-07-02T23:51:19.8804298+07:00 [INF] (Microsoft.EntityFrameworkCore.Database.Command) Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='1200']"
+""SELECT [x].[IDXe], [x].[BienSoXe], [x].[GiaThue], [x].[HangXe], [x].[HinhAnh1], [x].[HinhAnh2], [x].[HinhAnh3], [x].[HinhAnh4], [x].[IDLoaiXe], [x].[MoTa], [x].[NamSanXuat], [x].[NguyenLieuTieuHao], [x].[NhienLieu], [x].[SoChoNgoi], [x].[TenXe], [x].[TrangThai], [x].[TruyenDong]
+FROM [Xe] AS [x]
+WHERE [x].[TrangThai] <> N'Da xoa' OR ([x].[TrangThai] IS NULL)"
+2024-07-02T23:51:19.8858908+07:00 [INF] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/xe/get-all" responded 200 in 12.2952 ms

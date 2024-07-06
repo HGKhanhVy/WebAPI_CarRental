@@ -4,7 +4,6 @@ using CarRental.Contract.Repository.Models;
 using CarRental.Contract.Service;
 using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
-using CarRental.Core.Models.Login;
 using CarRental.Core.Models.ChucVu;
 using Invedia.DI.Attributes;
 using Microsoft.AspNetCore.Http;
@@ -110,16 +109,8 @@ namespace CarRental.Service
         {
             throw new NotImplementedException();
         }
-        public UserEntity GetByUserNameAsync(RefreshTokenEntity model)
-        {
-            throw new NotImplementedException();
-        }
 
         public string PrintByIDAsync(string id)
-        {
-            throw new NotImplementedException();
-        }
-        public ChucVuEntity GetByLoginAsync(LoginModel model)
         {
             throw new NotImplementedException();
         }

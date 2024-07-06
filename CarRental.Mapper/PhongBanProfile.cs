@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.Permission;
 using CarRental.Core.Models.PhongBan;
 using System;
 using System.Collections.Generic;

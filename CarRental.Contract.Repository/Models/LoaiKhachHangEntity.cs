@@ -14,7 +14,7 @@ namespace CarRental.Contract.Repository.Models
         public string IDLoaiKH { get; set; }
         public string TenLoaiKH { get; set; }
 
-        public KMLoaiKHEntity KMLoaiKHs { get; set; }
+        public virtual ICollection<KMLoaiKHEntity>? KMLoaiKHs { get; set; }
         public virtual ICollection<KhachHangEntity>? KhachHangs { get; set; }
     }
 }

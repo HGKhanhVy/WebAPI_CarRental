@@ -5,7 +5,6 @@ using CarRental.Contract.Service;
 using CarRental.Core.Constants;
 using CarRental.Core.Exceptions;
 using CarRental.Core.Models.KMLoaiXe;
-using CarRental.Core.Models.Login;
 using Invedia.DI.Attributes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +22,7 @@ namespace CarRental.Service
     {
 
         private readonly IKMLoaiXeRepository _kmRepository;
+        private readonly IKhuyenMaiRepository _kmfullRepository;
         private readonly IMapper _mapper;
         ILogger _logger;
 
@@ -119,20 +119,10 @@ namespace CarRental.Service
         {
             throw new NotImplementedException();
         }
-        public UserEntity GetByUserNameAsync(RefreshTokenEntity model)
-        {
-            throw new NotImplementedException();
-        }
-
         public string PrintByIDAsync(string id)
         {
             throw new NotImplementedException();
         }
-        public KMLoaiXeEntity GetByLoginAsync(LoginModel model)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task DeleteByAnotherKeyAsync(string idAnother, bool isPhysical, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
@@ -146,6 +136,14 @@ namespace CarRental.Service
         public ICollection<KMLoaiXeEntity> GetAllByAnotherKeyAsync(string str)
         {
             throw new NotImplementedException();
+        }
+
+        public ICollection<KMLoaiXeEntity> GetKMChuaCoAsync()
+        {
+            var entities = _kmfullRepository.Get(_ => !_.TrangThai.Equals("Da xoa")).ToList();
+            var kmChuaCo = _kmRepository.Get(_ => !_.TrangThai.Equals("Da xoa")).ToList();
+            var entitiesKhongChuaKmChuaCo = entities.Where(entity => !kmChuaCo.Any(km => km.IDKhuyenMai == entity.IDKhuyenMai)).ToList();
+            return (ICollection<KMLoaiXeEntity>)entitiesKhongChuaKmChuaCo;
         }
     }
 }

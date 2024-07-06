@@ -1,5 +1,4 @@
 ﻿using CarRental.Contract.Repository.Models;
-using CarRental.Core.Models.Room;
 using CarRental.Core.Models.ThamDinhXe;
 using System;
 using System.Collections.Generic;

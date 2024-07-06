@@ -25,7 +25,7 @@ namespace CarRental.Core.Models.HoaDonThueXe
         public double TongThanhToanChuaKM { get; set; }
         public string TrangThaiThanhToan { get; set; }
         public string HinhThucThanhToan { get; set; }
-        public string HinhAnhThanhToan { get; set; }
+        public string? HinhAnhThanhToan { get; set; }
         public string? UpdateBy { get; set; }
         public DateTime? UpdateAt { get; set; }
     }

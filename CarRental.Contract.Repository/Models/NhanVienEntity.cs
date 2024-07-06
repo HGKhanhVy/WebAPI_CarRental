@@ -37,7 +37,6 @@ namespace CarRental.Contract.Repository.Models
 
         public virtual ICollection<HopDongThueXeEntity>? HopDongThueXes { get; set; }
         public virtual ICollection<HopDongKyGuiEntity>? HopDongKyGuis { get; set; }
-        public virtual ICollection<RoomEntity>? Rooms { get; set; }
         public virtual ICollection<ThamDinhXeEntity>? ThamDinhXes { get; set; }
         public virtual ICollection<ThanhLyHopDongEntity>? ThanhLyHopDongs { get; set; }
     }
